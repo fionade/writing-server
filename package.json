@@ -1,0 +1,15 @@
+{
+  "name": "keyword_extractor",
+  "version": "1.0.0",
+  "description": "Extract keywords from given text",
+  "main": "index.js",
+  "dependencies": {
+    "natural": "^0.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "author": "fiona",
+  "license": "ISC"
+}
