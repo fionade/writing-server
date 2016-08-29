@@ -2,7 +2,6 @@ const restify = require('restify');
 const natural = require('natural');
 const pos = require('pos');
 const _ = require('underscore');
-const tokenizer = new natural.WordTokenizer();
 
 var STR_UNDEFINED = 'undefined';
 
@@ -13,17 +12,16 @@ function respond(req, res, next) {
 
 function returnKeywords(request, response, next) {
 
+	// deal with the specifics of the request
+	var text = request.body.replace(/\+/g, " ");
+	text = text.substring(5, text.length);
 	var keywordExtractor = new KeywordExtractor();
-	keywordExtractor.addDocument(request.body.text, 0, "en");
+	keywordExtractor.addDocument(text, 0, "en");
 
 	//  Extract collection and document keywords
 	keywordExtractor.processCollection();
-
-	//  Assign document keywords
-	var docKeywords = keywordExtractor.listDocumentKeywords(0);
-
+	
 	var keywords = keywordExtractor.getCollectionKeywords();
-	var keywordsDict = keywordExtractor.getCollectionKeywordsDictionary();
 
 	response.send(keywords);
 	next();
