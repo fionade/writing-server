@@ -1,7 +1,10 @@
 const restify = require('restify');
 const natural = require('natural');
 const pos = require('pos');
+const _ = require('underscore');
 const tokenizer = new natural.WordTokenizer();
+
+var STR_UNDEFINED = 'undefined';
 
 function respond(req, res, next) {
   res.send('hello ' + req.params.name);
@@ -358,13 +361,13 @@ var KeywordExtractor = (function(){
         },
         processCollection: function() {
             tfidf = new natural.TfIdf();
-            var timestamp = $.now();
+            var timestamp = new Date().getTime();
             this.documentKeywords = extractDocumentKeywords(this.collection);
             var collectionKeywords = extractCollectionKeywords(this.collection, this.documentKeywords);
             this.collectionKeywords = collectionKeywords.array;
             this.collectionKeywordsDict = collectionKeywords.dict;
 
-            var miliseconds = $.now() - timestamp;
+            var miliseconds = new Date().getTime() - timestamp;
             var seconds = parseInt(miliseconds / 1000);
             console.log('Keyword extraction finished in ' + seconds + ' seconds, ' + miliseconds%1000 + ' miliseconds (=' + miliseconds + ' ms)');
         },
@@ -391,6 +394,10 @@ var KeywordExtractor = (function(){
 
 String.prototype.removeUnnecessaryChars = function() {
     return this.replace(/[-=’‘\']/g, ' ').replace(/[()\"“”]/g,'');
+};
+
+String.prototype.isAllUpperCase = function() {
+    return this.valueOf().toUpperCase() === this.valueOf();
 };
 
 
