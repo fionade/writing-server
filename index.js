@@ -13,6 +13,7 @@ function respond(req, res, next) {
 
 function returnKeywords(request, response, next) {
 
+	var keywordExtractor = new KeywordExtractor();
 	keywordExtractor.addDocument(request.params.text, 0, "en");
 
 	//  Extract collection and document keywords
@@ -399,6 +400,3 @@ String.prototype.removeUnnecessaryChars = function() {
 String.prototype.isAllUpperCase = function() {
     return this.valueOf().toUpperCase() === this.valueOf();
 };
-
-
-var keywordExtractor = new KeywordExtractor();
