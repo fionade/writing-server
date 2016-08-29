@@ -16,12 +16,19 @@ function returnKeywords(request, response, next) {
 	var text = request.body.replace(/\+/g, " ");
 	text = text.substring(5, text.length);
 	var keywordExtractor = new KeywordExtractor();
-	keywordExtractor.addDocument(text, 0, "en");
+	keywordExtractor.addDocument(/*request.body.*/text, 0, "en");
 
 	//  Extract collection and document keywords
 	keywordExtractor.processCollection();
 	
 	var keywords = keywordExtractor.getCollectionKeywords();
+	
+	keywords = keywords
+            .sort(function(k1, k2){
+                if(k1.tf_idf < k2.tf_idf) return 1;
+                if(k1.tf_idf > k2.tf_idf) return -1;
+                return 0;
+            });
 
 	response.send(keywords);
 	next();
@@ -106,7 +113,7 @@ var KeywordExtractor = (function(){
            	d.tokens = getFilteredTokens(d.taggedWords, keyAdjectives);                                       // d.tokens contains raw nouns and important adjectives
         	tfidf.addDocument(d.tokens.map(function(term){ return term.stem(); }).join(' '));                 // argument = string of stemmed terms in document array
         });
-
+        
         // Save keywords for each document
         var documentKeywords = [];
         collection.forEach(function(d, i){
@@ -264,7 +271,8 @@ var KeywordExtractor = (function(){
                         repeated: 1,
                         variations: {},
                         inDocument : [_collection[i].id],
-                        keywordsInProximity: {}
+                        keywordsInProximity: {},
+                        tf_idf: docKeywords[stemmedTerm]
                     };
                 }
                 else {
