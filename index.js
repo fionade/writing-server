@@ -14,7 +14,7 @@ function respond(req, res, next) {
 function returnKeywords(request, response, next) {
 
 	var keywordExtractor = new KeywordExtractor();
-	keywordExtractor.addDocument(request.params.text, 0, "en");
+	keywordExtractor.addDocument(request.body.text, 0, "en");
 
 	//  Extract collection and document keywords
 	keywordExtractor.processCollection();
@@ -30,8 +30,14 @@ function returnKeywords(request, response, next) {
 }
 
 var server = restify.createServer();
-server.get('/keywords/:text', returnKeywords);
-// server.head('/hello/:name', respond);
+
+server.use(restify.gzipResponse());
+server.use(restify.bodyParser());
+
+server.post({
+path: '/keywords'
+}, returnKeywords);
+
 
 server.listen(8080, function() {
   console.log('%s listening at %s', server.name, server.url);
@@ -54,7 +60,7 @@ var KeywordExtractor = (function(){
     function KeywordExtractor() {
         s = {
             minDocFrequency: 1,
-            minRepetitionsInDocument: 1,
+            minRepetitionsInDocument: 3,
             maxKeywordDistance: 5,
             minRepetitionsProxKeywords: 2, 
             multiLingualEnabled : false
