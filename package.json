@@ -4,6 +4,7 @@
   "description": "Extract keywords from given text",
   "main": "index.js",
   "dependencies": {
+    "mongodb": "^2.2.11",
     "natural": "^0.4.0"
   },
   "devDependencies": {},

@@ -1,85 +1,6 @@
-const restify = require('restify');
-const natural = require('natural');
-const pos = require('pos');
-const _ = require('underscore');
+module.exports = {
 
-var STR_UNDEFINED = 'undefined';
-
-function respond(req, res, next) {
-  res.send('hello ' + req.params.name);
-  next();
-}
-
-function returnKeywords(request, response, next) {
-
-	// deal with the specifics of the request
-	// TODO: persistent object
-	var text = request.body.text.replace(/\+/g, " ");
-	text = text.substring(5, text.length);
-	var keywordExtractor = new KeywordExtractor();
-	keywordExtractor.addDocument(/*request.body.*/text, 0, "en");
-
-	//  Extract collection and document keywords
-	keywordExtractor.processCollection();
-	
-	var keywords = keywordExtractor.getCollectionKeywords();
-	
-	keywords = keywords
-            .sort(function(k1, k2){
-                if(k1.tf_idf < k2.tf_idf) return 1;
-                if(k1.tf_idf > k2.tf_idf) return -1;
-                return 0;
-            });
-
-	response.send(keywords);
-	next();
-}
-
-function saveActivity(request, response, next) {
-
-	var body = JSON.parse(request.body)
-	if (databaseConnector && databaseConnector.isConnected()) {
-		databaseConnector.insertDocument(body.activity);
-		response.send('inserted document');
-		next();
-	}
-	else {
-		console.log("Not connected to database");
-		response.send("Not connected to database");
-		next();
-	}
-}
-
-var server = restify.createServer();
-
-server.use(restify.gzipResponse());
-server.use(restify.bodyParser());
-
-server.post({
-	path: '/keywords'
-}, returnKeywords);
-
-server.post({
-	path: '/activity'
-}, saveActivity);
-
-
-// set up database connection
-var DatabaseConnector = require("./databaseConnector");
-var databaseConnector = new DatabaseConnector();
-
-databaseConnector.connect();
-
-// TODO
-// databaseConnector.close();
-
-// start listening
-server.listen(8080, function() {
-  console.log('%s listening at %s', server.name, server.url);
-});
-
-
-var KeywordExtractor = (function(){
+	function KeywordExtractor(){
 
     var _this,
         s = {},
@@ -433,7 +354,8 @@ var KeywordExtractor = (function(){
     };
 
     return KeywordExtractor;
-})();
+};
+}
 
 String.prototype.removeUnnecessaryChars = function() {
     return this.replace(/[-=’‘\']/g, ' ').replace(/[()\"“”]/g,'');
