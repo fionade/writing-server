@@ -1,6 +1,4 @@
-module.exports = {
-
-	function KeywordExtractor(){
+function KeywordExtractor(){
 
     var _this,
         s = {},
@@ -355,7 +353,6 @@ module.exports = {
 
     return KeywordExtractor;
 };
-}
 
 String.prototype.removeUnnecessaryChars = function() {
     return this.replace(/[-=’‘\']/g, ' ').replace(/[()\"“”]/g,'');

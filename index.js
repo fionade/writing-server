@@ -40,11 +40,10 @@ function saveActivity(request, response, next) {
 	var body = JSON.parse(request.body)
 	if (databaseConnector && databaseConnector.isConnected()) {
 		databaseConnector.insertDocument(body.activity);
-		response.send('inserted document');
+		response.send('Inserted document');
 		next();
 	}
 	else {
-		console.log("Not connected to database");
 		response.send("Not connected to database");
 		next();
 	}

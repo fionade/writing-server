@@ -32,7 +32,7 @@ DatabaseConnector.prototype.insertDocument = function insertDocuments(document) 
 		that.assert.equal(err, null);
 		that.assert.equal(1, result.result.n);
     	that.assert.equal(1, result.ops.length);
-    	console.log("Inserted document into the collection");
+    	//console.log("Inserted document into the collection");
 	});
 }
 
