@@ -14,7 +14,9 @@ function returnKeywords(request, response, next) {
 
 	// deal with the specifics of the request
 	// TODO: persistent object
-	var text = request.body.text.replace(/\+/g, " ");
+	var text = request.body;
+	text = text.replace(/\+|(%0A)+/g, " ");
+	text = text.replace("text=", "");
 	text = text.substring(5, text.length);
 	var keywordExtractor = new KeywordExtractor();
 	keywordExtractor.addDocument(/*request.body.*/text, 0, "en");
