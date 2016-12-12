@@ -56,7 +56,8 @@ function getActivity(request, response, next) {
 	// TODO: GET only, not POST?
 	var body = JSON.parse(request.body);
 	if (databaseConnector && databaseConnector.isConnected()) {
-		var result = databaseConnector.getDocuments(body.documentId);
+		// TODO security
+		var result = databaseConnector.getDocumentsForId(body.documentId);
 		response.send(200, result);
 		// TODO compile response
 		
