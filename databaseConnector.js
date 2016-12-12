@@ -40,6 +40,10 @@ DatabaseConnector.prototype.isConnected = function isConnected() {
 	return this.db;
 }
 
+DatabaseConnector.prototype.getDocumentsForId = function getDocumentsForId(documentId) {
+	return this.db.activity.find( { "documentId" : documentId });
+}
+
 module.exports = DatabaseConnector;
 
 

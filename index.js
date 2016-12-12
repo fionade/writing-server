@@ -39,16 +39,34 @@ function returnKeywords(request, response, next) {
 
 function saveActivity(request, response, next) {
 
-	var body = JSON.parse(request.body)
+	var body = JSON.parse(request.body);
 	if (databaseConnector && databaseConnector.isConnected()) {
 		databaseConnector.insertDocument(body.activity);
+		// TODO status code 
 		response.send('Inserted document');
-		next();
 	}
 	else {
-		response.send("Not connected to database");
-		next();
+		response.send(503, "Not connected to database");	
 	}
+	next();
+}
+
+function getActivity(request, response, next) {
+	
+	// TODO: GET only, not POST?
+	var body = JSON.parse(request.body);
+	if (databaseConnector && databaseConnector.isConnected()) {
+		var result = databaseConnector.getDocuments(body.documentId);
+		response.send(200, result);
+		// TODO compile response
+		
+		// TODO iter
+	}
+	else {
+		response.send(503, "Not connected to database");
+	}
+	
+	next();
 }
 
 var server = restify.createServer();
