@@ -82,6 +82,9 @@ server.post({
 	path: '/activity'
 }, saveActivity);
 
+server.post({
+	path: '/getActivity'
+}, getActivity);
 
 // set up database connection
 var DatabaseConnector = require("./databaseConnector");
