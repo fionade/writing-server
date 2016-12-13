@@ -43,7 +43,7 @@ DatabaseConnector.prototype.isConnected = function isConnected() {
 DatabaseConnector.prototype.getDocumentsForId = function getDocumentsForId(documentId, callback) {
 	var collection = this.db.collection('activity');
 
-	collection.find({"documentId" : documentId}).toArray(function(err, docs){
+	collection.find({"documentId" : documentId}).sort({"documentId" : 1}).toArray(function(err, docs){
     	callback(err, docs);
 	});
 }
