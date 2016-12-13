@@ -57,8 +57,9 @@ function getActivity(request, response, next) {
 	var body = JSON.parse(request.body);
 	if (databaseConnector && databaseConnector.isConnected()) {
 		// TODO security
-		var result = databaseConnector.getDocumentsForId(body.documentId);
-		response.send(200, result);
+		databaseConnector.getDocumentsForId(body.documentId, function(err, result) {
+			response.send(200, result);
+		});
 		// TODO compile response
 		
 		// TODO iter
