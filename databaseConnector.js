@@ -22,7 +22,7 @@ DatabaseConnector.prototype.close = function close() {
 	}
 }
 
-DatabaseConnector.prototype.insertDocument = function insertDocuments(document) {
+DatabaseConnector.prototype.insertDocument = function insertDocument(document) {
 
 	var that = this;
 
@@ -33,6 +33,18 @@ DatabaseConnector.prototype.insertDocument = function insertDocuments(document) 
 		that.assert.equal(1, result.result.n);
     	that.assert.equal(1, result.ops.length);
     	//console.log("Inserted document into the collection");
+	});
+}
+
+DatabaseConnector.prototype.insertDocuments = function insertDocuments(documents) {
+	
+	var that = this;
+	
+	// Get the documents collection
+	var collection = this.db.collection('activity');
+	collection.insert(document, function(err, result) {
+		that.assert.equal(err, null);
+    	console.log("Inserted documents into the collection");
 	});
 }
 

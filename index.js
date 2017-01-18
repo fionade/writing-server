@@ -43,12 +43,30 @@ function saveActivity(request, response, next) {
 	if (databaseConnector && databaseConnector.isConnected()) {
 		databaseConnector.insertDocument(body.activity);
 		// TODO status code 
-		response.send('Inserted document');
+		response.send("Inserted document");
 	}
 	else {
 		response.send(503, "Not connected to database");	
 	}
 	next();
+}
+
+function saveActivityItems(request, response, next) {
+	
+	var body = JSON.parse(request.body);
+	console.log(body);
+	
+	if (databaseConnector && databaseConnector.isConnected()) {
+		databaseConnector.insertDocument(body.activity);
+		// TODO status code 
+		response.send("Inserted documents");
+	}
+	else {
+		response.send(503, "Not connected to database");
+	}
+	
+	next();
+	
 }
 
 function getActivity(request, response, next) {
@@ -83,6 +101,10 @@ server.post({
 server.post({
 	path: '/activity'
 }, saveActivity);
+
+server.post({
+	path: '/activityItems'
+}, saveActivityItems);
 
 server.post({
 	path: '/getActivity'
