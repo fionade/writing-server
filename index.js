@@ -54,10 +54,9 @@ function saveActivity(request, response, next) {
 function saveActivityItems(request, response, next) {
 	
 	var body = JSON.parse(request.body);
-	console.log(body);
 	
 	if (databaseConnector && databaseConnector.isConnected()) {
-		databaseConnector.insertDocument(body.activity);
+		databaseConnector.insertDocuments(body.activity);
 		// TODO status code 
 		response.send("Inserted documents");
 	}
