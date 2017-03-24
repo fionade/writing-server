@@ -126,15 +126,16 @@ server.get('/getContext/:keyword', retrieveContexts);
 var DatabaseConnector = require("./databaseConnector");
 var databaseConnector = new DatabaseConnector();
 
-databaseConnector.connect();
-
 var TypingToolHelper = require("./typingToolHelper");
 var typingToolHelper = new TypingToolHelper(databaseConnector);
 
+databaseConnector.connect(function() {
+  databaseConnector.clearCollection("context");
+  typingToolHelper.getFileNames("./text_files");
+});
+
 // TODO REST call for this
 // let's hope it's already connected
-databaseConnector.clearCollection("context");
-typingToolHelper.getFileNames("./text_files");
 
 // TODO
 // databaseConnector.close();

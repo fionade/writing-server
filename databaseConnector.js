@@ -3,7 +3,7 @@ function DatabaseConnector() {
 	this.assert = require('assert');
 }
 
-DatabaseConnector.prototype.connect = function connect() {
+DatabaseConnector.prototype.connect = function connect(callback) {
 	// Connection URL
 	var url = 'mongodb://localhost:27017/breakfast';
 	var that = this;
@@ -13,6 +13,7 @@ DatabaseConnector.prototype.connect = function connect() {
 	  that.assert.equal(null, err);
 	  console.log("Connected successfully to server");
 	  that.db = db;
+		callback();
 	});
 }
 
