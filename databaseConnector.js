@@ -84,6 +84,13 @@ DatabaseConnector.prototype.getKeywordSurroundings = function getKeywordSurround
 
 }
 
+DatabaseConnector.prototype.clearCollection = function clearCollection(collection) {
+
+	var collection = this.db.collection(collection);
+
+	collection.remove({});
+}
+
 module.exports = DatabaseConnector;
 
 

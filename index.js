@@ -131,6 +131,9 @@ databaseConnector.connect();
 var TypingToolHelper = require("./typingToolHelper");
 var typingToolHelper = new TypingToolHelper(databaseConnector);
 
+// TODO REST call for this
+// let's hope it's already connected
+databaseConnector.clearCollection("context");
 typingToolHelper.getFileNames("./text_files");
 
 // TODO
