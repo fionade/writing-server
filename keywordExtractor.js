@@ -16,7 +16,7 @@ function KeywordExtractor(){
             minDocFrequency: 1,
             minRepetitionsInDocument: 3,
             maxKeywordDistance: 5,
-            minRepetitionsProxKeywords: 2, 
+            minRepetitionsProxKeywords: 2,
             multiLingualEnabled : false
         };
 
@@ -62,7 +62,7 @@ function KeywordExtractor(){
            	d.tokens = getFilteredTokens(d.taggedWords, keyAdjectives);                                       // d.tokens contains raw nouns and important adjectives
         	tfidf.addDocument(d.tokens.map(function(term){ return term.stem(); }).join(' '));                 // argument = string of stemmed terms in document array
         });
-        
+
         // Save keywords for each document
         var documentKeywords = [];
         collection.forEach(function(d, i){

@@ -12,5 +12,9 @@
     "test": "test"
   },
   "author": "fiona",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+  	"type": "git",
+  	"url": "https://github.com/fionade/writing-server.git"
+	}
 }

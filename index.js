@@ -23,9 +23,9 @@ function returnKeywords(request, response, next) {
 
 	//  Extract collection and document keywords
 	keywordExtractor.processCollection();
-	
+
 	var keywords = keywordExtractor.getCollectionKeywords();
-	
+
 	keywords = keywords
             .sort(function(k1, k2){
                 if(k1.tf_idf < k2.tf_idf) return 1;
@@ -42,34 +42,34 @@ function saveActivity(request, response, next) {
 	var body = JSON.parse(request.body);
 	if (databaseConnector && databaseConnector.isConnected()) {
 		databaseConnector.insertDocument(body.activity);
-		// TODO status code 
+		// TODO status code
 		response.send("Inserted document");
 	}
 	else {
-		response.send(503, "Not connected to database");	
+		response.send(503, "Not connected to database");
 	}
 	next();
 }
 
 function saveActivityItems(request, response, next) {
-	
+
 	var body = JSON.parse(request.body);
-	
+
 	if (databaseConnector && databaseConnector.isConnected()) {
 		databaseConnector.insertDocuments(body.activity);
-		// TODO status code 
+		// TODO status code
 		response.send("Inserted documents");
 	}
 	else {
 		response.send(503, "Not connected to database");
 	}
-	
+
 	next();
-	
+
 }
 
 function getActivity(request, response, next) {
-	
+
 	// TODO: GET only, not POST?
 	var body = JSON.parse(request.body);
 	if (databaseConnector && databaseConnector.isConnected()) {
@@ -78,14 +78,25 @@ function getActivity(request, response, next) {
 			response.send(200, result);
 		});
 		// TODO compile response
-		
+
 		// TODO iter
 	}
 	else {
 		response.send(503, "Not connected to database");
 	}
-	
+
 	next();
+}
+
+function retrieveContexts(request, response, next) {
+  // TODO
+  var keyword = request.params.keyword;
+
+  if (databaseConnector && databaseConnector.isConnected()) {
+    databaseConnector.getKeywordSurroundings(keyword, function(err, result) {
+      response.send(200, result);
+    });
+  }
 }
 
 var server = restify.createServer();
@@ -109,11 +120,18 @@ server.post({
 	path: '/getActivity'
 }, getActivity);
 
+server.get('/getContext/:keyword', retrieveContexts);
+
 // set up database connection
 var DatabaseConnector = require("./databaseConnector");
 var databaseConnector = new DatabaseConnector();
 
 databaseConnector.connect();
+
+var TypingToolHelper = require("./typingToolHelper");
+var typingToolHelper = new TypingToolHelper(databaseConnector);
+
+typingToolHelper.getFileNames("./data/text_files");
 
 // TODO
 // databaseConnector.close();
@@ -142,7 +160,7 @@ var KeywordExtractor = (function(){
             minDocFrequency: 1,
             minRepetitionsInDocument: 3,
             maxKeywordDistance: 5,
-            minRepetitionsProxKeywords: 2, 
+            minRepetitionsProxKeywords: 2,
             multiLingualEnabled : false
         };
 
@@ -188,7 +206,7 @@ var KeywordExtractor = (function(){
            	d.tokens = getFilteredTokens(d.taggedWords, keyAdjectives);                                       // d.tokens contains raw nouns and important adjectives
         	tfidf.addDocument(d.tokens.map(function(term){ return term.stem(); }).join(' '));                 // argument = string of stemmed terms in document array
         });
-        
+
         // Save keywords for each document
         var documentKeywords = [];
         collection.forEach(function(d, i){

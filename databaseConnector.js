@@ -31,20 +31,34 @@ DatabaseConnector.prototype.insertDocument = function insertDocument(document) {
 	collection.insert(document, function(err, result) {
 		that.assert.equal(err, null);
 		that.assert.equal(1, result.result.n);
-    	that.assert.equal(1, result.ops.length);
+    that.assert.equal(1, result.ops.length);
     	//console.log("Inserted document into the collection");
 	});
 }
 
-DatabaseConnector.prototype.insertDocuments = function insertDocuments(documents) {
-	
+DatabaseConnector.prototype.insertDocumentIntoCollection = function insertDocumentIntoCollection(document, collection) {
+
 	var that = this;
-	
+
+	// Get the documents collection
+	var collection = this.db.collection(collection);
+	collection.insert(document, function(err, result) {
+		that.assert.equal(err, null);
+		that.assert.equal(1, result.result.n);
+    that.assert.equal(1, result.ops.length);
+    //console.log("Inserted document into the collection");
+	});
+}
+
+DatabaseConnector.prototype.insertDocuments = function insertDocuments(documents) {
+
+	var that = this;
+
 	// Get the documents collection
 	var collection = this.db.collection('activity');
 	collection.insert(document, function(err, result) {
 		that.assert.equal(err, null);
-    	console.log("Inserted documents into the collection");
+    console.log("Inserted documents into the collection");
 	});
 }
 
@@ -58,6 +72,16 @@ DatabaseConnector.prototype.getDocumentsForId = function getDocumentsForId(docum
 	collection.find({"documentId" : documentId}).sort({"documentId" : 1}).toArray(function(err, docs){
     	callback(err, docs);
 	});
+}
+
+DatabaseConnector.prototype.getKeywordSurroundings = function getKeywordSurroundings(keyword, callback) {
+
+	var collection = this.db.collection('context');
+
+	collection.find({ 'variations' : { $in : [keyword]}}).toArray(function(err, docs) {
+		callback(err, docs);
+	});
+
 }
 
 module.exports = DatabaseConnector;
