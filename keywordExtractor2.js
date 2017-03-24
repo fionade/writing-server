@@ -268,8 +268,8 @@ function KeywordContextExtractor() {
           var variations = [];
           var i = -1;
           while((i = containsToken(allTokens, token, i + 1)) != - 1) {
-            leftParts.push(allTokens.slice(Math.max(0, i - 5), i));
-            rightParts.push(allTokens.slice(i + 1, Math.min(allTokens.length, i + 5)));
+            leftParts.push(allTokens.slice(Math.max(0, i - 10), i));
+            rightParts.push(allTokens.slice(i + 1, Math.min(allTokens.length, i + 10)));
             // the variations are also needed to build proper sentences afterwards
             variations.push(allTokens[i]);
           }
