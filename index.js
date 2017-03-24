@@ -131,7 +131,7 @@ databaseConnector.connect();
 var TypingToolHelper = require("./typingToolHelper");
 var typingToolHelper = new TypingToolHelper(databaseConnector);
 
-typingToolHelper.getFileNames("./data/text_files");
+typingToolHelper.getFileNames("./text_files");
 
 // TODO
 // databaseConnector.close();
