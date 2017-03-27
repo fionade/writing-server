@@ -101,6 +101,9 @@ function retrieveContexts(request, response, next) {
           variations : result[0].variations.slice(0, Math.min(result[0].variations.length, 12))
         }
       }
+      else {
+        result = null;
+      }
       response.send(200, result);
     });
   }
