@@ -31,6 +31,8 @@ TextMetrics.prototype.getMostFrequentWords = function getMostFrequentWords(text)
   var words = this.tokenizer.tokenize(text);
   var that = this;
 
+  // TODO singularise
+
   var repetitions = {};
   words.forEach(function(d) {
     var token = d.toLowerCase();
