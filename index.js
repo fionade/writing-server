@@ -107,6 +107,33 @@ function retrieveContexts(request, response, next) {
       response.send(200, result);
     });
   }
+
+  next();
+}
+
+function getTextMeasures(request, response, next) {
+
+  var text = request.body;
+	text = text.replace(/\+|(%0A)+/g, " ");
+	text = text.replace("text=", "");
+	text = text.substring(5, text.length);
+
+  var TextMetrics = require("./textMetrics");
+  var textMetrics = new TextMetrics();
+
+  var fleschKincaidScore = textMetrics.getFleschKincaid(text);
+  var mostFrequentWords = textMetrics.getMostFrequentWords(text);
+
+  // POS tagging: return
+  var result = {
+    fleschKincaidScore : fleschKincaidScore,
+    mostFrequentWords : mostFrequentWords,
+    taggedWords : textMetrics.getConjunctions(text)
+  }
+
+  response.send(200, result);
+
+  next();
 }
 
 var server = restify.createServer();
@@ -129,6 +156,10 @@ server.post({
 server.post({
 	path: '/getActivity'
 }, getActivity);
+
+server.post({
+  path: '/getTextMeasures'
+}, getTextMeasures);
 
 server.get('/getContext/:keyword', retrieveContexts);
 
