@@ -121,14 +121,15 @@ function getTextMeasures(request, response, next) {
   var TextMetrics = require("./textMetrics");
   var textMetrics = new TextMetrics();
 
-  var fleschKincaidScore = textMetrics.getFleschKincaid(text);
+  var fleschKincaidScore = Math.round(textMetrics.getFleschKincaid(text), 2);
   var mostFrequentWords = textMetrics.getMostFrequentWords(text);
+  mostFrequentWords = mostFrequentWords.slice(0, (Math.min(mostFrequentWords.length, 5));
 
   // POS tagging: return
   var result = {
     fleschKincaidScore : fleschKincaidScore,
     mostFrequentWords : mostFrequentWords,
-    taggedWords : textMetrics.getConjunctions(text)
+    frequentConjunctions : textMetrics.getConjunctions(text)
   }
 
   response.send(200, result);
