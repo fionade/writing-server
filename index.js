@@ -121,7 +121,7 @@ function getTextMeasures(request, response, next) {
   var TextMetrics = require("./textMetrics");
   var textMetrics = new TextMetrics();
 
-  var fleschKincaidScore = Math.round(textMetrics.getFleschKincaid(text) * 100) / 100);
+  var fleschKincaidScore = (Math.round(textMetrics.getFleschKincaid(text) * 100) / 100;
   var mostFrequentWords = textMetrics.getMostFrequentWords(text);
   mostFrequentWords = mostFrequentWords.slice(0, 5);
   var frequentConjunctions = textMetrics.getConjunctions(text);
