@@ -123,7 +123,7 @@ function getTextMeasures(request, response, next) {
 
   var fleschKincaidScore = Math.round(textMetrics.getFleschKincaid(text), 2);
   var mostFrequentWords = textMetrics.getMostFrequentWords(text);
-  mostFrequentWords = mostFrequentWords.slice(0, (Math.min(mostFrequentWords.length, 5));
+  mostFrequentWords = mostFrequentWords.slice(0, Math.min(mostFrequentWords.length, 5));
 
   // POS tagging: return
   var result = {
