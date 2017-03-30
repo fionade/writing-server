@@ -44,7 +44,8 @@ TextMetrics.prototype.getMostFrequentWords = function getMostFrequentWords(text)
     }
   });
 
-  return repetitions;
+  var result = sortByRepetitions(repetitions);
+  return result;
 
 }
 
@@ -65,11 +66,7 @@ TextMetrics.prototype.getConjunctions = function getConjunctions(text) {
     }
   });
 
-  console.log(repetitions);
-
   var result = sortByRepetitions(repetitions);
-  console.log(result);
-
   return result;
 
   // https://github.com/mark-watson/fasttag_v2
