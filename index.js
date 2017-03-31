@@ -141,7 +141,6 @@ function getTextMeasures(request, response, next) {
 function getMatchesForKeywords(request, response, next) {
 
   var keywords = JSON.parse(request.body);
-  console.log(keywords);
   var result = documentKeywordExtractor.getMatchesForKeywords(keywords.keywords);
 
   response.send(200, result);

@@ -2,13 +2,15 @@
 	{
 		"path" : "text_files/Deep_learning.txt",
 		"title" : "Deep Learning",
-		"authors" : "Wikipedia",
-		"url" : "https://en.wikipedia.org/wiki/Deep_Learning"
+		"authors" : "by some person",
+		"url" : "https://en.wikipedia.org/wiki/Deep_Learning",
+		"abstract" : "This article will tell you all you never thought you needed to know about deep learning."
 	},
 	{
 		"path" : "text_files/machine_learning.txt",
 		"title" : "Machine Learning",
-		"authors" : "Wikipedia",
-		"url" : "https://en.wikipedia.org/wiki/Machine_Learning"
+		"authors" : "Brecht, Berthold",
+		"url" : "https://en.wikipedia.org/wiki/Machine_Learning",
+		"abstract" : "Machines will take over the world at some point. Because we tell them how to learn."
 	}
 ]}
