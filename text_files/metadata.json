@@ -1,0 +1,14 @@
+{ "files" : [
+	{
+		"path" : "text_files/Deep_learning.txt",
+		"title" : "Deep Learning",
+		"authors" : "Wikipedia",
+		"url" : "https://en.wikipedia.org/wiki/Deep_Learning"
+	},
+	{
+		"path" : "text_files/machine_learning.txt",
+		"title" : "Machine Learning",
+		"authors" : "Wikipedia",
+		"url" : "https://en.wikipedia.org/wiki/Machine_Learning"
+	}
+]}
