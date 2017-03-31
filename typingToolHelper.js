@@ -1,19 +1,19 @@
 const fs = require('fs');
 var KeywordContextExtractor = require('./keywordExtractor2');
 
-function TypingToolHelper(databaseConnector) {
-  this.keywordContextExtractor = new KeywordContextExtractor();
+function TypingToolHelper(databaseConnector, keywordExtractor) {
+  this.keywordContextExtractor = keywordExtractor;
   this.databaseConnector = databaseConnector;
 };
 
-TypingToolHelper.prototype.addFile = function addFile(folder, filename, callback) {
+TypingToolHelper.prototype.addFile = function addFile(metadata, callback) {
   var that = this;
-  fs.readFile(folder + "/" + filename, 'utf8', function(err, data) {
+  fs.readFile(metadata.path, 'utf8', function(err, data) {
     if (err) {
       return console.log(err);
     }
 
-    that.keywordContextExtractor.addDocument(data, filename, "en");
+    that.keywordContextExtractor.addDocument(data, metadata.title, "en", metadata);
     callback();
 
   });
@@ -21,16 +21,38 @@ TypingToolHelper.prototype.addFile = function addFile(folder, filename, callback
 
 TypingToolHelper.prototype.getFileNames = function getFileNames(directory) {
   var that = this;
-  fs.readdir(directory, (err, files) => {
+  // fs.readdir(directory, (err, files) => {
+  //   if (err) {
+  //     return console.log(err);
+  //   }
+  //
+  //   var itemsProcessed = 0;
+  //   files.forEach(file => {
+  //     this.addFile(directory, file, function() {
+  //       itemsProcessed++;
+  //       if (itemsProcessed >= files.length) {
+  //         // once all files have been processed, the results can be used
+  //         that.getKeywords();
+  //         var contexts = that.keywordContextExtractor.getKeywordContexts();
+  //
+  //         that.storeKeywordsInDatabase(contexts);
+  //       }
+  //     });
+  //   });
+  // });
+
+  fs.readFile('./text_files/metadata.json', 'utf8', function(err, data) {
     if (err) {
       return console.log(err);
     }
 
+    var fileData = JSON.parse(data);
+
     var itemsProcessed = 0;
-    files.forEach(file => {
-      this.addFile(directory, file, function() {
+    fileData.files.forEach(function(d) {
+      that.addFile(d, function() {
         itemsProcessed++;
-        if (itemsProcessed >= files.length) {
+        if (itemsProcessed >= fileData.files.length) {
           // once all files have been processed, the results can be used
           that.getKeywords();
           var contexts = that.keywordContextExtractor.getKeywordContexts();
@@ -39,7 +61,20 @@ TypingToolHelper.prototype.getFileNames = function getFileNames(directory) {
         }
       });
     });
+
+  //   { files:
+  //  [ { path: 'Deep_learning.txt',
+  //      title: 'Deep Learning',
+  //      authors: 'Wikipedia',
+  //      url: 'https://en.wikipedia.org/wiki/Deep_Learning' },
+  //    { path: 'machine_learning.txt',
+  //      title: 'Machine Learning',
+  //      authors: 'Wikipedia',
+  //      url: 'https://en.wikipedia.org/wiki/Machine_Learning' } ] }
+
   });
+
+
 }
 
 TypingToolHelper.prototype.storeKeywordsInDatabase = function storeKeywordsInDatabase(keywordDict) {

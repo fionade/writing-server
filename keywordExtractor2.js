@@ -293,6 +293,38 @@ function KeywordContextExtractor() {
 
   }
 
+  this.getMatchesForKeywords = function(keywords) {
+
+    var that = this;
+
+    var scores = [];
+    for (var i = 0; i < this.collection.length; i++) {
+      scores.push({
+        index : this.collection[i].id,
+        score : 0,
+        metadata : this.collection[i].metadata
+      });
+    }
+
+    this.collection.forEach(function(d, i) {
+      keywords.forEach(function(e) {
+        if (that.documentKeywords[i][e]) {
+          scores[i].score += that.documentKeywords[i][e];
+        }
+      });
+    });
+
+    // sort
+    scores = scores.sort(function(k1, k2) {
+      if (k1.score < k2.score) return 1;
+      if (k1.score > k2.score) return -1;
+      return 0;
+    });
+
+    return scores;
+
+  }
+
   this.computeKeywordsInProximity = function(_collection, _keywordDict) {
       _collection.forEach(function(d){
           d.tokens.forEach(function(token, i, tokens){
@@ -362,11 +394,11 @@ function KeywordContextExtractor() {
 };
 
 KeywordContextExtractor.prototype = {
-    addDocument: function(document, id, language) {
+    addDocument: function(document, id, language, metadata) {
         document = (!Array.isArray(document)) ? document : document.join(' ');
         id = id || this.collection.length;
         language = language || "en";
-        this.collection.push({ id: id, text: document, language: language });
+        this.collection.push({ id: id, text: document, language: language, metadata: metadata });
     },
     processCollection: function() {
         tfidf = new natural.TfIdf();
@@ -392,6 +424,9 @@ KeywordContextExtractor.prototype = {
     },
     getKeywordContexts: function() {
         return this.keywordContexts;
+    },
+    getMatchesForKeywords: function(keywords) {
+        return this.getMatchesForKeywords(keywords);
     },
     clear: function() {
         tfidf = null;
