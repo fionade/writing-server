@@ -97,9 +97,9 @@ function retrieveContexts(request, response, next) {
     databaseConnector.getKeywordSurroundings(keyword, function(err, result) {
       if (result.length > 0) {
         result = {
-          leftParts : result[0].leftParts.slice(0, Math.min(result[0].leftParts.length, 12)),
-          rightParts : result[0].rightParts.slice(0, Math.min(result[0].rightParts.length, 12)),
-          variations : result[0].variations.slice(0, Math.min(result[0].variations.length, 12))
+          leftParts : result[0].leftParts.slice(0, Math.min(result[0].leftParts.length, 5)),
+          rightParts : result[0].rightParts.slice(0, Math.min(result[0].rightParts.length, 5)),
+          variations : result[0].variations.slice(0, Math.min(result[0].variations.length, 5))
         }
       }
       else {
