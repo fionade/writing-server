@@ -384,9 +384,16 @@ function KeywordContextExtractor() {
           return k.stem;
 
       // Pick shortest variation
+      // but not less than 3 characters
       var shortestTerm = keys[0];
+
+      var i = 1;
+      while (shortestTerm.length < 3 && i < keys.length) {
+        shortestTerm = keys[i++];
+      }
+
       for(var i = 1; i < keys.length; i++){
-          if(keys[i].length < shortestTerm.length)
+          if(keys[i].length > 2 && keys[i].length < shortestTerm.length)
               shortestTerm = keys[i];
       }
       return shortestTerm.toLowerCase();
