@@ -7,7 +7,7 @@
 		"abstract" : "In this paper we present an Augmented Reality (AR) application for industrial building acceptance. Building acceptance is the process of comparing as-planned documentation with the factory that was actually built. A self-supported mobile AR device, the AR-Planar, is used to facilitate this comparison by overlaying 3D models on top of a video image. The suitability of this approach is assessed using an expert heuristic in a real factory, and furthermore the usability of the AR-Planar in comparison to other AR systems was examined in a complementary user study."
 	},
 	{
-		"path" : "text_files/woodward_2001.txt",
+		"path" : "text_files/woodward_2011.txt",
 		"title" : "Mobile Augmented Reality System for Construction Site Visualization",
 		"authors" : "Charles Woodward, Mika Hakkarainen",
 		"url" : "https://pdfs.semanticscholar.org/8b21/de34239dda0e195a6a6c489a6b263b75d647.pdf",
