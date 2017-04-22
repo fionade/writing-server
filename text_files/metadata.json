@@ -7,21 +7,21 @@
 		"abstract" : "In this paper we present an Augmented Reality (AR) application for industrial building acceptance. Building acceptance is the process of comparing as-planned documentation with the factory that was actually built. A self-supported mobile AR device, the AR-Planar, is used to facilitate this comparison by overlaying 3D models on top of a video image. The suitability of this approach is assessed using an expert heuristic in a real factory, and furthermore the usability of the AR-Planar in comparison to other AR systems was examined in a complementary user study."
 	},
 	{
-		"path" : "text_files/woordward_2001.txt",
+		"path" : "text_files/woodward_2001.txt",
 		"title" : "Mobile Augmented Reality System for Construction Site Visualization",
 		"authors" : "Charles Woodward, Mika Hakkarainen",
 		"url" : "https://pdfs.semanticscholar.org/8b21/de34239dda0e195a6a6c489a6b263b75d647.pdf",
 		"abstract" : "This paper describes our mobile Augmented Reality (AR) system for construction site visualization and interaction. The mobile AR system can be operated either stand-alone, or as a client-server solution scaling down to mobile phones and tablets based on our lightweight tracking solution. The system is validated in field tests, covering architectural AR visualization with photorealistic rendering effects, up to construction time applications at a real building site."
 	},
 	{
-		"path" : "text_files/dhl_2014",
+		"path" : "text_files/dhl_2014.txt",
 		"title" : "Augmented Reality in Logistics",
 		"authors" : "Holger Glockner, Kai Jannek, Johannes Mahn, Björn Theis",
 		"url" : "https://delivering-tomorrow.de/wp-content/uploads/2015/08/dhl-report-augmented-reality-2014.pdf",
 		"abstract" : "From personal computers to mobile devices, we know that technology can profoundly alter the way we commu- nicate and interact with the world. New technologies im- pact almost every industry, and logistics is no exception.\nThe potential for Augmented Reality in the logistics industry has already been highlighted in the acclaimed ‘DHL Logistics Trend Radar’. This overarching study is a dynamic living document designed to help organizations derive new strategies and develop more powerful projects and innovations."
 	},
 	{
-		"path" : "text_files/raskar_2004",
+		"path" : "text_files/raskar_2004.txt",
 		"title" : "RFIG Lamps: Interacting with a Self-Describing World via Photosensing Wireless Tags and Projectors",
 		"authors" : "Ramesh Raskar, Paul Beardsley, Jeroen van Baar, Yao Wang, Paul Dietz, Johnny Lee, Darren Leigh, Thomas Willwacher",
 		"url" : "http://www.merl.com/publications/docs/TR2006-108.pdf",
@@ -161,7 +161,7 @@
 		"abstract" : "Still images often take advantage of stylized techniques to portray motion. Most of these techniques are commonly used for dynamic images as well (e.g. for cartoons). Typically an artist abstracts the motion of a specific scene or animation to illustrate movement. Depicting motion in real-time environments is no less essential and therefore a similar approach would be desirable. Our approach is focused on three methods to stylize motion: squash-and-stretch, multiple images, and motion lines. These methods for depicting motion in dynamic images are discussed in the course of this paper, and an implementation is presented. Finally, we discuss the results and conclude with an outlook of further development."
 	},
 	{
-		"path" : "text_files/haller_205.txt",
+		"path" : "text_files/haller_2005.txt",
 		"title" : "A Loose and Sketchy Approach in a Mediated Reality Environment",
 		"authors" : "Michael Haller, Florian Landerl, Mark Billinghurst",
 		"url" : "http://ir.canterbury.ac.nz/bitstream/handle/10092/2338/12602112_2005-GRAPHITE-Loose&Sketchy.pdf?sequence=1",
