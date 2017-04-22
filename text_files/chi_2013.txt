@@ -1,0 +1,379 @@
+Visualization & Video UIST’13, October 8–11, 2013, St. Andrews, UK
+DemoCut: Generating Concise Instructional Videos for Physical Demonstrations
+Pei-Yu (Peggy) Chi†‡, Joyce Liu†, Jason Linder‡, Mira Dontcheva‡, Wilmot Li‡, Bjo ̈rn Hartmann† †: Computer Science Division, UC Berkeley and ‡: Adobe Research peggychi@cs.berkeley.edu, joyce.liu@berkeley.edu, linder@adobe.com mirad@adobe.com, wilmotli@adobe.com, bjoern@cs.berkeley.edu
+ ABSTRACT
+Amateur instructional videos often show a single uninter- rupted take of a recorded demonstration without any edits. While easy to produce, such videos are often too long as they include unnecessary or repetitive actions as well as mistakes. We introduce DemoCut, a semi-automatic video editing sys- tem that improves the quality of amateur instructional videos for physical tasks. DemoCut asks users to mark key moments in a recorded demonstration using a set of marker types de- rived from our formative study. Based on these markers, the system uses audio and video analysis to automatically orga- nize the video into meaningful segments and apply appropri- ate video editing effects. To understand the effectiveness of DemoCut, we report a technical evaluation of seven video tu- torials created with DemoCut. In a separate user evaluation, all eight participants successfully created a complete tutorial with a variety of video editing effects using our system.
+Author Keywords
+video; instructions; tutorials; demonstrations; how-to
+ACM Classification Keywords
+H.5.m. Information Interfaces and Presentation (e.g. HCI): Miscellaneous
+INTRODUCTION
+Do it yourself (DIY) instructional videos show viewers how to carry out physical tasks, such as craft projects, home im- provement, repair, or cooking [30]. The availability of free video-sharing sites like YouTube and Vimeo has led to an explosion in user-generated video tutorials online [21]. Ef- fective instructional videos use a range of video editing tech- niques, including subtitles, annotations, and temporal speed up effects, to concisely communicate physical procedures. However, producing high-quality videos requires significant time investment and expertise. In addition to recording pos- sibly many takes, authors must review and cut the footage and then apply the appropriate editing effects [24]. Instead of investing this effort, many amateurs instead create videos
+Permission to make digital or hard copies of part or all of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for third-party components of this work must be honored. For all other uses, contact the Owner/Author.
+Copyright is held by the owner/author(s).
+UIST’13, Oct 08-11 2013, St Andrews, United Kingdom ACM 978-1-4503-2268-3/13/10. http://dx.doi.org/10.1145/2501988.2502052
+Figure 1. DemoCut automatically segments a single-shot demonstration recording and applies video editing effects based on user markers (A), including subtitles, fast motion (B), leap frog, zoom (C), and skip (D).
+that simply show a long uninterrupted recording of a demon- stration. While such videos are easy to produce, they often include a lot of unnecessary footage (e.g., pauses, mistakes, long repetitive actions) that makes it difficult for viewers to focus on the most important steps and actions.
+The goal of our work is to help amateur users produce effective instructional videos. We analyzed existing DIY videos and interviewed video authors to uncover key chal- lenges in creating high-quality video tutorials: organizing long, single take recordings into meaningful steps; remov- ing/condensing unnecessary or repetitive actions; and adding effects that emphasize important details in the demonstration. To address these challenges, we introduce DemoCut, a semi- automatic video editing system that generates concise instruc- tional videos from recorded demonstrations (Figure 1).
+With DemoCut, users record a single take of a narrated phys- ical task demonstration and then roughly annotate the record- ing with markers that indicate high-level steps, important ac- tions, supplies and mistakes. Based on these annotations, the system uses a combination of video and audio analysis to au- tomatically organize the recording into meaningful segments and apply editing effects that make the tutorial more clear and concise. DemoCut supports both temporal effects that increase playback speed or skip segments, as well as visual effects, such as zooming, subtitles, and visual highlights. De-
+141
+
+
+moCut also provides an interface that allows users to quickly review and edit the automatically generated effects.
+We used DemoCut to create seven video tutorials in five dif- ferent DIY domains: electronics, crafts, art, repair and food. The generated videos were concise in terms of video length and descriptive instructions with low effect error rates. We also conducted a small user study where participants used our system to record and edit their own video tutorials. All partic- ipants successfully created a complete tutorial that included a variety of video editing effects, and the qualitative feedback on DemoCut was very positive. The participants felt that De- moCut enables a convenient workflow for creating concise video tutorials and that the automatic editing effects are par- ticularly useful for speeding up repetitive actions.
+In summary, the main contributions of this paper include:
+• A light-weight annotation-based interface for editing in- structional videos.
+• A set of marker types for annotation derived from our for- mative work. Markers represent different types of mo- ments that lead to different editing effects.
+• A semi-automatic approach for editing DIY video that combines user annotation with audio and video analysis.
+• A working implementation of this approach and a prelimi-
+nary evaluation with both novice and expert video editors.
+RELATED WORK
+Current Practices around How-To Videos
+The research community has been investigating the motiva- tions of both authors and viewers of how-to videos and writ- ten tutorials. While one primary motivation is to share ex- pertise, published videos also serve as a way to broadcast skill and as an online portfolio [30]. Authors may derive rev- enue through advertising or referrals [21]. Viewers, on the other hand, typically seek technical explanations, but are also searching for inspiration [29] and looking for validation of existing skills [21]. In aggregate, these studies suggest that how-to videos have a larger variety of purposes and uses than merely communicating technical content. In our work we strive to make authoring of how-to videos more accessible to amateurs while maintaining opportunities for adding indi- vidual style through control over editing effects.
+Video Capture, Annotation and Editing
+Capture. Several research and commercial systems guide users at capture time to yield higher-quality videos. Such sys- tems often employ templates to help users capture sequences of distinct shots (e.g., Snapguide1) or suggest framing of the subject or camera view as in NudgeCam [7]. Computer vi- sion algorithms, like face tracking, can be used to offer real- time feedback during such directed actions [10, 18, 7]. In- stead of relying on templates, shot suggestions can also be bootstrapped through user dialogs [1]. In contrast to these systems, we work with a single long video take and do not require the author to manipulate the camera during capture.
+1 http://snapguide.com/
+Many leisure activities, such as home repair or cooking, re- quire use of both hands or involve getting one’s hands dirty, so camera manipulation is not possible.
+Annotation. Researchers have investigated how to provide in- teractions that enable efficient, fluid annotation of video data, from the early EVA system [23] to more recent interfaces like VideoTater that leverage pen input [11]. We do not claim a contribution in the interaction techniques of our annotation interface and take inspiration from such prior work.
+Editing. Frame-based editing of video is very time-intensive, as it forces users to operate at a very low level of detail. Editors can leverage metadata, such as transcripts [6] and shot boundaries [8], to give users higher-level editing oper- ations at the shot level rather than the frame level. Com- puter vision techniques can automate certain effects, such as creating cinemagraphs [2, 20], automatically-edited lecture videos [17], zoomable tapestries [3] and synopses [27], or stabilizing shaky amateur videos [22]. When analyzing video is a matter of subjective taste, identifying salient frames can also be outsourced to crowd workers [5]. DemoCut also uses vision techniques for automatic editing. It differs from previ- ous approaches in its focus on a particular application domain – physical demonstration videos. By focusing on a specific domain, DemoCut can make assumptions about the structure of the input and output video, such as the fact that there is a linear set of steps, and offer an interface and algorithms that make it easier to create high quality how-to videos.
+Creating Effective Tutorials
+There are many ways to produce effective tutorials. One ap- proach is to track user behavior to automate tutorial author- ing [13, 14, 9]. This method also opens the door to interactive tutorials that can respond to user progress [4, 26]. However, tracking user behavior in the physical world, rather than in software, remains a challenge. DuploTrack uses a depth cam- era to track progress and provide guidance for block assembly tasks [15]. Augmented reality applications overlay real-time information on top of the work area, usually through a head- mounted display. Such systems can provide visual highlights (such as arrows, text, closeup views, and 3D models) for ma- chine maintenance [19], or interactive remote tutoring for re- pair tasks [16].
+In this work we seek to support a wide variety of how-to tasks from craft to home repair and cooking where automatically tracking user activities is not yet possible. To support these tasks we propose a semi-automatic approach where the user marks important moments and the system automatically edits the video based on the user markers. Here we focus on the authoring of how-to videos, and we leave interactive tutorials for physical tasks to future work.
+UNDERSTANDING CURRENT PRACTICE
+To gain insight into the editing decisions that go into effective demonstration videos, we analyzed a set of 20 highly-rated videos on YouTube and interviewed six of the authors of these videos about their recording and editing processes.
+ 142
+
+
+    ID
+ Category
+Experience
+    Videos
+ Sample Project
+  P1
+P2
+P3
+P4
+P5
+P6
+           electronics home/repair science home/repair home/repair electronics
+     professional amateur professional amateur amateur amateur
+  48* 162 45* 717 33 5
+           Body-mounted camera Powder coating aluminum Develop caffenol film Snowblower repair Paintcan setup
+On-beat disco light
+        Figure 2. We analyzed 20 DIY instructional videos. Examples included (clockwise from top left): Microcontroller circuit design, tablet screen replacement, custom shoe painting, and creating latte art.
+Video Analysis
+To cover a range of topics, we chose five different DIY do- mains (electronics/science, craft, home/repair, art, and food) from a popular DIY website2. We selected the first four videos on YouTube for each domain that satisfied a set of cri- teria chosen to ensure they were effective, including:
+• Produced video: evidence of editing through cuts
+• Camera angle: 1-2 static camera viewpoints
+• Content: 1-2 instructors with audio narration
+• Popularity: a minimum of 1000 views, with less than 10%
+dislikes from the total like-or-dislike ratings.
+• Experience: authors with >5 published how-to videos.
+20 videos from 20 distinct authors were coded in a week (Fig- ure 2). The average length of these videos is 5 minutes and 5 seconds (max=9’08”, min=1’54”), and the average view count is 269,426 (max=4,004,613, min=1,156). Although these tutorials cover various topics and tasks, we observed several common characteristics of the videos:
+• Narration. All of the videos include narration that ex- plains what is happening in the tutorial. Most authors seem to narrate during the demonstration (70%), while fewer au- thors record a separate voice-over track.
+• Speed-up effects. Most videos (60%) include editing ef- fects that speed up repetitive actions, such as screwing in fasteners or chopping vegetables. In many cases, authors break the sync between the audio and video tracks in these sped-up sections so that the narration plays continuously at normal speed with no long silences while the video plays at a faster speed.
+• Annotations. Many videos (65%) include titles that add relevant information about the task, including descriptions of depicted objects or actions, measurements, elapsed time, and details that are not shown in the demonstration. Some videos also include other annotations (e.g., arrows, rectan- gular highlights) that emphasize important details.
+This analysis suggests that authors apply a common set of editing techniques. Since the final videos convey limited in- formation about the recording and editing processes, we in- terviewed several authors of the selected videos. We hope to learn what kind of footage they omitted and how much time
+2 http://makezine.com/
+Table 1. Background information about interview participants. * Num- bers of videos published on personal YouTube channels, excluding those on the professional channels.
+they spent on editing. We also wanted to understand the ra- tionale behind the edits.
+Interviews with Tutorial Authors
+We contacted the 20 YouTube account holders of the ana- lyzed videos, and interviewed the first six who responded (all males, ages 17 to 48). One of the YouTube user accounts cor- responded to a 3-person team, which we counted as a single participant (P6). Among the participants, two were profes- sional tutorial makers, while the rest were amateurs. For edit- ing, three used Apple Final Cut Pro, two Corel VideoStudio, and one Adobe Premiere. Table 1 summarizes other informa- tion about the experience of the authors.
+Capture. Except for the team (P6), all of the participants record demonstrations individually without any assistants. P2–P6 use a single video camera, while P1 uses an extra cam- era to capture closeup shots. To keep the recording process simple, the amateur authors tend to capture demonstrations in one uninterrupted take, narrating the action as they go. Nat- urally, such recordings often include mistakes (e.g., walking out of frame to retrieve a forgotten tool) and long, repetitive actions. In contrast, the professional authors create a script beforehand and record the narration separately.
+Editing. All of the participants mentioned the importance of editing the final video tutorial down to a reasonable length (5–10 minutes). The goal is to provide enough information to understand the demonstration, but at the same time keep the video lively and interesting. P2 described his strategy as fol- lows: “If you can get rid of it and the video content still gets through, get rid of it”; “The way to make your video sizzle is to have good cuts, good points.” As a result, authors spend much of their editing time deciding on cuts, segmenting the video, removing and merging shots, and adding visual effects to speed up repetitive actions. They also take time to add sub- titles and annotations. As P4 explained, “the filming is the easiest part; it is the editing that’s the challenge.” Overall, participants reported that filming time takes from one hour up to one day, and editing time typically takes 6–12 hours, depending on the the complexity of the project.
+DESIGN IMPLICATIONS
+Based on our analysis of existing video tutorials and inter- views with tutorial authors, we identified a few key aspects of the tutorial creation process that have important design impli- cations for DIY video editing systems.
+Working with single take, single camera footage. Most am- ateur authors record demonstrations in a single take with a a single camera. As a result, the captured footage often in- cludes mistakes and long, repetitive actions.
+ 143
+
+Visualization & Video UIST’13, October 8–11, 2013, St. Andrews, UK
+ Figure 3. Users first add markers to their recorded video in the Annotation Interface (A). Each marker can be labeled with a descriptive string (B). The Editing Interface shows automatically generated segments with effect suggestions (C). Users can change the effect (D) applied to each segment (E).
+ Making concise videos. The most important design princi- ple for creating effective DIY videos is to make them con- cise without sacrificing clarity. To this end, authors re- move/condense unnecessary or repetitive actions so that the resulting video only contains salient footage.
+Retiming audio and video tracks separately. One common technique for speeding up a video involves breaking the syn- chronization between the audio and video tracks so that they can be retimed separately. In cases where the narration refers to specific visual events, the tracks should remain aligned.
+Emphasizing important information. Most effective DIY videos include titles, annotations and/or closeup views to em- phasize relevant information and highlight key details.
+Focusing on high-level editing decisions. Amateur users often struggle with low-level manipulation of cut points and timing in general-purpose video editors: A system should re- duce the editing efforts and enable authors to focus on making simple choices for the final production.
+We next describe how these considerations informed the de- sign of DemoCut.
+AUTHORING VIDEOS WITH DEMOCUT
+To enable amateur users to produce effective video tutorials, the DemoCut video authoring system semi-automatically ed- its a long, single take recording into meaningful steps. Early testing revealed that users find it easier to locate specific mo- ments in the video than to mark or edit segments. There- fore, our Annotation Interface asks users to mark important moments. DemoCut combines the user annotations with au- dio and video analysis to automatically generate a segmented video with editing suggestions: It removes or condenses un- necessary/repetitive actions and enables flexible synchroniza- tion between audio and video tracks. Titles, visual annota- tions and closeup views are applied to enhance the content. Users can review and revise these decisions in the DemoCut Editing Interface. This section reviews DemoCut from the user’s perspective (Figure 4). The following section will de- scribe our video analysis pipeline.
+Annotating the Video
+The purpose of the DemoCut Annotation UI is to collect high- level information that is difficult to extract automatically but useful in determining how to edit the video. We rely on users to distinguish important from unimportant actions and suc- cessful steps from mistakes. The user scrubs through the cap- tured footage and adds markers for distinct moments, such as
+Figure 4. DemoCut users first mark their recorded video in the Anno- tation Interface. DemoCut then segments their recording and suggests video edits, which users can change in the Editing Interface.
+the instant when he cuts a sheet of paper (Figure 3A). Demo- Cut offers five types of markers for annotating a video:
+• Step: indicates the start of a major part of the task
+• Action: marks important moments
+• Closeup: indicates moments where the action is happening
+in a small region of the video frame, e.g., for a detailed
+action such as fastening a small screw.
+• Supply: indicates a tool or material used in the task
+• Cut-out: indicates moments of the video that should be re-
+moved due to occlusion or a mistake in the performance.
+This set of markers was derived from our observations of the structure of effective tutorial videos: actions are treated sep- arately from supplies; zooming can direct the viewer’s atten- tion to a small area of the frame; and step divisions are used to divide actions into meaningful groups. Rather than specify start and end frames, users can place a marker on any frame of an important moment.
+Users can add descriptions to markers (Figure 3B). These de- scriptions serve a dual purpose: they are used to generate au- tomatic subtitles, and they are also shown as segment names in the Editing Interface to facilitate navigation. Users can also add visual highlights such as boxes and arrows to any marker.
+Automatic Video Editing
+Based on the user’s markers, DemoCut automatically seg- ments the raw footage and applies editing effects.
+Temporal Effects
+We designed four temporal effects to shorten a video. In ad- dition to skipping a segment or leaving it unchanged, we con- sider the synchronization between the audio and video tracks: People are sensitive to changes in speech playback speed, but video can often be accelerated without loss of clarity. There- fore, our temporal effects accelerate or contract video but keep audio at normal speed.
+Fast motion (with merged audio): When a segment includes several sections of narration with intermediate pauses, Demo-
+144
+
+
+   Markers
+A Video B Audio C Adjust D Final
+Step Supply “Onion”
+take onion up
+T1S T1m “We’ll need...”
+Supply
+“Mustard”
+show mustard
+Step Action “Dice the onion”
+dicing onion
+Time
+        T1e
+T2S
+T2m T2e “Also,” “I like the...”
+T3S T3m T3e
+       “for ...”
+“First of all, ...”
+“Try to ...”
+                  Figure 5. DemoCut accelerates playback of video with intermittent au- dio narration through Fast Motion (A) and Leap Frogging (B).
+Cut removes the pauses and concatenates the audio segments. Then it speeds up the video so the total video length corre- sponds to the length of the concatenated audio (Figure 5A). This effect is appropriate if tight synchronization between au- dio and video is not required. For example, an author may describe general strategies for choosing supplies while mea- suring paper – here audio and video are independent of each other. In this case, DemoCut will accelerate the video to fit the length of the author’s remarks.
+Leap frog (with synchronized audio): If synchronization be- tween audio and video is necessary, this effect plays video and audio at normal speed during active audio segments, and skips video in the interstitial segments (Figure 5B). Synchro- nization is important if the author’s face is in the shot (so lip movement and audio match), if actions produce distinct sounds (like cutting paper), or if the narration refers specifi- cally to actions, e.g., when pointing at an object and describ- ing its properties. Since DemoCut cannot automatically de- cide whether synchronization is necessary, it applies the Fast Motion effect by default but offers users control to change that effect.
+Skip: Depending on the length of the removed segment, De- moCut either applies a fade through black (for segments up to 15 seconds); or a fade to a title that indicates how much time has passed (e.g., “2 minutes later”).
+If these temporal effects are not appropriate, DemoCut plays the audio and video at the captured rate. We call this the Normal effect.
+Visual Effects
+In addition to manipulating time, DemoCut offers three visual effects to structure the video and to provide emphasis. These visuals appear for the duration of the segment DemoCut de- rived from the user’s marker:
+Subtitles: Text entered by the user in the marking phase is converted into automatic subtitles with two levels – a step heading that remains on screen for all segments within a step (e.g., “Wrapping the present”); and a subheading from indi- vidual event markers (e.g., “Sharpen creases”).
+Automatic zoom: When users create closeup markers, they also specify a rectangular region of interest. DemoCut auto- matically crops and enlarges this region of the segment.
+Visual annotation: DemoCut overlays visual box or arrow an- notation specified by the user in the marking stage.
+Figure 6. Given user markers, DemoCut analyzes both video and audio to segment the demonstration video and apply editing effects.
+Reviewing and Editing
+Since our automatic video and audio segmentation has a lim- ited understanding of the video, it is likely that some edit- ing decisions will be incorrect. For example, DemoCut’s al- gorithms have no way of inferring whether audio-video syn- chronization will or will not be required in a given segment. In addition, automatic analysis may also lead to errors: if the narration is not correctly segmented, speech can be cut off mid-sentence. DemoCut’s editor gives authors the opportu- nity to review and revise all editing decisions.
+In the Editing Interface, the video is visualized as a set of segments (Figure 3E) flowing from top to bottom on the right side of the main video view (Figure 3C). There is no tradi- tional timeline for two reasons: first, editing operations only apply to detected segments (we consciously prevent users from applying frame-level edits to keep with the goal of a semantic editor); second, because segments may come with labels entered by the user, a vertical layout makes it easier to read labels. Users can navigate to any segment by clicking on its thumbnail. Once selected, they can change which ef- fect should be applied to a given segment (Figure 3D). Users can also modify any visual effects, to edit subtitles, resize the cropped region, or add/delete highlights. When satisfied with their choices, users can export a continuous video suitable for online video sharing platforms.
+AUTOMATIC EFFECT DECISION PIPELINE
+DemoCut performs several automated steps to convert the user-annotated input recording into an edited video tutorial. First, the system segments the recording into regions around user-specified markers. This segmentation considers both the similarity of video frames around each marker and the pres- ence of narration in the audio track in order to determine the appropriate segment boundaries (Figure 6). DemoCut then automatically applies an temporal and a visual effect to each segment based on the type of the corresponding user marker and the properties of the audio/video content in the segment. The rest of this section describes these steps in detail.
+Video Segmentation
+Except for the step marker, all of the user-specified markers indicate important moments in the demonstration that cor- respond to some segment of the recording. In many cases, we can infer the duration of these segments by searching for video frames that look similar to the marked frame. For ex- ample, in Figure 7A, the similar frames before and after a supply marker show the author holding up a bottle of vine- gar, and in Figure 7B, the similar frames around an action
+145
+
+
+      marker show the author grating cheese. For every marked
+frame Tm, DemoCut uses the following method to compute
+candidate start and end frames T s and T e for the correspond-
+ing segment. For the i-th marked frame Tim, our algorithm
+finds Tis by comparing Tim to earlier frames in the video until
+it reaches a previous marker at T m , or until 5% of pixels (in i−1
+grayscale) have changed by 20%. Similarly, the system finds Tie by comparing Tim to subsequent frames in the video. To optimize performance, DemoCut compares to frames sam- pled at 0.5 seconds and ignores overlaps between segments. Segment overlaps are resolved during boundary adjustment after incorporating the audio analysis.
+Adjusting Segments with Audio Analysis
+Adjacent segments can have different effects that change how video and audio are processed. To prevent such changes from interfering with a video’s narration, DemoCut adjusts seg- ment boundaries to align with audio activity boundaries.
+Detecting non-silent sections
+Since many DIY videos include prominent non-speech sounds such as chopping noises, power tools, etc., detect- ing speech automatically is a challenging task. We found that even state-of-the-art speech detection algorithms produce poor results in many cases. As a result, we take a more conservative approach; DemoCut automatically detects non- silent sections in the recorded audio and treats the background sound as part of the narration.
+At a high level, our algorithm for detecting non-silent sections works as follows. We compute the “loudness” of each au- dio window, organize the windows into a histogram based on loudness, and then analyze the histogram to determine a min- imum loudness threshold for non-silent windows. We then apply this threshold to categorize all audio windows as silent or non-silent. Finally, we filter this categorization to eliminate very short sequences of silent or non-silent samples. Here, we describe these steps in more detail:
+Computing loudness. Given an input audio waveform sam- pled at 44.1 kHz (Figure 8A), we estimate loudness by com- puting the root mean square (RMS) energy [25] across the entire waveform. The RMS energy for a window of size n is  ( n x2i )/n where xi is the value of the ith audio sam- ple in the window. We set window sizes as 0.1 second with n = 4410. Prior to computing RMS energy, the audio is nor- malized and noise-reduced with Adobe Audition.
+Computing loudness threshold. After analyzing the RMS en- ergy profiles of several different types of DIY videos, we found that the vast majority of recorded audio represents background sound, which tends to have similar and fairly low RMS energy values. In contrast, user narration varies from medium to high RMS values based on the speaker’s distance to the microphone and the sensitivity of the recording device. Based on this observation, we first compute a histogram of RMS energy for all windows in the audio track; the windows that correspond to background sound form a large mass at the low-RMS end of the histogram (Figure 8B). To distinguish these “silent” parts of the recording from the narration, we
+... ...
+Ts Tm Te
+A Holding up vinegar
+... ...
+Ts Tm Te
+B Grating cheese
+Figure 7. DemoCut looks for similar video frames before and after a marked frame T m to find candidate start (T s ) and end (T e ) frames for the corresponding segment.
+            Count
+ɛ
+B RMS Histogram non-silent sound
+elbow point
+A Audio waveform of a How-To video recording
+       Figure 8. We use RMS energy of the audio to find silent and non-silent regions. We determine the threshold for silence by analyzing the his- togram of the RMS energy.
+smooth the histogram with a Gaussian kernel, find the mini- mum derivative point in the smoothed histogram, and set the loudness threshold ε to be the RMS energy value at this el- bow point. Figure 8B shows the RMS histogram and loud- ness threshold for one of our example videos, “How to make salad dressing.”
+Categorizing silent/non-silent sections. To partition the audio track into silent and non-silent sections, we first label each window as silent or non-silent based on ε. This initial la- beling often includes some very short silent and non-silent sections. Since many short silent sections correspond to short pauses between spoken words, we turn any silent sections that are shorter than 0.4 seconds into non-silent sections. Then, we discard any non-silent sections that are shorter than 0.8 seconds to account for any clicks and pops in the recorded audio. The 0.4 and 0.8 second thresholds for silent and non- silent sections were tuned experimentally, and we used these parameter values for all of our results.
+Adjusting segment boundaries
+In order to avoid cutting off an author’s narration, Demo- Cut adjusts the video segment boundaries using the non-silent sections of the audio track (Figure 6). First, for any segment we find all of the overlapping non-silent audio sections and
+RMS value
+ 146
+
+Visualization & Video UIST’13, October 8–11, 2013, St. Andrews, UK
+  Task
+ Category
+   Raw footage length
+DemoCut video length
+  # of markers
+    # of
+seg- ments
+  Incorrect Effects
+# of non-silent sections
+   Audio misses
+Audio cut-off
+   Audio false-
+positives
+ A: Xbee tutorial
+B: Paper pipe robot
+C: Ribbons for straps
+D: Fixing front light
+E: How to make grassy head F: How to make potato stamps G: How to make salad dressing
+       electronics craft craft repair art
+art food
+        7’01” 10’55” 10’03” 6’32” 9’28” 16’38” 14’46”
+            3’27” 4’40” 4’23” 2’12” 5’29” 4’05 5’38”
+ 16 18 39 21 29 30 33
+        30 30 46 33 44 45 39
+             0% 20% 7% 9% 5% 7% 13%
+      79 77 72 40 86 119 121
+  5% 21% 15% 10% 8% 7% 6%
+            0% 12% 7% 3% 2% 3% 2%
+  0% 0% 0% 0% 0% 0% 0%
+             AVERAGE
+ -
+  10’46”
+4’10”
+ 26.4
+  38.1
+ 9%
+83.5
+  10.3%
+4.1%
+  0%
+   Table 2. A list of how-to videos we recorded to assess the robustness of the DemoCut system.
+ then grow the segment so that it completely contains all of these non-silent sections. Next, DemoCut resolves overlap- ping segments: If any two segments overlap, the boundaries must be readjusted. If the overlap region is silent, the region is split into two equal parts and each is assigned to the corre- sponding segment. If the overlap region includes a non-silent audio section, DemoCut assigns this non-silent section to the segment that has more overlap with the section. If the over- lap for both video segments is the same, DemoCut assigns the section to the smaller video segment. Finally, DemoCut addresses any gaps between segments. If a gap is less than 2 seconds, it is merged to the shorter adjacent segment. Other- wise, DemoCut creates a new segment for the gap. Note that such unmarked segments do not have a corresponding marker, but they may still show useful details of the demonstration.
+Applying Effects
+To automatically apply an effect to each computed segment, DemoCut first detects whether there is motion in the video. A segment is considered to be static (i.e., no motion) if less than 1% of pixels in the grayscale versions of consecutive frames have changed by more than 20%. To optimize for performance, the segment is sampled at 0.5 seconds for this comparison. DemoCut chooses effects as follows:
+1. If the segment includes a cutout marker, apply “Skip”.
+2. If the segment includes a closeup marker, apply “Zoom”
+to the entire segment.
+3. If the segment includes any non-silent audio sections, ap-
+ply “Fast Motion”.
+4. Ifthesegmentissilent,static,andunmarked,apply“Skip”.
+5. If the segment is silent but not static (either marked or un-
+marked), apply “Normal”.
+6. For any marker with a text annotation, apply “Subtitles”.
+IMPLEMENTATION
+The video and audio analysis is implemented in Matlab. The Annotation and Editing Interfaces are implemented with stan- dard Web technologies (HTML5, CSS3, and JavaScript). An Apache web server hosts these web pages and sends the user annotations to the back-end Matlab system.
+EVALUATING AUTOMATIC EFFECT DECISION
+To evaluate DemoCut’s analysis engine, we recorded seven how-to tasks from the five categories we selected in the for- mative user study (Table 2). The tasks were recorded by 4 people (all authors of this paper) in 7 locations using a Sony camcorder or an iPad with a video resolution of at least 640x480 pixels. We used DemoCut to annotate the record- ings and then examined the automatically generated tutorials.
+Figure 9. Illustrative frames from the seven videos used to assess Demo- Cut. Labels correspond to task labels in Table 2.
+Overall, the resulting tutorials exhibit many of the desired characteristics outlined earlier in the paper. The automat- ically edited videos are concise: 2-5 minutes long and 2.5 times shorter than the original footage. In most cases, Demo- Cut successfully identified segments where the “Fast Motion” or “Skip” effects could be applied to condense the tutorial. For example, the edited salad dressing video uses “Fast Mo- tion” to speed up repetitive actions like chopping an onion and grating cheese, and then skips the segment where the au- thor leaves the frame to toast pine nuts. In addition, the auto- matically generated titles improve the clarity of the tutorials by adding valuable descriptions of steps, actions, supplies and indicating the elapsed time for skipped segments. In an elec- tronics tutorial, titles like “sending data toggles LED” add important details that are not visible in the video.
+There were some situations where the effects were not as suc- cessful. To get a more quantitative measure of DemoCut’s performance, we counted several types of errors in the auto- matically generated videos:
+Incorrect editing effects. In a few cases, the “Fast Motion” effect is applied to segments where the audio track should ac- tually be in sync with the visuals. Also, when markers are very close to one another in time, DemoCut sometimes gen- erates very short segments where the editing effects are hard to see. We identify these cases as incorrect editing effects.
+Audio miss. We refer to any piece of narration that is not detected as a non-silent section as a miss.
+Audio cut-off. We refer to any detected non-silent section that cuts off narration by ending too early or starting too late as a cut-off error.
+Audio false-positive. We refer to any non-silent section that is neither narration nor significant activity or background sound as a false-positive.
+147
+
+
+ Figure 10. Our user study setup
+We report the incorrect edits as a percentage of the total num- ber of segments and the three audio errors as a percentage of the total number of ground-truth narration sections. Table 2 shows all of the results from our analysis. Overall, we found low average error rates (less than 11%) for all of these prob- lems. Also, note that most of these errors can be fixed by changing the automatically applied editing effects in Demo- Cut’s reviewing and editing interface.
+USER EVALUATION
+To evaluate the usability and utility of DemoCut, we recruited 8 participants (4 males, ages 20-41) to create how-to video tu- torials. We were especially interested in two questions: First, how much effort would participants have to invest to mark and edit their own tutorial videos with DemoCut? And sec- ond, what are the qualities of the resulting videos – both in terms of strengths and shortcomings?
+Task and Materials
+The participants were asked to create a tutorial for wrapping and decorating a present. We chose this task because it is relatively simple but still involves multiple distinct activities and steps that can be accomplished in 5-15 minutes. Possible steps include: measuring the gift size, cutting paper and rib- bons, folding and wrapping, and decorating the present with ornaments. We offered the following supplies:
+• Present: a rectangular gift box of size 9 × 2 × 4.5 inches.
+• Tools: scissors, utility knife, ruler, pencil, double-sided
+tape, transparent tape, and glue.
+• Wrapping paper: a variety of wrapping paper rolls includ-
+ing plain, patterned, and textured.
+• Decorations: ribbons (curling and fabric) in multiple col-
+ors, gift bows, stickers, and message cards.
+To help them understand the context of the study, the partic- ipants were asked to watch three videos before visiting our lab. The videos were selected from the formative user study.
+Procedure and Environment
+The study was conducted in a quiet lab environment with static lighting. We used a tripod-mounted Sony camcorder to record the gift wrapping task (Figure 10), and a Macbook Pro running OS X and Google Chrome for DemoCut. The laptop was connected to a 30-inch monitor and external mouse and keyboard. Each study session lasted 60-90 minutes.
+Introduction (15 minutes). The participants viewed a web- based tutorial that introduced the goal and procedure of the study. In the tutorial, the participants practiced annotating a one-minute demo video with five types of markers, reviewed a system-generated result, and modified video effects in the DemoCut Editing interface.
+Filming setup and practice (5 minutes). The participants were asked to plan their gift-wrapping demonstration with any of the provided supplies. The camcorder was positioned either opposite the participants or behind them on the right and was angled down to capture their workspace on a conference ta- ble. The participants reviewed the camera’s point of view and were told that any activities outside of the delineated workspace would not be captured. The participants were free to plan their task on paper or conduct a practice run.
+Filming demonstration (10-20 minutes). The participants filmed their gift wrapping demonstration in a single take. The study moderator initiated and terminated the recording, but did not provide additional assistance.
+Annotating and editing (30-45 minutes). The participants an- notated their video with the DemoCut Annotation Interface and modified the generated video tutorial using the DemoCut Editing Interface.
+Review of the final video and discussion (10 minutes). Finally, participants reviewed the final video, completed a question- naire, and discussed the process with experimenters.
+FINDINGS AND DISCUSSION
+All of the participants successfully created a complete video tutorial of their gift wrapping technique using DemoCut dur- ing the study session. The average length of the recorded demonstrations was 8 minutes, and the final generated videos were just over 5 minutes long (45% shorter than the raw footage). On average, participants spent 15 minutes annotat- ing the recordings and added 33 markers. Table 3 summarizes several other quantitative results from the study.
+Here, we summarize a few key points from the responses to the questionnaire and the end-of-study discussions:
+DemoCut interface and workflow. We received strong pos- itive feedback about the DemoCut interface as a whole and the editing workflow that it enables. All participants agreed or strongly agreed that it was easy to annotate a recording using the Annotation Interface, and seven of them found it easy to use the reviewing and Editing Interface. P1 explained, “This is very simple for beginning users and takes out some of the guess work around learning how to use different layers, speed effects, etc.”, and P2 described the workflow as, “super easy and SUPER FAST!” P6 also appreciated the simplicity of the interface: “I like this a lot because there aren’t thou- sands of different buttons to work with.” In addition, several participants noted how the automated components of the sys- tem reduced the amount of effort required to create an edited video: “I could be lazier and still have a great video cause it did everything for me” (P8), and “Pre-segmentation (when it worked well) made it easy to zero in on the portion I wanted to modify” (P4).
+148
+
+Visualization & Video UIST’13, October 8–11, 2013, St. Andrews, UK
+    ID
+  Editing exper- tise (years)
+  Footage length
+    Demo- Cut video length
+    Final video length
+   Anno- tation time (mins)
+# and types of markers used for annotation
+  Ave
+text length (words)
+   # of
+seg- ments
+  Review & edit time (mins)
+  # of effects
+changed
+   Total
+  Step
+ Action
+ Supply
+Closeup
+  Cutout
+  P1 P2 P3 P4
+      5
+3 10 2
+ 3’51”
+7’16” 10’57” 9’16”
+     2’14” 4’09” 6’45” 5’12”
+       2’14” 4’14” 6’45” 5’38”
+   10 16 18 25
+ 20 29 36 35
+     3
+4 10 6
+       10 16 18 20
+    5 4 4 3
+   1 5 0 4
+  1 0 4 2
+      3.2 4 2.2 3.3
+  28 49 57 56
+      8 11 10 13
+  1 4 3 6
+        P5 P6 P7 P8
+      0 0 0 0
+ 7’17”
+6’28” 10’08” 8’58”
+     4’13” 3’20” 6’18” 3’05”
+       4’07” 2’48” 6’02” 3’03”
+   17 8 21 8
+ 38 24 66 13
+     5 3 7 4
+       18 13 35 6
+    7
+6 12 1
+   6 0 8 0
+  2 2 4 2
+      3 3.5 3.9 3.6
+  56 40 92 21
+      12 9 14 10
+  5
+9 20 2
+        AVE
+2.5
+ 8’01”
+  4’24”
+ 4’21”
+15
+ 33
+  5
+ 17
+ 5
+3
+  2
+3.3
+  50
+11
+  6
+    Automatic editing effects. In general, the participants liked how DemoCut automatically removed or condensed parts of their recordings. Their feedback suggests that the automati- cally generated effects were particularly useful for speeding up repetitive actions like cutting and folding and skipping ex- traneous actions, such as removing the adhesive sticker from a bow. As P3 noted, these effects were generally success- ful because DemoCut “correctly understood parts with no speech but long actions.” Another participant commented specifically on the fast motion with merged audio effect, and said “(I) appreciate the automatic speeding up/slowing down of video to match speech.”
+Reviewing and editing. As expected, there were some cases where participants decided to modify the automatic effects. Errors in the audio analysis can cause the narration within a segment to get cut off when fast motion effects are applied. To eliminate these audio artifacts, participants changed the seg- ment effect from fast motion to normal mode. In cases where the narration referred to specific visual events, participants switched from the default fast motion with merged audio ef- fect to leap frog with synchronized audio. Finally, in a few situations, participants decided to skip an annotated segment that they deemed unnecessary or unclear after reviewing the rest of the tutorial.
+Quality of generated tutorials. Five of the eight participants said they were satisfied or very satisfied with the video tutori- als that they created with DemoCut during the study. The re- maining three participants had significantly more video edit- ing experience, and they wanted to further refine their tutori- als by adjusting some of the timing and cut points using more traditional low-level editing tools. However, even these par- ticipants agreed that DemoCut was “good for a first pass of editing” and provided “helpful “smart” suggestions” even though the system is “limited in manual control.”
+Default speed-up effects. The participants noted some lim- itations with the default editing effects. P5 explained that “having the speed up of video be the default speed creates a stressful tutorial.” Some participants pointed out that there are some obvious cases where fast motion with merged au- dio should not be applied; for example, the effect “does not work well if the person’s face is showing (the speech and mouth movements would not match up).” We agree with these comments and plan to use face detection and add an adaptive learner to improve the system.
+Annotation guidelines. One observation from the study is that adding too many markers during the annotation phase can hurt the quality of the generated tutorial. Adding markers temporally close together leads to many short segments, and since DemoCut applies a video edit effect to each segment individually, the resulting tutorial may end up transitioning rapidly through several inconsistent effects (e.g., fast motion effects with various playback speeds). One way to address this problem is to make automatic editing decisions that span several consecutive segments. The participants offered a few other suggestions: P4 wonders “if there are simple tips you could give to the user while recording that would make them more successful,” and P8 suggested that seeing real-time ef- fects while adding markers might help him understand how best to annotate the recording.
+LIMITATIONS AND FUTURE WORK
+Our implementation is based on several simplifying assump- tions that limit generality. We assume a single, static camera position that shows all relevant actions and a quiet indoor en- vironment with constant lighting and little background noise. In order to detect static shots that should be skipped, our video analysis assumes a static background. Our audio analy- sis assumes that all non-silent sections of audio are narration, but this may not always be the case. Loud non-speech sounds, such as chopping or the sound of a sewing machine, can lead to errors in our editing effect decisions.
+As was pointed out by several of our study participants, mak- ing effect decisions individually for each segment can lead to inconsistencies in playback speed as the video transitions from segment to segment. A more global approach that looks at all video effects together and enforces smooth transitions between adjacent segments would help address some of these artifacts. In addition to addressing these limitations, we see several promising directions for future work.
+Multiple camera footage. We designed DemoCut to work with footage from a single, static camera. One interesting avenue for future work is to consider footage from multiple cameras. Prior work has compared different camera views capturing physical tasks for remote collaboration [12, 28]. Similarly, DemoCut could try to automatically select the best view for each segment based on user annotations as well as the video content (e.g., choosing a zoomed view for closeups, switching to a different view when there are occlusions).
+Table 3. Quantitative analysis of the user evaluation.
+149
+
+
+Support viewer’s learning. In this work, we focus on pro- ducing well-edited video tutorials. However, we could also imagine generating different output formats, including in- dexed videos, step-by-step instructions, or mixed media tu- torials, similar to those presented by Chi et al. [9]. Another natural extension would be to develop interactive components that monitor user actions and provide realtime guidance and feedback for general DIY tasks. Follow-up studies to under- stand viewer’s learning experience would be useful for refin- ing the automatic editing effects and interactive design.
+Generalize to other instructional video domains. One ex- citing direction is to explore other areas where our techniques could be applied, such as software learning, music instruc- tion, and video lectures. Each domain may require slightly different analysis and segmentation rules. For example, the system could use a log of executed operations to adjust seg- ment boundaries for software tutorials, or incorporate pitch detection when analyzing music instruction.
+CONCLUSION
+In this paper, we presented DemoCut, a semi-automatic video editing system that helps users create clear and concise video tutorials of DIY tasks. The key idea behind our approach is to combine rough user annotations with simple video and audio analysis techniques in order to segment the input recording and apply appropriate editing effects. Our small user evalu- ation suggests that video authors are able to create effective video tutorials using DemoCut, and the qualitative feedback includes encouraging positive reactions to the annotation and editing workflow, as well as the automatic editing effects.

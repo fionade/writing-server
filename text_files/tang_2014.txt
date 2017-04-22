@@ -1,0 +1,98 @@
+Work-in-Progress
+CHI 2014, One of a CHInd, Toronto, ON, Canada
+ Richard Tang
+Interactions Lab University of Calgary Calgary, Alberta, T2N 1N4 richard.tang@ucalgary.ca
+Hesam Alizadeh
+Interactions Lab University of Calgary Calgary, Alberta, T2N 1N4 halizade@ucalgary.ca
+Anthony Tang
+Interactions Lab University of Calgary Calgary, Alberta, T2N 1N4 tonyt@ucalgary.ca
+Scott Bateman
+Dept. of Computer Science & IT University of Prince Edward Island Charlottetown, PEI, C1A 4P3 sbateman@upei.ca
+Joaquim Jorge
+INESC-ID
+Instituto Superior Técnico University of Lisboa Lisbon, Portugal jaj@inesc-id.pt
+Abstract
+Patients typically undergo physiotherapy with the help of a physiotherapist who teaches, guides, and corrects the patients as they perform exercises. It would be nice if people could repeat these exercises at home, potentially improving their recovery rate. However, without guidance and/or corrective feedback from a physiotherapist, the patient will not know whether they are doing their exercises correctly. To address this problem, we implemented a prototype that guides patients through pre-recorded exercise movements using visual guides overlaid atop a mirror-view of the patient on a wall-mounted display. We conducted informal evaluations and pilot studies to assess our prototype and identified some working designs and design characteristics. Collected data will assist us in developing future iterations of the system and designing improved guides for physiotherapy sessions at home.
+Author Keywords
+Physiotherapy; Human Factors; Design; Measurement
+ACM Classification Keywords
+H.5.2 [Information interfaces and presentation]: User interfaces
+Introduction
+Physiotherapy is a post-injury rehabilitation activity that promotes good health, physical well-being and
+Physio@Home: Design Explorations to Support Movement Guidance
+  Permission to make digital or hard copies of part or all of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for third-party components of this work must be honored. For all other uses, contact the Owner/Author.
+Copyright is held by the owner/author(s).
+CHI 2014, Apr 26 - May 01 2014, Toronto, ON, Canada ACM 978-1-4503-2474-8/14/04. http://dx.doi.org/10.1145/2559206.2581197
+          1651
+
+Work-in-Progress
+CHI 2014, One of a CHInd, Toronto, ON, Canada
+ Figure 1. Physio@Home prototype. The patient sees themselves in a mirror-like display with descriptive visual guides such as the arrow.
+exercise [1]. Patients typically undergo physiotherapy with the assistance of a physiotherapist in co-located sessions. The therapist provides directions and guidance to the patient in order to help them learn and practice movements. For instance, a physiotherapist will teach arm exercises so that a patient may regain range-of-motion through gradual practice. In particular, the physiotherapist corrects the patient whenever a motion is performed incorrectly.
+The problem is that physiotherapists may not always be available when patients perform exercises (e.g. when at home); often, because movements do not always feel “natural” or may cause pain, patients may perform some motions incorrectly. The patient may only have diagrams or textual descriptions of exercise motions
+[5], which are less effective than working with a physiotherapist and, most importantly, do not provide feedback. This becomes a problem, for instance, when the patient has reduced range-of-motion after an injury, where overstraining or incorrect movements may aggravate or worsen the injury.
+To address this, we designed a prototype system to guide patients through exercises and movements without the presence of a physiotherapist, by using a commodity depth camera and a large display. The system uses the large display to show the RGB camera feed, treating the display as though it were a mirror for patients to see themselves as they perform their exercises. Our goal was to understand how to design visual guides for physical movements so a patient exercising at home can mimic them as accurately as possible. We contribute a detailed analysis of designs for corrective feedback and guidance. We conclude with initial findings and describe our ongoing work.
+Related Work
+LightGuide [3] guides hand motions by projecting the guides (e.g., arrows, pipe, and red/blue shading) directly on the human body. MotionMA [4] is a fully featured system that tracks movement repetitions in exercises and provides simple feedback on whether to speed up or slowdown in an exercise. YouMove [2] is a similar system for training movement, but is focused on training coarse-grained, full-body movements such as those in ballet, but it does not systematically explore visual representations. These previous systems, particularly MotionMA and YouMove, focused on teaching motion by breaking down complex movements into steps and emphasized repetition and learning. In contrast, we focus on designing guides and corrective
+1652
+
+Work-in-Progress
+CHI 2014, One of a CHInd, Toronto, ON, Canada
+visualizations. And while they also use commodity depth cameras, some works require very specialized hardware, such as a moveable projector (LightGuide) or a full-sized custom display (YouMove).
+Approach
+In order to gain an understanding of visual guidance of physiotherapy exercise we identified an approach comprised of three phases: first, interviewing physiotherapists to derive design goals; second, designing visual guides based on these goals, and third, evaluating the designs. To ensure our work was grounded in real physiotherapy practice, we worked closely with two physiotherapists throughout this process.
+1. Interviews and Resulting Design Goals
+We interviewed two physiotherapists to understand the domain and gather feedback for iterative development of our system. Specifically, we were interested in how physiotherapists teach movements, and the types of exercises often assigned for homework. Based on these interviews, we developed a list of goals to inform the design of our on-screen guides for physiotherapy practice at home.
+Feedback and Feed-forward guidance
+Our guides must be designed to convey feedback and feed-forward to the patient while they perform exercises. Feedback refers to giving the patient information about what they have just performed (perhaps that it was incorrect and/or with immediate corrective actions), while feed-forward refers to showing what the patient must perform next (so they can anticipate what movement comes after). These concepts may be used separately or in combination to
+convey movement direction and instruction to the patient.
+Mirrors
+Our interviews highlighted the use of mirrors in teaching exercises. Mirrors provide patients with a sense of self-assessment and personal contextualization for their movement. Further, they allow patients to see themselves while they perform an exercise and understand how they should look when performing it correctly. This is particularly helpful when combined with correction from a physiotherapist.
+We also observed the use of mirrors in other forms of physical instruction, such as in ballet or gymnastics [2,3,4].
+Self-pacing
+We identified the ability for a patient to follow an exercise on his/her own time and speed to be a vital design factor. Patients may be provided with a video recording of an exercise, but if the exercise is complex and requires very strict movement, it may not be possible for them to follow in real-time, particularly if they are injured or have reduced mobility. As a result, our guides must allow them to move at whichever pace they desire in order to best understand and follow an exercise.
+Visual simplicity
+When providing instructions to a patient, such as feedback on a mirror display, our physiotherapists cautioned against complexity in the design of our guides. In identifying various methods of designing feedback and feed-forward guides, our physiotherapists suggested the guides should be easy and quick to interpret, and should not clutter the screen.
+1653
+
+   Figure 2. Our arrow guides: (a) is the 2D arrow. (b) is the 3D arrow.
+Work-in-Progress
+CHI 2014, One of a CHInd, Toronto, ON, Canada
+Movement types
+Our physiotherapists identified some of the exercises they teach their patients. Exercise movements are intended to work with the type of motion that matches a joint’s capabilities. For instance, the elbow is capable of flexion and extension, while the shoulder is also capable of rotation. We were interested in exercises for regaining range-of-motion in a joint, such as after a dislocated shoulder. Similar exercises include strengthening proprioception, or the patient’s sense of self in space. We looked at movements of the arm that use the shoulder, such as moving the arm to trace paths or shapes. These require a patient to closely follow the movement path throughout an exercise.
+2. Visual Guide Designs
+We implemented a prototype Kinect-based system using the Microsoft Kinect SDK and WPF to record and playback skeleton, RGB, and depth data captured by the Kinect. We also implemented algorithms to scale and reposition recorded skeleton data to the patient’s size and position, and to find the nearest recorded frame based on their live hand position. To display this data, we draw on our design goals and prior work by overlaying visual guides over a mirror view of the patient (Figure 1). Several different designs for guides were implemented and preliminarily evaluated. Due to space limitations, only some of our most promising designs and their rationale are described.
+2D Arrow
+One of our designs was a flat 2D arrow to illustrate desired hand position. The arrowhead provides the direction the patient must move towards, while the shape and path of the arrow’s stem conveys the
+movement path of the exercise. This was intended to convey feed-forward information only, using the natural understanding of arrows and direction to guide the patient.
+We create the arrow by first locating the nearest recorded frame, and then using the hand positions from the next fifteen frames to build the arrow’s stem and head. As the patient moves, the algorithm is repeated and the arrow is updated and moves with the patient.
+3D Arrow
+Early on, we saw that visualizing depth cues with the 2D arrow would be problematic; this was addressed using a 3D arrow (Figure 2). This arrow can move and rotate, and point forwards and backwards to convey movement in those directions. The arrowhead and stem are coloured differently to distinguish them when the arrow is pointing towards or away from the patient. The arrow’s size and fixed and the end of the stem is attached to the patient’s current hand position as detected by the Kinect. The arrowhead points to the next hand position from the scaled exercise data.
+The 3D Arrow was designed to only convey feedback. Because the end of the arrow is fixed to the patient’s hand and points where they need to go next, if the patient is performing the exercise movement incorrectly, the arrow will point them back on the correct path and will constantly point to the next position along the correct movement path. The patient is expected to watch and follow the direction of the arrow as they move along to follow it.
+Because the 3D Arrow alone only provides feedback, we also implemented a variation to convey feed-forward.
+1654
+
+   Figure 3. Our arm tracing guides:
+(a) is the 2D arm traces. (b) is the 3D arm traces.
+Work-in-Progress
+CHI 2014, One of a CHInd, Toronto, ON, Canada
+We do this by displaying part of the movement path ahead of the position pointed at by the arrow. As the patient follows the direction provided by the arrow, the path moves ahead and gradually reveals the future movement to allow them to anticipate what motions they will perform next.
+Arm Traces
+We also explored visualizing arm positions in addition to hand position (a common focus in prior work, e.g. [3]). As illustrated in Figure 3, the resulting guide is a trace-ahead of the patient’s forearm that conveys where they need to move their arm next, making this guide a feed-forward guide. As the patient moves, the next set of frames and arms are retrieved and updated, resulting in a flowing cascade of lines that directs the patient through the exercise. The lines gradually reduce in opacity, so that the closest and immediate arms from the replay are more opaque and visible for the patient. This allows the future arm positions further on to be only barely visible enough to generally convey where the exercise is moving.
+As in Figure 3 (lower), we explored traces as 3D “tubes” (representing the forearm). This allows us to convey the direction and orientation of the arms more easily than with 2D lines. To make the orientation more apparent, we also made the hand end of each tube thicker than the elbow.
+3. Pilot Evaluation of Visual Guides
+We informally evaluated our designs through design sessions with our physiotherapists to iteratively drive our next phases of development. We also gathered feedback from eight members of our research lab with pilot studies to determine whether the guides were
+easy to understand. Our pilot studies were structured as within-subject evaluations; each study participant performed ten different arm movements (letter Cs, Ss, and figure-eights) using each visual guide and a condition where they watch and mimic a video recording of an exercise in real time. Pilot study feedback enabled us to identify flaws and continuously iterate to arrive at the designs described above.
+Design tension: ease of interpretation vs. information richness. Both variations of 2D and 3D arrows were identified by our physiotherapists as being helpful and easy to understand. Both arrow variations satisfied the design goals for visual simplicity and timely interpretation. The shape of the 2D Arrow could not clearly infer whether the arrow was facing forwards or backwards, however. For this, 2D arm traces was promising because the lengths of each line could suggest it. The size and spread of the individual lines also suggested it was easier and less-strict to use than the arrows. It may be the case that different kinds of issues can be resolved best using different visualizations altogether, and that smoothly transitioning between these visualizations (depending on the specific need) may be more effective than trying to find a single design that addresses everything.
+Illustrating depth. Feedback from members of our research lab indicated depth perception still needed work. For proprioceptive arm exercises requiring a patient to follow a complex chain of movements, motions toward and away from the camera were difficult to distinguish. These problems were prevalent with the 2D designs. Regardless, even with the separately coloured head and stem of the 3D arrow,
+1655
+
+Work-in-Progress
+CHI 2014, One of a CHInd, Toronto, ON, Canada
+movements in depth were still difficult to accurately discern.
+Evaluating Visual Guides. These are still very early results and do not yet indicate which guides may be most beneficial. We intend to run formal user evaluations in the future, using a within-subjects design where each participant will try on different visual guides and exercise movements. We will work closely with physiotherapists to design movements grounded on proper physiotherapy, proprioceptive, and functional motion exercises. We select visualizations by Latin square and randomly present exercise movements to mitigate learning biases.
+To measure a participant’s error or deviation from an exercise, we will look at Euclidean distance between joints and angles of limbs on anatomical planes. We will record and compare their exercise movements to the original exercise and apply scaling and transformations to account for different body sizes and position.
+Conclusions and Future Work
+To allow patients practicing physiotherapy at home to receive corrective guidance on performing exercises, we developed a prototype system after interviews with physiotherapists that overlays guides over a mirror display of the patient. Initial evaluations helped to identify areas for improvement. We expect to contribute with a detailed evaluation of guidance techniques towards better supportive tools for physiotherapy.
+Our future work includes three major stages: first, we will continue to iterate on design; second, we will re- implement the system using a more robust tracking
+tool (e.g. Vicon), and finally, we will evaluate these designs using real physiotherapy-based movements. (1) User feedback identified at least two possible visualizations to be implemented: overlaying the replay video against the live camera feed and simplified variants of the arrow. As noted from the discussion, showing depth remains a problem, so other means to convey depth should be designed and evaluated. (2) We would also like to evaluate the visualizations themselves, and have found that commodity depth- cameras do not provide adequate tracking. To overcome this, we will reimplement the system using Vicon cameras. (3) Finally, we will run user studies using real physiotherapy exercises with a variety of guides to formally evaluate how effective our visualizations are.

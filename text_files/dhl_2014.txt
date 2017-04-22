@@ -1,0 +1,348 @@
+AUGMENTED REALITY IN LOGISTICS
+Changing the way we see logistics – a DHL perspective
+
+PREFACE
+The next big wave of change in the logistics industry might just come in the form of Augmented Reality technology.
+From personal computers to mobile devices, we know that technology can profoundly alter the way we commu- nicate and interact with the world. New technologies im- pact almost every industry, and logistics is no exception.
+The potential for Augmented Reality in the logistics industry has already been highlighted in the acclaimed ‘DHL Logistics Trend Radar’. This overarching study is a dynamic living document designed to help organizations derive new strategies and develop more powerful projects and innovations.
+This trend report intends to deepen your understanding of Augmented Reality and answer the key questions:
+• What is Augmented Reality all about?
+• How far has this technology developed; are there some
+examples of best practice?
+• What are the implications for Augmented Reality
+in the logistics industry?
+Jointly developed with Z_punkt the Foresight Company,
+a specialty consultancy for strategic future planning, trend analysis, and new technologies, this report goes beyond
+the recent media hype to offer real-world use cases, revealing what’s going on now, and what’s likely to happen in the future.
+We hope that ‘Augmented Reality in Logistics’ sparks your interest and enthusiasm for this exciting, emerging topic and provides you with new insights. Thank you for choosing to join us on this journey, which we believe is about to take off shortly.
+Yours sincerely,
+
+1 UNDERSTANDING AUGMENTED REALITY
+Understanding Augmented Reality 3
+   Imagine your car breaks down in the middle of the highway. You know very little about vehicle mechanics, and the next garage is miles away. Today, this breakdown is likely to cost you lots of time and money to fix; but tomorrow, it may be no more than a minor glitch in your day. Using your smart glasses, you’ll be able to launch your repair app and assess the problem through your normal line of sight accompanied by a step-by-step repair guide for your particular make and model of car, without the help of a mechanic.
+Or imagine you’re out shopping, and want to know how other consumers have rated a jacket that you’re thinking of buying. By glancing down at the product with your smart glasses, you’ll instantly see extra information displayed alongside the jacket – user ratings, product price range, and supply information – all of which empowers your purchasing decision.
+This is Augmented Reality (AR) – where every object you see could be enriched with additional and valuable information. AR is defined as the expansion of physical reality by adding layers of computer-generated informa- tion to the real environment.1 Information in this context could be any kind of virtual object or content, including text, graphics, video, sound, haptic feedback, GPS data, and even smell. But AR is more than a simple displaying technology. It also represents a new type of real-time natural user interface for human interaction with
+objects and digital devices.
+AR is made possible by performing four basic and distinct tasks, and combining the output in a useful way.
+1. Scene capture: First, the reality that should be augmented is captured using either a video-capture device such as a camera, or a see-through device such as a head-mounted display.
+2
+Scene Capture
+Scene Identi cation
+ 
+    
+1
+Scene Processing 3
+4 Scene Visualization
+ 
+Figure 1: Basic Functionality of Augmented Reality; Source: Functionality
+2. Scene identification: Secondly, the captured reality must be scanned to define the exact position where the virtual content should be embedded. This position could be identified either by markers (visual tags) or by tracking technologies such as GPS, sensors, infrared, or laser.
+3. Scene processing: As the scene becomes clearly recognized and identified, the corresponding virtual content is requested, typically from the Internet or from any kind of database.
+4. Scene visualization: Finally, the AR system produces a mixed image of the real space as well as the virtual content.
+Experts also differentiate between Augmented Reality
+and Virtual Reality (VR). VR is a completely computer- generated, immersive and three-dimensional environment that is displayed either on a computer screen or through special stereoscopic displays, such as the Oculus Rift.
+In contrast, AR (or Mixed Reality as it is also sometimes called) combines both the virtual and the real. Users of AR are still able to sense the real world around them;
+this is not possible when people are immersed in VR.
+ 1 Carmigniami et al. (2011): Augmented Reality: An Overview. In: Carmigniami; Furth (eds.): Handbook of Augmented Reality, Springer, New York, 2011, pp. 3–46
+ 4 Understanding Augmented Reality
+1.1 From Digital Gimmickry to Revolutionizing Business?
+Despite the surge in widespread media coverage over the past 12 months, the majority of AR solutions that we read about today are still in development. Only a few hardware solutions are being mass produced and readily available to purchase off the shelf.
+Just a couple of years ago, there were only a handful of available commercial AR applications – in fact the first AR app for the iPhone was not released until 2009.2
+In 2011, global AR revenues were as low as USD 181 million3 and, at that time, AR was often perceived by the public
+as just a marketing gimmick: a technology in search of
+a useful application. There was little public awareness, and applications were primarily developed to gain quick PR wins, or their value was limited to attention-grabbers such as adding video effects.
+However, latest forecasts predict that by 2017 the
+AR market will grow to USD 5.2 billion – an impressive annual increase of almost 100 %. With substantial funding being poured into AR projects and start-ups, especially by large corporations such as Google,
+Canon, and Qualcomm, we can expect the first significant wave of consumer-ready AR products
+to be launched over the next 12 months. And with concrete business benefits coming to light, experts
+are convinced that AR will be the ‘next big thing’ in
+the consumer, medical, mobile, automotive, and manufacturing markets.4
+AR is no longer just a marketing ploy. We will see continued uptake of AR and, as it grows, its application will be accelerated by technological progress.
+ $6,000
+Global AR Revenues 2012 to 2017, by market segment, in million US-$
+   $0
+2012
+2017
+Games
+ Enterprise Multimedia & Entertainment
+Social Networking
+Lifestyle & Healthcare
+Location Based
+      Figure 2: Global AR Revenues 2012–2017 (estimate); Source: Xcubelab
+2 Yelp’s “monocle feature”. For further info see: Ben Parr (2009): Easter Egg. Yelp Is the iPhone’s First Augmented Reality App. Online at: http://mashable.com/2009/08/27/yelp-augmented-reality/
+3 Research and Markets (2011): Global Augmented Reality Market Forecast by Product for Gaming, Automotive, Medical, Advertisement, Defense, E-Learning & GPS Applications – Expected to Grow to $5,155.92 Million by 2016
+4 CNET (2013):  e next big thing in tech. Online at: http://news.cnet.com/8301-11386_3-57588128-76/the-next-big-thing-in-tech-augmented-reality/
+ Million US-$
+
+ 1.2 Hardware Overview
+Both the development and implementation of AR software solutions rely, in turn, on the development
+of suitable and robust AR hardware platforms. And this hardware development is driven by technological progress in the fields of computer processors, displays, sensors, mobile Internet speed, battery life, and more.
+By looking at the types of AR platform currently available, and predicting what lies ahead, the following AR items can be identified today:
+• Handheld Devices
+• Stationary AR Systems
+• Spatial Augmented Reality (SAR) Systems • Head-mounted Displays (HMDs)
+• Smart Glasses
+• Smart Lenses
+Understanding Augmented Reality 5
+ Handheld Devices
+   Figure 3: Smartphone Example of a Hand- held Device; Source: Freshmindstalent
+We are currently experiencing a massive boom in Handheld Devices such as smartphones and tablet computers, and this will accelerate AR adoption. These devices are appearing with ever-better features such as higher-resolution displays, more powerful processors, and high-quality cameras, along with a growing array of sensors providing accelerometer, GPS, and compass capabilities, making them very suitable AR platforms. Although handheld devices are the easiest way for consumers to access AR apps, most are not wearable and so they cannot give users a hands-free AR experience.
+ Stationary AR Systems
+   Figure 4: Stationary AR Wardrobe at a Topshop in Russia; Source: Mashable
+Stationary AR Systems are suitable when a larger display or higher resolution is required in a permanent location. Unlike mobile AR devices, these motionless systems can be equipped with more advanced camera systems and can therefore provide more precise recognition of people and scenes. Moreover, the display unit often shows more realistic pictures and is not so much affected by environmental in uences such as sunlight or dim lighting.
+ Spatial Augmented Reality (SAR) Systems
+   Figure 5: SAR System at Volkswagen; Source: Volkswagen
+In contrast to all other systems, Spatial Augmented Reality (SAR) Systems include virtual content directly projected on top of the real-world image. SAR systems are frequently stationary in nature. Any physical surface such as walls, desks, foam, wooden blocks, or even the human body can be turned into an interactive display. With projectors decreasing in size, cost, and power consumption, and with progress in 3D projection, what’s emerging is a completely new range of interaction and display possibilities. The biggest advantage of SAR systems is that they provide a more accurate re ection of reality, as virtual information can be visualized with actual proportions and size. Furthermore, content can be made visible to a larger number of viewers, and this can for example enable simultaneous working.
+
+ 6 Understanding Augmented Reality
+ Head-mounted Displays (HMDs)
+   Figure 6: Canon`s Mixed Reality Headset as an HMD Example; Source: Digitaltrends
+Head-mounted Displays (HMDs) represent another rapidly growing AR hardware item. HMDs consist of a headset, such as a helmet, which is paired with one or more (micro-) displays. HMDs place images of both the physical world and virtual objects over the user‘s  eld of view. In other words, the user does not see reality directly,
+but sees an (augmented) video image of it. If the display is placed only in front of one of the user ́s eyes, it is called a monocular HMD (in contrast to binocular systems, where both eyes view the display). Modern HMDs are often capable of employing sensors for six degrees of freedom (allowing the user to move their head freely forward/backward, up/down, left/right, pitch, yaw, and roll). This enables the system to align virtual information to the physical world, and to adjust according to the user‘s head movements.
+ Smart Glasses
+   Figure 7: Vuzix M100 Smart Glasses; Source: Vuzix
+Many companies from the consumer electronics industry are expecting Smart Glasses to be the next global consumer hit after smartphones. These AR devices
+are in essence glasses equipped with screens, cameras, and microphones. With this concept, the user’s real world view is intercepted and an augmented view re-displayed in the user’s  eld of vision. AR imagery is projected through or re ected off the surface of the eyewear lens pieces. The most prominent examples of this technology are Google Glass and Vuzix M100. However, one of the most exciting smart glasses developments today is the Atheer One – these smart glasses are equipped with
+3D depth sensors, allowing users to physically control the virtual content displayed in front of them.
+ Smart Lenses
+   Figure 8: Lens Containing Metal Circuit Structures, Developed at the University of Washington; Source: Washington
+Glasses are certainly not the end of the story. Research is gaining momentum into Smart Lenses that can display AR imaging; companies such as Microsoft and Google are busy unveiling their own smart lens projects.
+The idea is to turn conventional lenses into a functional system by integrating control circuits, communication circuits, miniature antennas, LEDs, and other optoelectronic components. In future, hundreds of integrated LEDs could be used to form an image directly in front of the eye, transforming the lens into a display. However, before this can become reality, a couple of signi cant challenges must be overcome, such as how to power the lenses, and how to ensure that the human eye is not damaged.
+
+ 2 AUGMENTED REALITY BEST PRACTICE
+In this section, we explore how this emerging techno- logy is currently being used across different sectors, and anticipate best practice that’s likely to become mainstream in future. We have selected a number of innovative AR examples, clustered into four functional categories; each provides individuals or companies with significant benefits when using AR applications.
+2.1 Context-sensitive Information – Information at the Right Time and Place
+The first cluster is context-sensitive information, encompassing various applications that enable easy access in context-specific situations to static data that’s already available on the Internet.
+Foto: Luca Bruno / AP
+Figure 10: Word Lens; Source: Questvisual
+One of the most promising areas of application in AR is the field of language translation. An existing app is Word Lens software which runs on almost any smart phone and simultaneously translates text from one language to another. With this app running, the user merely points their device to a piece of text written in a foreign language. Then their device displays this information translated into the user’s native language. It is written in the same font and on the same real- world background as the original text.
+Augmented Reality Best Practice 7
+   Figure 9: Wikitude; Source: Wikitude
+Wikitude and Metaio’s Junaio are two leading examples of AR browsers that provide context-sensitive information software capable of recognizing locations or objects to link digital information to real-world situations. The software runs on any smartphone and displays additional digital information about the user’s surroundings in a mobile camera view.
+This additional digital information could be nearby places of interest, for example, such as museums, shops, restaurants, or the pedestrian route to the next bus stop. The software includes image recognition, user position localization via GPS and WiFi, and 3D modelling.
+Figure 11: In nity Augmented Reality App; Source: In nity
+Another example of easy access to Internet information in context-specific real-life situations is the combination of face detection and AR. An app that is promised to be available soon is the Infinity AR application. The concept is to analyze a face and compare and match it to profile pictures found in social networks (e.g., Facebook). Infor- mation posted in the matched profile is then displayed
+in the user’s field of vision.
+
+ 8 Augmented Reality Best Practice
+ As well as being useful in consumer applications, this technology is very promising for law enforcement agencies (e.g., scanning crowds for wanted criminals). Under- standably, this application has also raised many privacy concerns.
+Figure 12: Volkswagen MARTA; Source: MARTA
+A highly practical solution to the best practice of provi- ding the right information at the right place in the auto- motive sector is the MARTA (Mobile Augmented Reality Technical Assistance) system developed by VW.
+This system comes in handy when a car isn’t running properly, helping its user to perform vehicle repairs
+and maintenance. It recognizes vehicle parts via object recognition, and describes and pictures all required repair and maintenance steps in detail and real time, along with information about any equipment requirements. This app runs on various mobile devices. Currently, the system is for the exclusive use of VW Service, but it is conceivable such systems could become available for consumer mar- kets in future, helping everyone to fix their cars without knowing very much about mechanics.
+2.2 Enhanced Senses – Becoming Human 2.0
+Even today, AR applications can offer much more
+than just retrieving Internet information on the go.
+The following AR use cases enhance reality using newly generated information from data gathered mostly by
+the device’s sensors. They feature a range of devices that enhance the senses, extending human capabilities beyond our current achievements.
+Figure 13: Recon Jet; Source: Recon Instruments
+Recon Jet is an already available AR system for leisure activities. The device’s sports-oriented heads-up display connects to third-party sensors such as Bluetooth and WiFi, and offers navigation and weather information, access to social networks, and real-time information
+about performance – for example, a runner would want
+to know their speed, distance to the finishing line, current elevation gain, and their heart rate. With these capabilities, the Recon Jet points towards the future development
+of wearable AR that can monitor the vital signs and surroundings of people working in hazardous environ- ments or physically demanding jobs.
+  Figure 14: BMW HUD; Source: BMW
+Another heads-up display (HUD) is used to project sensory information such as driving speed onto the windshield of some BMW cars. This enhanced-senses capability has been used by the automotive company since 2004, and BMW is constantly working to improve this HUD with additional features.
+
+ BMW’s current ConnectedDrive HUD is augmented
+by virtual markings that are superimposed on real objects in the external environment. This allows navigation infor- mation or information from driver assistance systems to be displayed in exactly the right position on the driver’s view of the road scene. Navigation instructions can be blended into the road, and vehicles or safety-relevant objects can be highlighted or marked in context. A great example is the visual information provided by BMW’s night vision system.
+Figure 15: iOnRoad; Source: iOnRoad
+A similar but less advanced augmented driving assistance system for the mass market is the award-winning iOnRoad app. Using only the smartphone camera and some vision algorithms, it provides real-time features such as collision warning, headway monitoring, off-road warning, and a black box video recording function which can come in handy after an accident.
+In a completely different field of application, surgeons can access enhanced senses with the Liver Explorer app by the developer Fraunhofer MEVIS. This app provides real-time AR guides and assistance to the medical prac- titioner. The device’s camera films the liver and, using AR, superimposes surgical planning data onto the organ. In addition, the software can react in real time (e.g., updating the surgical plan according to the movement
+of blood vessels which the system tracks constantly). These capabilities go beyond the MARTA system’s provi- sion of context-sensitive information. Assuming the app receives positive evaluation, it is likely to be modified for future expansion into additional surgical fields.
+Augmented Reality Best Practice 9
+   Figure 16: Liver Explorer; Source: Fraunhofer
+Figure 17: Q-Warrior Helmet; Source: Telegraph
+In dangerous situations it is especially important to have crucial information at hand. Therefore the military is one of the biggest investors in AR applications. One military app is the Q-Warrior Helmet. This AR item is intended to provide soldiers with “heads-up, eyes-wide, finger-on- the-trigger” situational awareness, friend-or-foe identifi- cation, night vision, and an enhanced ability to remotely coordinate small units. The helmet transmits detailed positional information about each wearer to the others, allowing the system to gather, map, and share information and positions in real time on the battlefield and during reconnaissance. It is easy to look ahead and anticipate similar systems being developed for other professionals working in dangerous environments, such as fire fighters and law enforcement personnel.
+
+ 10 Augmented Reality Best Practice
+2.3 Mixed-reality Simulations – Exploring the Virtual in the Real
+While the above examples augment reality by providing static digital information, this next AR cluster goes a step further. These so-called mixed-reality simulations allow users to dynamically adapt or change virtual objects in the real environment.
+Uniqlo’s Magic Mirror offers an even-more personal AR fitting experience. Introduced in 2012 in a Uniqlo shop
+in San Francisco, USA, this large augmented mirror recog- nizes the shopper’s size and selected fashion item, so there’s no need to try on different colors. The shopper simply puts on one item and steps in front of the mirror; a touchscreen then prompts the consumer to select other available hues, and projects back the modified reflection.
+Figure 20: MREAL; Source: Engadget
+The Mixed Reality System (MREAL) by Canon supports the design process by enabling the seamless merging of 3D computer-generated models with real- world objects in a real environment. For example,
+it can help with designing a new model of car in the automotive sector. MREAL allows multiple users to work collaboratively and simultaneously on a full-scale product design.
+The system can be used to analyze how real components will fit together with a newly planned design. It does this by creating a 3D model of both the existing components and the new concept, and then brings both together.
+For example, an existing car seat can be integrated into the projection of a virtual new car design. Since MREAL delivers mixed reality, users can actually sit in the (real) seat and see both the real environment outside the car along with the digital representation of the car interior, including the planned new dashboard and steering wheel.
+  Figure 18: IKEA AR App; Source: IKEA
+One of the most prominent examples is the latest Ikea catalog. Developed by Metaio, this AR app lets con- sumers use their mobile devices to ‘place’ digital versions of selected Ikea furniture in their real living rooms, making it easy to test whether the dimensions, style, and color of the furniture fit in a chosen position. This app also allows the user to change the size and color of each piece.
+ Figure 19: The Magic Mirror; Source: Trendhunter
+
+ Augmented Reality Best Practice 11
+ Figure 21: MiRA; Source: High yer
+Another industrial AR app that’s already in use comes from Airbus. With the master for a new aircraft production process developed entirely with digital tools, Airbus colla- borated to create the MiRA (Mixed Reality Application) in 2009. This app increases productivity in production lines by using AR to scan parts and detect errors. On the A380, MiRA, which today consists of a tablet PC and a specifically developed sensor pack and software, has reduced the time needed to check tens of thousands of brackets in the fuse- lage from 300 hours to an astonishing 60 hours. Further- more, late discoveries of damaged, wrongly positioned or missing brackets have been reduced by 40%.5
+Figure 22: The Interactive Hatsune Miku; Source: Hatsune Miku
+Our final example in this AR cluster gives a glimpse of what we can expect of AR apps in the mid-range future.
+A hacker from Japan used an available 3D model and cheap motion sensors to have an AR ‘date’ with the famous virtual Japanese pop star Hatsune Miku. In his video,
+how Miku recognizes and reacts to real-world objects (e.g., by sitting on a real chair). This software even makes it possible to interact with the virtual pop star (e.g., touching her tie or head). While this application is clearly sensationalist it is more than just a gimmick. It gives the idea that soon people may be accompanied by virtual companions who could provide assistance when needed (e.g., in medical or engineering tasks, or as a human-like interface for everyday digital issues such as managing
+a personal calendar, notes, and contacts).
+2.4 Virtual Interfaces – Controlling the Real Through the Virtual
+With more and more ‘smart’ objects connected to the Internet, and with new ways of accessing digital informa- tion, more and more people want to work with AR devices and data. Therefore, our fourth cluster, virtual interfaces, focuses on AR technologies that offer new options for controlling real-world objects through digital means. Essentially, this allows a mixed reality where real objects can be altered and controlled.
+  he shows how he ‘walks’ with Miku in a real park and
+5 http://applications.airbus-group.com/airbusgroup/investor-relations/spain/informe-anual2011/data/EADS_RA_RSE_2011_interactif.pdf
+Figure 23: SixthSense; Source: Pranavmistry
+An advanced way to interact with the digital world on the go is to use gestures. One example of a gestural inter- face system is SixthSense, developed by MIT. While this system currently uses spatial AR technology, it can also be used with all other technologies. The system allows the user to interact with information via natural hand gestures. In order to capture the intended input of the user, the camera recognizes and tracks the user‘s hand gestures using computer-vision-based techniques.
+ 
+ 12 Augmented Reality Best Practice
+ Figure 24: Revolv; Source: Revolv
+AR-based interfaces are not limited to computer devices. They can be used to control cars, entertainment, and household appliances such as heating systems. One example is the home automation system Revolv, which is still under development. In combination with Google Glass, the system gives the user control over all digital devices in the household (e.g., the light system and locking system). The result is an augmented ‘smart’ household environment, which can be remotely controlled by voice or fingertip.
+Virtual interfaces can go beyond the home, as shown by Yihaodian, the largest food e-retailer in China. The company recently announced that it was going to open up the first AR supermarket chain in the world.
+Each of these supermarkets will have a floor space of around 1.200 m2 and will be located in ‘blank’ public spaces (e.g., train or subway stations, parks, and college campuses). While the naked eye will just see empty floors and walls, people using an AR-capable device will see a complete supermarket, with shelves filled with digital representations of real-world products. To buy products, the user just scans each product with their mobile device, adding it to their online shopping cart. After completing their AR shopping tour, the user receives delivery of the products to their home. This is an enhancement of similar concepts such as the QR-based Tesco supermarkets in South Korea’s subway stations.
+ Figure 25: In nite Yihaodian; Source: Augmented Reality Trends
+
+ 3 AUGMENTED REALITY IN LOGISTICS
+After the wide range of best practice identified in the four clusters above, we now examine implications of AR in the logistics industry. Although AR is in relatively early stages of adoption in logistics, it could offer significant benefits. For example, AR can give logistics providers quick access to anticipatory information anytime and anywhere. This is vital for the prospective and exact planning and operation of tasks such as delivery and load optimization, and is critical to providing higher levels of customer service.
+At DHL Trend Research, we are transferring to logistics what we see as best practice in other industries, and we are envisioning several use cases for AR in the logistics industry. These serve as a visionary outlook and the basis for discussion rather than a concrete prediction of how AR in logistics will develop in the future.
+These use cases are arranged in the following categories:
+• Warehousing Operations
+• Transportation Optimization
+• Last-mile Delivery
+• Enhanced Value-added Services
+3.1 Warehousing Operations
+AR has so far shown most promise for logistics in warehousing operations. These operations are estimated to account for about 20 % of all logistics costs, and the task of picking accounts for 55 % to 65 % of the total cost of warehousing operations.6 This indicates that AR has the potential to significantly reduce cost by improving the picking process. It can also help with the training
+of new and temporary warehouse staff, and with warehouse planning.
+Pick-by-Vision: Optimized Picking
+In logistics, the most tangible AR solutions are systems to optimize the picking process. The vast majority of warehouses in the developed world still use the pick-by- paper approach. But any paper-based approach is slow and error prone. Furthermore, picking work is often undertaken by temporary workers who usually require cost-intensive training to ensure they pick efficiently and without making errors.
+Systems by Knapp, SAP, and Ubimax are currently in the late field-test phase and consist of mobile AR systems such as a head-mounted display (HMD), cameras, a wearable PC, and battery packs that provide enough energy for at least one work shift. The vision picking software offers real-time object recognition, barcode reading, indoor navigation, and seamless integration of information with the Warehouse Management System (WMS). A key benefit of vision picking is its provision of hands-free intuitive digital support to workers during manual picking operations.
+By using a system like this, each worker can see the digital picking list in their field of vision and – thanks to indoor navigation capabilities – see the best route, reducing their travel time by efficient path planning. Using automated barcode scanning capabilities, the system’s image recogni- tion software (e.g., provided by Knapp KiSoft Vision7) can check whether the worker has arrived at the right location, and guide the worker to quickly locate the right item on the shelf.
+Augmented Reality in Logistics 13
+ 6 De Koster, René et.al. (2006): Design and control of warehouse order picking: A literature review. European Journal of Operational Research. 182(2): 481–50
+
+ 14 Augmented Reality in Logistics
+The worker can then scan the item and register this pro- cess simultaneously in the WMS, enabling real-time stock updates. In addition, such systems can reduce the amount of time required to orientate and train new employees, as well as bridge any language barriers with migrant workers.
+Field tests of these AR systems have proved they offer significant productivity improvements in warehousing operations. For example, constant picking validation can decrease errors by as much as 40 %. Although today’s picking error rate is very low, even using a pick-by-paper approach – experts estimate a rate of 0.35 % – every error must be prevented, because it typically results in high follow-up costs.8
+Warehouse Planning
+AR is also likely to affect warehouse-planning processes. Today’s warehouses are not only used as storage and distribution hubs; more and more, they house a growing number of value-added services, ranging from product assembly to product labelling, repacking, and repair.
+This means hubs must be redesigned to accommodate these new services. AR can be used to visualize any planned rearrangements in full scale, making it possible to place interactive digital representations of proposed future modifications in the present, real warehouse environment. Planners can test whether measurements of a planned modification will fit in place, and model new workflows. In future, this could allow a real warehouse to be used
+as the test bed for warehouse operation planning.
+       Pick-by-Vision: Optimized Picking
+     • Picking staff are equipped with wearable AR devices for the picking process
+• The solution offers digital navigation to find the right route and item more efficiently, while reducing training time
+• Main objectives: reduce picking errors and search time
+       Warehouse Planning
+     • Creating a mixed-reality simulation of warehouse operation processes
+• Modifications are overlaid in the real environment to ‘field test’ and adjust planned redesign measures
+• Main objective: support and reduce the cost of warehouse redesign and planning
+ 7 Knapp (2014): KiSo  Vision. Online at: http://www.knapp.com/glossary?iD=35
+Knapp AG (2011): KiSo  Vision. Online at: https://www.youtube.com/watch?v=BWY8uFlteIM
+8 Schwerdtfeger, Björn (2009): Pick-by-Vision: Bringing HMD-based Augmented Reality into the Warehouse. Institut für Informatik der Technischen Universität München. Online at: https://mediatum.ub.tum.de/doc/992985/992985.pdf
+
+ 3.2 Transportation Optimization
+International Trade
+Over the last decade, the use of advanced information technologies by logistics providers has greatly improved the efficiency, reliability, and security of freight transport- ation. AR has the potential to further optimize freight transportation in areas such as completeness checks, international trade, driver navigation, and freight loading.
+Completeness Checks
+AR can achieve more effective pick-ups. An AR-equip- ped collector could quickly glance at the load to check if
+it is complete. Currently, this requires manual counting
+or time-consuming barcode scanning with a handheld device. In the future, a wearable AR device could use a combination of scanners and 3D depth sensors to deter- mine the number of pallets or single parcels (by scanning specific markers on each parcel) or their volume (using measurement devices). This measurement is compared to predefined values and the result – hopefully a match – will be displayed to the collector. This AR system could also scan items to detect any damage or faults.
+With more of the world’s regions poised to flourish economically, transport flows to and from emerging markets are increasing significantly. This represents a large opportunity for logistics providers but it also increases complexity, as there is significant variation in trade regulations and requirements around the world.
+AR is likely to prove valuable for providers of global trade services. Before a shipment, an AR system could assist in ensuring the shipment complies with the relevant import and export regulations, or trade documentation has been correctly completed. An AR device can scan trade docu- ments or goods for key words and automatically propose changes or correct the commodity code classification.
+After shipment, AR technology can significantly reduce port and storage delays by translating trade document text such as trade terms in real time (see the Word Lens app in section 2.1).
+Augmented Reality in Logistics 15
+             Completeness Check
+     • AR devices register if a delivery is complete and ready for pick-up
+• Capturing pallet and parcel numbers and volume using markers or advanced object recognition technology
+• Automated confirmation of pick-up by AR after the correct number of undamaged parcels is recognised
+• Main objectives: time savings, completeness check, damage detection
+ International Trade
+     • AR support for global trade service providers
+• AR devices can check (printed) trade documents
+and identify commodity code classification
+• Real-time translation of parcel labels or foreign trade terms
+• Main objectives: facilitate trade documentation and international freight handling
+
+ 16 Augmented Reality in Logistics
+Dynamic Traffic Support
+Traffic congestion often prevents the smooth running
+of many economic processes that heavily depend on the smooth flow of physical goods. It’s estimated that traffic congestion costs Europe about 1 % of gross domestic product (GDP) each year.9 And as congestion increases, there is high demand for solutions to improve punctuality.
+In future, we will see increasing use of dynamic traffic support with real-time traffic data to optimize routes or re-route shipments on the fly. AR driver assistance apps (either with glasses or a windshield display) could be used to display information in real time in the driver ́s field
+of vision. In effect, AR systems will be the successors to today’s navigation systems, with a key advantage that the driver doesn’t have to take their eyes off the road. AR systems can also provide the driver with critical information displays on their vehicle and cargo
+(e.g, confirmation of cargo temperature).
+Freight Loading
+Today, freight transportation by air, water, and road makes extensive use of digital data and planning software for optimized load planning and vehicle utilization. Issues such as content, weight, size, destination, and further pro- cessing are taken into account for each item. Even though there may be some potential for further improvement, the bottleneck is often the loading process itself.
+AR devices could help by replacing the need for printed cargo lists and load instructions. At a transfer station, for example, the loader could obtain real-time information on their AR device about which pallet to take next and where exactly to place this pallet in the vehicle. The AR device could display loading instructions, with arrows or high- lights identifying suitable target areas inside the vehicle. This information could be generated either in advance
+by planning software or on the spot by ad-hoc object recognition. The latter approach is comparable with the popular computing game Tetris, where the gamer has to place the next random item according to its shape
+in order to maximize available space and avoid gaps. In contrast to current paper-based lists, AR-supported cargo lists would also allow for real-time – something that happens quite often during the loading process.
+       Dynamic Traf c Support
+     • Replacement of navigation systems in delivery vehicles with AR devices (glasses or windshield projection)
+• Analysis of real-time traffic data and display of relevant information (e.g. blocked or alternative routes) in the driver ́s field of vision
+• Superimposing critical information on surrounding, vehicle and cargo (e.g. temperature of cold store)
+• Main objective: optimized routing on the fly, improvement of driving safety, minimizing of driver distraction
+       Freight Loading
+     • Use of AR devices for optimized cargo loading
+• Loader receives load plan and instructions (which pallet to take next and where to put it) directly on their AR device display
+• Renders printed load lists unnecessary
+• Main objective: speed up the freight loading process
+ 9 European Commission (2011): Transport 2050:  e major challenges, the key measures. Press release online at: http://europa.eu/rapid/press-release_MEMO-11-197_ga.htm
+
+ 3.3 Last-mile Delivery
+Another important field of application for AR is at the last mile.10 The growing use of e-commerce has led to a boom of last-mile delivery services, which is the final step in the supply chain and often the most expensive one. Therefore, the optimization of last-mile delivery to drive down product cost and increase profit is a promising field of application for AR devices.
+Parcel Loading and Drop-off
+Estimates suggest that drivers spend between 40 % and 60% of their time away from the distribution center not driving. Instead, they spend much of this time locating the correct boxes within their truck for the next delivery. Currently, to find a box, drivers must rely on their memory of the loading process.
+In future at the distribution center, each driver could receive critical information about a specific parcel by looking at it with their AR device. This information could include the type of goods being transported, each parcel’s weight, delivery address, and whether it is fragile or requires specific positioning to avoid damage. The device could then calculate the space requirements for each parcel in real time, scan for a suitable empty space in the vehicle, and then indicate where the parcel should be placed, taking into account the planned route.
+With efficient and intelligent loading, and with AR devices highlighting the right parcel for the driver, the search process would be much more convenient and significantly accelerated at every drop-off.
+In addition, AR could help to reduce the incidence of package damage. One of the key reasons why parcels get damaged today is that drivers need a spare hand to close their vehicle door, forcing them to put parcels on the ground or clamp them under their arm. With an AR device, the vehicle door could be closed ‘hands-free’ – the driver could give a voice instruction or make an eye or head movement (see the SixthSense and Revolv apps in section 2.3).
+Augmented Reality in Logistics 17
+       Parcel Loading & Drop-off
+     • Equip staff with wearable AR devices for parcel handling, loading, and delivery processes
+• Through AR, all parcels are overlaid with critical information (e.g., contents, weight, and destination) and handling instructions, and parcels are loaded intelligently into the vehicle
+• Main objectives: improve parcel handling, avoid improper handling, ensure load optimization
+ 10  e term “last mile” has its origin in telecommunications and describes the last segment in a communication network that actually reaches the customer. In the logistics sector, the last mile is a metaphor for the  nal section of the supply chain, in which goods are handed over to the recipient. Source: ‘ e de nition of the  rst and last miles’, DHL Discover Logistics, cf. http://www.dhl-discoverlogistics.com/cms/en/course/technologies/ reinforcement/ rst.jsp
+
+ 18 Augmented Reality in Logistics
+       Last-meter Navigation
+     • AR-supported identification of buildings and entrances, as well as indoor navigation for faster delivery
+• A learning system that is able to add user- generated content, particularly when public databases are unavailable
+• Main objectives: efficient indoor navigation, reduce search and delivery time, especially for first-time deliveries
+Last-meter Navigation
+With the vehicle door shut and the correct parcel in the driver’s hands, often the next challenge is to find a specific building. This is particularly true when doing a first-time delivery, as there can be many complicating factors such as obscured or missing house numbers or street names, entrances hidden in backyards or, as is the case in many developing countries, no structured naming scheme for streets and buildings.
+AR could be extremely helpful here; the driver could point an AR device at a building or block of buildings and it could display information such as a Google Street View
+or relevant details from other databases. When there’s no available public database, particularly with information
+on the position of entrances or other local features, the AR device could also be used to place markers, thereby building up an independent database over time. At the next delivery to the same address, the AR device could access this previously collected data; virtual layers of information could be created accordingly.
+Sometimes, last-meter delivery requires indoor navi- gation. While GPS-based navigation works well out in the open, buildings sometimes cause severe interference to the GPS signal. A solution could be for the learning AR device to place LLA (latitude, longitude, altitude) markers at various internal points.
+AR-secured Delivery
+Equipping staff with AR devices could also increase security and improve the quality of customer contact. Using facial-recognition technology, the person
+receiving a parcel could be unambiguously identified without having to show any ID. The AR device could
+take a picture and automatically match this in a secure database. Due to data privacy issues, it would be necessary for the recipient to give prior permission for use of this AR face-confirmation technique. This service may not be applicable for ordinary every-day deliveries, but when the parcel has extraordinary high value, users may appreciate this enhanced level of security as it is superior to an easily forged ID card or recipient signature.
+       AR-secured Delivery
+     • AR-based unambiguous identification of the parcel receiver using face-recognition technology
+• Visual approval/refusal instead of ID card or signature
+• Main objectives: improve security of registered letters, speed up the delivery process
+• Service would require approval and registration in advance
+
+ Augmented Reality in Logistics 19
+       Assembly and Repair
+     • Assembly and repair teams are equipped with hands-free AR devices (glasses) and software that support specific tasks
+• The software blends in visual step-by-step instructions for the assembly or repair while keeping each worker’s hands free to conduct these steps
+• Main objectives: control quality, significantly reduce training costs
+3.4 Enhanced Value-added Services
+As well as helping logistics providers to improve their processes, AR can also enable them to perform new services for their customers, such as assembly and repair, and provide new customer support tools.
+Assembly and Repair
+More and more logistics providers offer added value
+to customers with services such as assembly and repair. For example, DHL not only collects materials from component providers for Audi, but also assembles
+these components into interior door panels that are
+then delivered to the Audi production plant in Germany.
+Currently, skilled workers are required for such tasks, and each must be individually trained. However,
+in future AR could train and aid warehouse staff to assemble a variety of products and ensure that high standards of service are maintained, potentially reducing cost for customers.
+The AR system could ensure quality control by monitor- ing each work step (via enhanced image recognition) and detecting errors in the assembly process. For repair staff, it could offer an intuitive and visual way to support the identification and fixing of errors, especially with the ever-increasing number of end-consumer technologies and gadgets. The use of such interactive repair guides could significantly reduce training costs as well as the technical staff ’s average repair time.
+
+ 20 Augmented Reality in Logistics
+       Customer Services
+         • AR apps for end-consumer devices such as smartphones and tablets for a convenient shipping experience
+• Main objectives: help customers determine and order the correct shipping options by scanning the goods to be sent and overlaying this scan with a virtual representation of shipping boxes; improve parcel handling
+Customer Services
+In the near future, AR-enhanced parcel service applica- tions could enable customers with an AR-capable device to volume scan the measurement of goods to be shipped and estimate the weight to establish the perfect size and lowest price parcel box from their logistics provider. In addition, this app could display different shipping and insurance price options.
+While such an elaborated app is not yet available today, there is a simpler version in use. The DHL Paketassistent11 lets the user print a sheet containing an icon that is similar to a QR code. Using a webcam, holograms of available DHL parcel boxes are projected for customers to then match their items to the right-size box.
+In conclusion, AR has a promising future in the logistics industry. Ranging from picking-by-vision in warehouses to assisting customers with after-sales activities, it is clear that AR can play a part in almost every step of the logistics value chain. Although only
+a few of these use cases are currently being developed, there are encouraging first signs of AR adoption in the logistics industry. This trend will continue to grow, and we hope that more logistics providers will participate to drive the AR revolution.
+  11 https://www.dhl.de/de/paket/information/privatkunden/paketassistent.html
+
+ OUTLOOK
+It may be difficult to imagine smart glasses becoming an essential part of our daily appearance. And, as is often the case with new and emerging technologies, it isn’t easy to gauge whether there will be a rapid uptake of AR. But it is quite possible that AR devices will one day be as normal and widespread as smartphones.
+We hope this trend report has helped to illustrate that AR is no longer in the realm of science fiction. As demonstrated by our wide variety of best practice use cases, AR is already providing tangible benefits across many industries today, including logistics.
+But before AR devices (especially wearable ones) can
+be widely adopted in logistics, we need to overcome a number of technical and societal challenges including battery life, high investment cost, network performance issues, privacy, and public acceptance, to name just a few.
+Nevertheless, logistics providers and their customers should be aware of the benefits AR can offer now and in the future. We must be ready to take advantage
+of opportunities as they arise, many of which are currently untapped.
+Looking ahead, AR is well positioned to deliver some
+of the future ́s most intriguing user interfaces and display technologies, harnessing the potential to fundamentally change how we perceive information and interact in
+our professional and private lives.
+We are clearly in the early stages of what is sure to be an exciting journey that could result in the integration of AR into daily life in logistics – so come join us and together let’s look at reality in new ways.

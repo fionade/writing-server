@@ -1,0 +1,160 @@
+A Loose and Sketchy Approach in a Mediated Reality Environment
+Michael Haller∗, Florian Landerl† Media Technology and Design
+Upper Austria University of Applied Sciences
+Mark Billinghurst‡ HITLabNZ University of Canterbury
+   Figure 1: A traditional rendered AR scenario (a) and the NPR rendered scenario (b), (c).
+Abstract
+In this paper, we present sketchy-ar-us, a modified, real-time ver- sion of the Loose and Sketchy algorithm used to render graphics in an AR environment. The primary challenge was to modify the orig- inal algorithm to produce a NPR effect at interactive frame rate. Our algorithm renders moderately complex scenes at multiple frames per second. Equipped with a handheld visor, visitors can see the real environment overlaid with virtual objects with both the real and virtual content rendered in a non-photorealistic style.
+CR Categories: I.3.3 [Computer Graphics]: Picture/Image Generation— [I.3.5]: Non Photorealistic Rendering—Hardware Accelerated Rendering H.5.1 [Information Interfaces and Presen- tation]: Multimedia Information Systems—Artificial, augmented, and virtual realities
+Keywords: Mediated Reality, Non-photorealistic rendering, Loose and Sketchy
+1 Introduction
+In recent years, non-photorealistic rendering (NPR) has become a popular research topic in the area of computer graphics. Aug- mented Reality applications are those in which computer graphics are overlaid in real time on views of the real world. In Augmented Reality (AR) installations, there are two alternatives for rendering the superimposed 3D content: either using photorealistic rendering techniques with the goal of seamlessly integrating the augmented
+∗ e-mail:haller@fh-hagenberg.at
+† e-mail:florian.landerl@fh-hagenberg.at ‡ e-mail:mark.billinghurst@hitlabnz.org
+Copyright © 2005 by the Association for Computing Machinery, Inc.
+Permission to make digital or hard copies of part or all of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, to republish, to post on servers, or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from Permissions Dept, ACM Inc., fax +1 (212) 869-0481 or e-mail permissions@acm.org.
+© 2005 ACM 1-59593-201-1/05/0010 $5.00
+content into the existing real environment, or using an NPR style to enhance the augmented content. In the last decade AR research has mostly been focused on improving photorealistic rendering, in- cluding consistent illumination, integrating shadows and enhancing shading by BRDFs etc. [Agusanto et al. 2003; Bimber et al. 2003; Gibson et al. 2003; Haller et al. 2003; Naemura et al. 2002; Sugano et al. 2003]. However there may be other ways to make AR instal- lations more visually appealing and fun. Recently there has been new research trying to making AR installations more stylistically believable, and/or more enjoyable, than photorealistic.
+Ferwerda [Ferwerda 2003] distinguished three different varieties of realism:
+• physical realism, where the virtual objects provide the same visual simulation as the real scene.
+• photorealism, where the image produces the same visual re- sponse as the scene, and
+• functional realism, in which the image provides the same vi- sual information as the scene.
+In this paper, we focus on aspects of photorealism (non- photorealism) in AR interfaces and leave addressing physical re- alism (non-realism) and functional realism (non-realism) for later work. There are a lot of good reasons to improve the realism of aug- mented reality imagery [Haller 2004]. Currently it is challenging to create a seamless (not discontinuous) coherence between the real and the virtual world: for example, light sources have to influence the augmented content in the same way as they affect real objects, including casting virtual shadows to match real shadows. Gogolin predicts that sooner or later, photorealism research will start de- veloping very new rendering techniques [Gogolin 2004]. Durand [Durand 2002] demonstrates that the border between photorealism and non-photorealism can be fuzzy and the idea of realism itself can become very complex. The virtual world has to be interpreted more convincingly rather than realistically rendered. In fact, it should be a believable world, where the augmented objects should be expres- sive, clear, and look aesthetically perfect.
+The goal of this work is to achieve a more stylistic and artistic AR visualization (cf. figure 2).
+The main contributions of this paper are twofold:
+  371
+
+ Figure 2: sketchy-ar-us in use: the embedded snapshot shows the view of what the users would see through the handheld visor.
+Implementationofareal-timeversion oftheLooseandSketchy algorithm using programmable GPU hardware. Curtis’ orig- inal algorithm was primarily designed for offline rendering, where the performance played a secondary role. Thus, it took 10-60 seconds to render each frame [Curtis 1998].
+Combination with an AR environment: Both the real and the virtual objects are rendered in the same sketchy style. Due to the blurred image and the sketchy silhouette style, users cannot differ between the real and the virtual, augmented ob- jects. Consequently, they get a better immersive experience and a more enjoyable stylistic view.
+After an overview of related work, described in section 2, we demonstrate our approach, the modified Loose and Sketchy algo- rithm, including the creation of the silhouettes, the blurring of the image, its composition, and the combination with the AR setup. Performance tests and user feedback comments are discussed in section 5. Finally, we conclude the paper with directions for fu- ture work.
+2 Related Work
+Our work is based on elements of Mediated Reality, as introduced by Steve Mann [Mann and Fung 2001; Mann 1994]. In contrast to Augmented Reality, in a Mediated Reality interface virtual content is not just added to the real environment, but modified by a visual filter. Grasset et al. [Grasset et al. 2003] demonstrate an application where they allow a user to paint virtually onto a real environment. In this paper, we present sketchy-ar-us (cf. figure 1), a modified, real-time version of the Loose and Sketchy algorithm presented by Curtis [Curtis 1998] used to render an AR environment using AR- ToolKit [Kato and Billinghurst 1999].
+Sketchy-ar-us presents a non photorealistic view of the AR scene using non-photorealistic rendering (NPR). There are several rea- sons why NPR images may be better for some applications: the pictures are easy to understand, they are easy to display, and they do not need a huge amount of data [Raskar et al. 2004]. A hand-drawn sketch can often communicate complex coherences in a better way than photorealistic pictures. Sketchy (un-completed) drawings need users to mentally complete the picture and add missing details. Mc- Cloud describes in [McCloud 1994] that scenarios can be expressed
+easier by using a simple, comic style.
+A general overview of different NPR algorithms are given by [Gooch and Gooch 2001; Strothotte and Schlechtweg 2002]. Many algorithms have been developed in the last decade that create im- ages which resemble art made by humans [Gooch et al. 2002; Hertzmann and Perlin 2000]. Different art techniques and styles can be simulated, such as pen and ink [Salisbury et al. 1994], hatching [Praun et al. 2001], water color [Curtis et al. 1997] and impression- ism [Haeberli 1990; Meier 1996].
+Although NPR techniques are becoming more common, there has been little research conduced into combining AR content with novel rendering techniques. In [Haller and Sperl 2004] we presented a non-photorealistic renderer in an AR environment, where only the virtual objects have been rendered in a painterly style. Fischer et al. [Fischer et al. 2005] postulate a cartoon-like AR environment, where both the virtual and the real objects are rendered in the same style. Their approach is based on a bilateral image filtering for the color segmentation and a Canny-edge-detector for the silhouette generation. Their work motivated us to combine the Loose and Sketchy algorithm with an AR setup to achieve a more stylistic and artistic environment.
+Another example of how the AR content can be enriched by NPR objects is presented by Collomosse et al. [Collomosse et al. 2003a; Collomosse et al. 2003b], who postulate that an abstract illustration of motion also makes sense for real movie sequences. In their work, they enhance the motion in movies by adding motion lines or de- forming real objects so that they seem to be moving quickly. Their movies are impressive and convincing, although their techniques require extensive pre-processing.
+Our Loose and Sketchy algorithm consists of three different steps: finding the silhouette by using reference images, blurring the image to achieve a more fuzzy image, and adding paper texture to produce a more stylistic image. A lot of different algorithms have been pub- lished for the generation of silhouettes [Saito and Takahashi 1990; Card and Mitchell 2002; Raskar and Cohen 1999; Northrup and Markosian 2000]. Kowalski et al. [Kowalski et al. 1999] demon- strate a novel silhouette rendering technique to achieve an art-based rendering of fur, grass, and trees. However, less attention has been given to coherent stylized silhouettes (cf. [Masuch et al. 1997; Kalnins et al. 2003]).
+In contrast to Fischer et al. [Fischer et al. 2005] our algorithm uses the basic concepts proposed by Curtis. In our case, both the vir- tual content (3d scenario) and the real scenario (the video input) uses a ”different” rendering mechanism. Consequently, for both images (the augmented, virtual content and the real scene) we used different input to achieve the best NPR results. So, for example, we used the depth-information to create silhouettes of the virtual 3d objects. In addition, 3d objects closer to the camera viewpoint could be drawn with thicker silhouette lines than objects that were far away. Fischer’s algorithm is mainly based on edge-detection and it renders the silhouette edge in a normal way. In contrast, our al- gorithm is based on a particle system, which allows more flexibility and results in a more stylistic image.
+3 Real-time Loose and Sketchy approach
+The Loose and Sketchy technique of Curtis produces images that appear to be drawn by hand. It automatically draws the visible sil- houette edges of a 3D model using image processing and a stochas- tic, physically-based particle system.
+372
+
+              
+               
+                   
+               
+            
+           
+             
+          
+        
+                  
+           
+  Due to its complexity, the original Loose and Sketchy method could not be used for real-time applications. To apply the same style of rendering in real-time, we modified the technique of Curtis by extensively using modern 3D hardware—particularly the pro- grammable graphics pipeline. The real-time method is still based on the same principles as laid out in [?], albeit with minor simplifi- cations.
+In the following sections the steps involved in creating a real-time Loose and Sketchy image are discussed. The graphics pipeline of the described system is shown in figure 3.
+3.1 Preprocessing
+The Loose and Sketchy algorithms rely heavily on image process- ing, both for edge detection as well as the blurring of the scene. The edge detection filter operates on the depth-buffer and the blur filter manipulates the color-buffer. To perform these filters successfully, the appropriate buffers have to be prepared first.
+Direct rendering to textures using PBuffers [Wynn 2002] allows for rapid generaton of the necessary data. Once defined as a render tar- get, the rendering process draws directly into the appropriate color- and depth-buffer textures of the PBuffer—without taking a detour over the standard on-board frame- and depth-buffer. Afterwards these textures can be used just like normal OpenGL textures.
+3.2 Generating the reference image
+The reference image holds two different kinds of data important for drawing the strokes. Firstly, it contains the silhouette information of the scene and, secondly, a ”force field” which is used to place the strokes along the silhouettes. By applying the Sobel edge detection filter on the depth-buffer texture, the necessary data can be found for constructing the reference image.
+In contrast to Fischer et al. [Fischer et al. 2005], we do not use the Canny filter, because we needed to create ”force field” vectors to
+determine the movement of the particles.
+Figure 3: The pipeline of the real-time Loose and Sketchy algorithm.
+373
+The Sobel operator performs a 2D spatial gradient measurement on an image and then emphasizes regions of high spatial gradient that correspond to edges. Since discontinuities in neighboring depth- buffer values occur mostly at the 3D-objects’ contours, only sil- houette edges and a few boundary edges will be detected—but this is exactly what is needed. In [Saito and Takahashi 1990], Saito and Takahashi introduced how to find boundary edges by taking into account discontinuities in neighboring surface normal values.
+The Sobel edge detection filter consists of a pair of 3 × 3 convolu- tion masks shown in equation 1, where the second matrix is simply the transposition of the first one.
+1 0−1121 G=2 0−2G=000(1)
+x1 0−1 y −1−2−1
+The masks are applied separately to the depth-buffer, to produce separate measurements of the gradient component in each orienta- tion. These components are then combined to form a 2D vector.
+The absolute magnitude of this gradient vector is used to determine if an edge has been found at the current pixel position. In order to assert an edge, the absolute magnitude of the gradient vector must exceed a defined threshold value. The lower the threshold, the more edges that will be found, since a lower magnitude is sufficient for ”edge-qualification”—a higher threshold results in fewer detected edges. The ”force field” is obtained by calculating unit vectors per- pendicular to the gradient vector.
+The reference image’s creation is completely performed inside a fragment shader and the results of the fragment program are written to a texture. Therefore, the silhouette information as well as the ”force field” data has to be encoded as pixel values. The pixel’s blue component contains a value which determines whether an edge has been found or not. If no edge has been detected this value is set to 0. However, if an edge is present, the depth-buffer’s data of the
+
+                        
+Figure 4: Using the ”force field”, new particles are created along the silhouette.
+current pixel location is stored instead. This information can be useful later on when drawing the lines. The red and green values of the pixel hold the x- and y-components of the ”force field” vector respectively.
+3.3 Drawing the outlines
+The reference image shows where the objects’ silhouettes are to be found. The final image consists of individual brush strokes that are drawn along these silhouettes. After calculating the reference image using a fragment shader, it is stored as a texture. Since the reference image has to be accessible when drawing the strokes, the contents of this texture have to be read back into main memory. Un- fortunately, this ”memory read-back” is a very demanding process, and is to be held as the scapegoat for being the major bottleneck in the whole application.
+For rendering the brush strokes on the screen we implemented a special particle system. A single stroke consists of multiple parti- cles, which determine the stroke’s position and course. For each frame a predefined number of particles are consecutively emitted, and placed randomly on the screen. By looking up the reference image, we assert if the particle’s position is located at a silhouette edge. If this is not the case the particle gets deleted immediately.
+If the particle is located on a silhouette edge, it is defined as the starting point of a new brush stroke. Moving some steps from this starting point along the direction of the previously created ”force field”, the next point of the stroke is derived. In a similar manner, now starting from the second point, a further point of the stroke is determined. This process is reiterated until a point departs from the silhouette edge or the desired stroke length is exceeded (cf. figure 4).
+After this procedure, the particles which make up a single stroke are exactly specified. Apart from the position, a particle stores ad- ditional parameters which can be used to modify the visual appear- ance of the stroke. For example, by taking information of the orig- inal depth-buffer into account, more distant objects can be repre- sented by thinner brush strokes to give hints on the depth conditions of a scene.
+The process of generating a single brush stroke is repeated until the desired number of strokes is reached. As soon as the characteristics for all strokes are defined, they can finally be drawn onto the screen.
+We implemented three different methods to render the strokes:
+1. Thestrokesarerenderedusingtexturedpolygons(cf.figure5 (a)). This method displays changes in the visual appearance of a stroke with a smooth transition using modern graphics hard- ware. For example, by increasing the transparency along the stroke’s length, a subtle fade-out for the brush strokes can be achieved. Furthermore, the line thickness can be precisely set
+2.
+3.
+by appropriately adjusting the polygons’ size. Another ma- jor advantage is the possibility of rendering the polygons with textures attached to them. By the use of brush textures, a mul- titude of different drawing styles can be imitated, as can be seen in table 2. Thus, this approach represents the most artis- tically versatile style. The silhouettes were created by using normal quad strips and attaching brush strokes. To guaran- tee that this does not result in ”stretching artifacts”, the brush stroke textures have to be chosen carefully (cf. table 2).
+The brush strokes are rendered using the OpenGL GL LINE STRIP command (cf. figure 5 (b)). This so- lution is not well suited for the task of drawing brush strokes. The biggest drawback of this method is that smooth transitions of transparency, stroke width or color, cannot be achieved. Moreover, the lines tend to be aliased and therefore they produce artifacts that interfere with the perception of a drawn style.
+Aninterestingoptionistousetheparticlesinamoreconven- tional manner. Instead of generating brush strokes, each par- ticle stands on its own and a bitmap is rendered at its position (cf. figure 5 (c)). A particle stays alive for a certain period of time and moves along the silhouette using the reference im- age. The particle is destroyed after its time expires—not when leaving the silhouette. A problem with this approach appears when the objects in the scene move rather fast, causing their silhouette to change dramatically per frame. Since the parti- cles stay on the screen for some time and travel only a small distance, the result lags behind the current proper silhouettes.
+        
+                                                                                                                                                      
+        
+     
+            374
+(a) (b) (c)
+Figure 5: The various rendering methods produce distinctively dif- ferent results.
+The reference image is computed for every single frame to properly reflect changes in the 3D scene. Because of this, the brush strokes also have to be redrawn in every frame. Since the strokes are cre- ated randomly, they are different every time and a frame-to-frame coherence between the brush strokes is not guaranteed.
+3.4 Blurring the background
+The techniques presented so far are capable of rendering 3D scenes as pure outline drawings. In order to create the final image the
+
+bodies of the sketched objects are filled with color. Color provides a better understanding and allocation of the displayed scene.
+The color information obtained by a standard rendering pass serves as a basis for the color fill. As discussed in 3.1 a texture was pre- pared containing the color-buffer of the rendered scene. By blurring this texture, the colors appear to fill the strokes completely despite the fact that the strokes do not coincide with the edges of the ob- jects. This works because our brains process color and edge infor- mation separately [?]. Blurring the color texture removes the high- frequency information that would otherwise cause an impression of a double edge.
+The blurring is accomplished in hardware using a two-dimensional image-processing filter as described in [Fernando 2004, Cha. 21]. First, the color-buffer texture is blurred in one axis to produce a temporary image. This image is then blurred in the other axis to produce the final blur. This procedure is demonstrated in figure 6.
+for each frame of animation
+render scene to PBuffer
+generate reference image from depth-buffer update particle system with reference image blur color-buffer texture
+render blurred color texture to framebuffer multiply framebuffer by paper texture
+for each particle (that starts a stroke)
+add brush stroke to framebuffer end for
+end for
+4 Integrating real-time Loose and Sketchy into the AR environment
+In a video see-through AR environment, a video stream from a cam- era is acquired and rendered as a background image for the virtual 3D objects. In order to achieve a seamless combination of both the real and the virtual objects, and thereby an immersive impression of a believable world, everything has to be drawn in the same visual style.
+To be able to apply the brush strokes that are used for rendering the 3D objects’ silhouettes, to the background image as well, a refer- ence image for the real environment has to be generated. By apply- ing the same Sobel edge detection filter, albeit with higher threshold settings to the red channel of the background image, we are able to create decent silhouette information for the real environment. In real-life scenarios, a certain amount of noise cannot be avoided (at least not without prior processing), and we have to compensate this flaw by setting a higher threshold. Since the contents of the depth- buffer are strictly computer generated, there is no need to worry about noise in the image and we generally get away with a lower threshold.
+When creating the 3D objects’ reference image, the silhouette infor- mation of the real environment is passed to the shader program. The fragment shader calculates the objects’ silhouettes and also merges both reference images into one which is subsequently used to place the brush strokes onto the screen. By calculating the silhouettes of the real and virtual images separately, and subsequently merging them, we are able to control the parameters of the edge detection processes individually to achieve better results.
+The blurring of both the real and the virtual objects is achieved by rendering the 3D objects on top of the acquired video frame, and processing the two-step blur on that image. After the paper texture is blended, we draw the brush strokes to get the final Loose and Sketchy result in an AR environment.
+5 Results and Discussions
+Figure 8 (a) shows a traditional AR rendered scene of an augmented (not realistic rendered) bottle. Figures (b) to (d) represent different stages of the Loose and Sketchy algorithm. The installation has been presented at the local city art gallery, where about 200 people had the possibility to give their feedback. It was interesting to see that people really loved to watch themselves in a different style (cf. figures (d), (e), and (f)). They liked the stylistically rendered scene much more than the Gouraud shaded still life. They were amazed by the fact that they could not distinguish between the real and the virtual objects while using a handheld visor.
+                        (a) (b) (c)
+Figure 6: The Gaussian blur is implemented as a two-step opera- tion.
+By implementing the blur as a two-step operation, the processing time is reduced dramatically. The time required to perform a blur is dependent on the proportion of the blur’s area. The larger the blur the more surrounding pixels that have to be taken into account. In a single pass, the area is proportional to the blur diameter squared (d 2 ). This would make large-area blurs impractical for real-time usage. By blurring the image in a two-step operation the cost is reduced from d2 to 2 · d, which can easily be handled by modern graphic cards.
+The source code of a Gaussian blur using a two-step approach is available from the Scotopic Vision Demo from nVIDIA’s SDK1. We basically used the same code for creating the blur effect in the real- time Loose and Sketchy renderer.
+3.5 Putting it together
+First, the blurred color texture is rendered onto the screen. After- wards, to enhance the ”handmade” illusion, we add a paper texture to the rendering. Finally, the brush strokes are drawn on top of the composed image. All the steps involved in creating a Loose and Sketchy rendering are presented below (and shown visually in fig- ure 3):
+1 http://developer.nvidia.com
+ 375
+
+After blurring the scene, the augmented and the real objects were difficult to distinguish. Some of the visitors criticized the fact that the whole scene was too blurred; they were thinking that the cam- era’s lens was incorrectly calibrated. However, the combination with the paper texture for the background gave the scene the im- pression of a painted, sketched image. Finally, by using a sketched border, people really had the impression of watching a sketched AR environment.
+All scenes were rendered on a 2.8 GHz PC with 1 GB of memory using an nVIDIA Geforce FX 6800 with 256 MB. The performance does not depend on the complexity of the rendered model, thus in our case we achieved 16.87 fps. A more detailed overview of the frames-per-seconds is given in table 1, which shows different sce- narios rendered in the blurred style, adding the sketchy silhouette, and adding the background paper. In the two testing environments, we used a model with 894 polygons for the first scene (bottle ge- ometry) and 10,182 polygons for the second scene (Van Gogh’s bedroom geometry) respectively. Notice that the performance was measured in combination with the ARToolKit for marker detection and using an ADS webcam delivering a resolution of 640x480 pix- els at 30 fps. One of the biggest bottlenecks, was the ARToolKit marker detection library, which runs on the CPU rather than the GPU.
+Table 1: The performance of sketchy-ar-us in two different scenar- ios.
+In contrast to [Fischer et al. 2005], our approach uses a completely different method for rendering the scene in a non-photorealistic style. In our case, the silhouette strokes are placed randomly, which itself results in a more ”dynamic” image. This is the desired effect, since it animates the outcoming image and gives the scene a life of its own.
+Thanks to the blurring effect, we didn’t have to care about a one- to-one matching of the real scenario properties with those of the virtual content (i.e. guaranteeing the same lighting parameters and light positions as in the real environment). The missing shadows, the wrong light position and the corresponding wrong shading (be- cause of the fixed OpenGL light position) was never criticized by the visitors.
+In our example, the virtual and the real images have been sent in- dividually to the Loose and Sketchy pipeline. Thus, the parameters for the silhouettes (e.g. the edge detection) could be controlled indi- vidually to achieve better results. Table 2 shows some brush strokes used for the silhouette and the corresponding close-up of the stylis- tic rendered image.
+One problem with our rendering approach occurs with the usage of the depth-buffer for the silhouette detection. Long drawn-out surfaces pointing towards the user can cause unwanted silhouette
+(a) (b)
+Figure 7: Unwanted silhouettes might occur in long drawn-out sur- faces.
+detection inside the surface. This is because the depth information inside the shape changes extremely, which results in depth layers, interpreted as silhouettes (cf. figure 7).
+6 Future Work and Conclusion
+In this paper, we have presented a real-time version of Curtis’ al- gorithm for rendering AR images in a Loose and Sketchy style (cf. [?]). By using modern graphics hardware and high-level shader lan- guages, the process is fast enough to be applied in real-time AR en- vironments. NPR in an augmented environment can become more and more important, especially for artistic applications: by mak- ing images look less photorealistic, artists enable audiences to feel more immersed in a virtual world [McCloud 1994]. Our primary in- terest was to enable the use of real-time stylized rendering to create a more compelling and interesting environment.
+One problem of our proposed algorithm was the lag of stylized sil- houettes with a robust frame-to-frame coherence. The ”flickering” effect, as it was proposed by Curtis, can become disturbing once the objects are moving fast. The particle position, which is calcu- lated randomly within the silhouette path, has to be chosen more carefully from one frame to the other. Kalnins et al. proposed in [Kalnins et al. 2003] one possible solution for propagating the parametrization from strokes in one frame to strokes in the next. We would like to combine these presented ideas with our algorithm to achieve more compelling results.
+Moreover, we want to adapt our algorithm not just on the whole frame and render both the real and the virtual content in the same style. We believe that in some cases it makes more sense to render just parts of the scenario in a non-photorealistic style to enhance regions of the scenario.
+Finally, we want to start a formal usability study to get feedback what people expect from AR in combination with NPR. People have a wide different view regarding the benefits of a non-photorealistic rendered AR scenario and it would be intersting to find out in which sense it influences the visual perception.
+  Scenario
+ Shading
+  fps
+     Add blurring Add edges Add paper
+ 18.51 16.95 16.87
+    Add blurring Add edges Add paper
+ 18.40 16.80 16.54
+     376
+
+  (a) Gouraud rendered image.
+(b) Blurred colored image.
+  (c) Combination of color and paper texture.
+(d) Adding particle rendered outlines.
+  (e) The still life without paper texture and shading color.
+(f) Still life with paper texture but no shading color.
+Figure 8: Different scenario results including some steps of the rendering process of sketchy-ar-us.
+377
+
+                     Table 2: Different brush textures for the strokes result in different appearances of the scenario.

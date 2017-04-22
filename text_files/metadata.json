@@ -1,16 +1,296 @@
 { "files" : [
 	{
-		"path" : "text_files/Deep_learning.txt",
-		"title" : "Deep Learning",
-		"authors" : "by some person",
-		"url" : "https://en.wikipedia.org/wiki/Deep_Learning",
-		"abstract" : "This article will tell you all you never thought you needed to know about deep learning."
+		"path" : "text_files/schmalstieg_2008.txt",
+		"title" : "Augmented Reality for Industrial Building Acceptance",
+		"authors" : "Ralph Schoenfelder, Dieter Schmalstieg",
+		"url" : "https://www.researchgate.net/profile/Ralph_Schoenfelder/publication/4324891_Augmented_Reality_for_Industrial_Building_Acceptance/links/5506e40d0cf27e990e0430d8.pdf#page=71",
+		"abstract" : "In this paper we present an Augmented Reality (AR) application for industrial building acceptance. Building acceptance is the process of comparing as-planned documentation with the factory that was actually built. A self-supported mobile AR device, the AR-Planar, is used to facilitate this comparison by overlaying 3D models on top of a video image. The suitability of this approach is assessed using an expert heuristic in a real factory, and furthermore the usability of the AR-Planar in comparison to other AR systems was examined in a complementary user study."
 	},
 	{
-		"path" : "text_files/machine_learning.txt",
-		"title" : "Machine Learning",
-		"authors" : "Brecht, Berthold",
-		"url" : "https://en.wikipedia.org/wiki/Machine_Learning",
-		"abstract" : "Machines will take over the world at some point. Because we tell them how to learn."
+		"path" : "text_files/woordward_2001.txt",
+		"title" : "Mobile Augmented Reality System for Construction Site Visualization",
+		"authors" : "Charles Woodward, Mika Hakkarainen",
+		"url" : "https://pdfs.semanticscholar.org/8b21/de34239dda0e195a6a6c489a6b263b75d647.pdf",
+		"abstract" : "This paper describes our mobile Augmented Reality (AR) system for construction site visualization and interaction. The mobile AR system can be operated either stand-alone, or as a client-server solution scaling down to mobile phones and tablets based on our lightweight tracking solution. The system is validated in field tests, covering architectural AR visualization with photorealistic rendering effects, up to construction time applications at a real building site."
+	},
+	{
+		"path" : "text_files/dhl_2014",
+		"title" : "Augmented Reality in Logistics",
+		"authors" : "Holger Glockner, Kai Jannek, Johannes Mahn, Björn Theis",
+		"url" : "https://delivering-tomorrow.de/wp-content/uploads/2015/08/dhl-report-augmented-reality-2014.pdf",
+		"abstract" : "From personal computers to mobile devices, we know that technology can profoundly alter the way we commu- nicate and interact with the world. New technologies im- pact almost every industry, and logistics is no exception.\nThe potential for Augmented Reality in the logistics industry has already been highlighted in the acclaimed ‘DHL Logistics Trend Radar’. This overarching study is a dynamic living document designed to help organizations derive new strategies and develop more powerful projects and innovations."
+	},
+	{
+		"path" : "text_files/raskar_2004",
+		"title" : "RFIG Lamps: Interacting with a Self-Describing World via Photosensing Wireless Tags and Projectors",
+		"authors" : "Ramesh Raskar, Paul Beardsley, Jeroen van Baar, Yao Wang, Paul Dietz, Johnny Lee, Darren Leigh, Thomas Willwacher",
+		"url" : "http://www.merl.com/publications/docs/TR2006-108.pdf",
+		"abstract" : "This paper describes how to instrument the physical world so that objects become self-describing, communicating their identity, ge- ometry, and other information such as history or user annotation. The enabling technology is a wireless tag which acts as a radio fre- quency identity and geometry (RFIG) transponder. We show how addition of a photo-sensor to a wireless tag significantly extends its functionality to allow geometric operations - such as finding the 3D position of a tag, or detecting change in the shape of a tagged ob- ject. Tag data is presented to the user by direct projection using a handheld locale-aware mobile projector. We introduce a novel tech- nique that we call interactive projection to allow a user to interact with projected information e.g. to navigate or update the projected information.\nThe ideas are demonstrated using objects with active radio fre- quency (RF) tags. But the work was motivated by the advent of unpowered passive-RFID, a technology that promises to have sig- nificant impact in real-world applications. We discuss how our cur- rent prototypes could evolve to passive-RFID in the future."
+	},
+	{
+		"path" : "text_files/alvarez_2011.txt",
+		"title" : "Providing Guidance for Maintenance Operations Using Automatic Markerless Augmented Reality System",
+		"authors" : "Hugo Álvarez, Iker Aguinaga, Diego Borro",
+		"url" : "https://pdfs.semanticscholar.org/2427/ca038004a470de346ab89de3e7ca17c9726f.pdf",
+		"abstract" : "This paper proposes a new real-time Augmented Reality based tool to help in disassembly for maintenance operations. This tool provides workers with augmented instructions to perform maintenance tasks more efficiently. Our prototype is a complete framework characterized by its capability to automatically generate all the necessary data from input based on untextured 3D triangle meshes, without requiring additional user intervention. An automatic offline stage extracts the basic geometric features. These are used during the online stage to compute the camera pose from a monocular image. Thus, we can handle the usual textureless 3D models used in industrial applications. A self-supplied and robust markerless tracking system that combines an edge tracker, a point based tracker and a 3D particle filter has also been designed to continuously update the camera pose. Our framework incorporates an automatic path-planning module. During the offline stage, the assembly/disassembly sequence is automatically deduced from the 3D model geometry. This information is used to generate the disassembly instructions for workers."
+	},
+	{
+		"path" : "text_files/henderson_2007.txt",
+		"title" : "Augmented Reality for Maintenance and Repair (ARMAR)",
+		"authors" : "Steven J. Henderson, Steven K. Feiner",
+		"url" : "http://www.dtic.mil/dtic/tr/fulltext/u2/a475548.pdf",
+		"abstract" : "The purpose of this research, Augmented Reality for Maintenance and Repair (ARMAR), was to research the design and development of experimental augmented reality systems for maintenance job aiding. The goal was to explore and evaluate the feasibility of developing prototype adaptive augmented reality systems that can be used to investigate how real time computer graphics, overlaid on and registered with the actual equipment being maintained, can significantly increase the productivity of maintenance personnel, both during training and in the field."
+	},
+	{
+		"path" : "text_files/henderson_2009.txt",
+		"title" : "Evaluating the Benefits of Augmented Reality for Task Localization in Maintenance of an Armored Personnel Carrier Turret",
+		"authors" : "Steven J. Henderson, Steven Feiner",
+		"url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.479.8523&rep=rep1&type=pdf",
+		"abstract" : "We present the design, implementation, and user testing of a pro- totype augmented reality application to support military mechan- ics conducting routine maintenance tasks inside an armored ve- hicle turret. Our prototype uses a tracked head-worn display to augment a mechanic’s natural view with text, labels, arrows, and animated sequences designed to facilitate task comprehension, location, and execution. A within-subject controlled user study examined professional military mechanics using our system to complete 18 common tasks under field conditions. These tasks included installing and removing fasteners and indicator lights, and connecting cables, all within the cramped interior of an ar- mored personnel carrier turret. An augmented reality condition was tested against two baseline conditions: an untracked head- worn display with text and graphics and a fixed flat panel display representing an improved version of the laptop-based documenta- tion currently employed in practice. The augmented reality condi- tion allowed mechanics to locate tasks more quickly than when using either baseline, and in some instances, resulted in less over- all head movement. A qualitative survey showed mechanics found the augmented reality condition intuitive and satisfying for the tested sequence of tasks."
+	},
+	{
+		"path" : "text_files/henderson_2008.txt",
+		"title" : "Opportunistic Controls: Leveraging Natural Affordances as Tangible User Interfaces for Augmented Reality",
+		"authors" : "Steven J. Henderson, Steven Feiner",
+		"url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.181.48&rep=rep1&type=pdf",
+		"abstract" : "We present Opportunistic Controls, a class of user interaction techniques for augmented reality (AR) applications that support gesturing on, and receiving feedback from, otherwise unused affordances already present in the domain environment. Oppor- tunistic Controls leverage characteristics of these affordances to provide passive haptics that ease gesture input, simplify gesture recognition, and provide tangible feedback to the user. 3D wid- gets are tightly coupled with affordances to provide visual feed- back and hints about the functionality of the control. For example, a set of buttons is mapped to existing tactile features on domain objects. We describe examples of Opportunistic Controls that we have designed and implemented using optical marker tracking, combined with appearance-based gesture recognition. We present the results of a user study in which participants performed a simu- lated maintenance inspection of an aircraft engine using a set of virtual buttons implemented both as Opportunistic Controls and using simpler passive haptics. Opportunistic Controls allowed participants to complete their tasks significantly faster and were preferred over the baseline technique."
+	},
+	{
+		"path" : "text_files/henderson_2011.txt",
+		"title" : "Augmented Reality in the Psychomotor Phase of a Procedural Task",
+		"authors" : "Steven J. Henderson, Steven Feiner",
+		"url" : "http://gtubicomp2013.pbworks.com/w/file/fetch/65262372/hendersonFeinerISMAR2011.pdf",
+		"abstract" : "Procedural tasks are common to many domains, ranging from main- tenance and repair, to medicine, to the arts. We describe and eval- uate a prototype augmented reality (AR) user interface designed to assist users in the relatively under-explored psychomotor phase of procedural tasks. In this phase, the user begins physical manipu- lations, and thus alters aspects of the underlying task environment. Our prototype tracks the user and multiple components in a typ- ical maintenance assembly task, and provides dynamic, prescrip- tive, overlaid instructions on a see-through head-worn display in response to the user’s ongoing activity. A user study shows partic- ipants were able to complete psychomotor aspects of the assembly task significantly faster and with significantly greater accuracy than when using 3D-graphics–based assistance presented on a station- ary LCD. Qualitative questionnaire results indicate that participants overwhelmingly preferred the AR condition, and ranked it as more intuitive than the LCD condition."
+	},
+	{
+		"path" : "text_files/henderson_2010.txt",
+		"title" : "Opportunistic Tangible User Interfaces for Augmented Reality",
+		"authors" : "Steven J. Henderson, Steven Feiner",
+		"url" : "http://www.academia.edu/download/30744406/Opportunistic_Tangible_User_Interfaces_for_Augmented_Reality-Etw.pdf",
+		"abstract" : "Opportunistic Controls are a class of user interaction techniques that we have developed for augmented reality (AR) applications to support gesturing on, and receiving feedback from, otherwise unused affordances already present in the domain environment. By leveraging characteristics of these affordances to provide passive haptics that ease gesture input, Opportunistic Controls simplify gesture recognition, and provide tangible feedback to the user. In this approach, 3D widgets are tightly coupled with affordances to provide visual feedback and hints about the functionality of the control. For example, a set of buttons can be mapped to existing tactile features on domain objects. We describe examples of Opportunistic Controls that we have designed and implemented using optical marker tracking, combined with appearance-based gesture recognition. We present the results of two user studies. In the first, participants performed a simulated maintenance inspection of an aircraft engine using a set of virtual buttons implemented both as Opportunistic Controls and using simpler passive haptics. Opportunistic Controls allowed participants to complete their tasks significantly faster and were preferred over the baseline technique. In the second, participants proposed and demonstrated user interfaces incorporating Opportunistic Controls for two domains, allowing us to gain additional insights into how user interfaces featuring Opportunistic Controls might be designed."
+	},
+	{
+		"path" : "text_files/henderson_2011_2.txt",
+		"title" : "Exploring the Benefits of Augmented Reality Documentation for Maintenance and Repair",
+		"authors" : "Steven J. Henderson, Steven Feiner",
+		"url" : "",
+		"abstract" : "We explore the development of an experimental augmented reality application that provides benefits to professional mechanics performing maintenance and repair tasks in a field setting. We developed a prototype that supports military mechanics conducting routine maintenance tasks inside an armored vehicle turret, and evaluated it with a user study. Our prototype uses a tracked headworn display to augment a mechanic’s natural view with text, labels, arrows, and animated sequences designed to facilitate task comprehension, localization, and execution. A within-subject controlled user study examined professional military mechanics using our system to complete 18 common tasks under field conditions. These tasks included installing and removing fasteners and indicator lights, and connecting cables, all within the cramped interior of an armored personnel carrier turret. An augmented reality condition was tested against two baseline conditions: the same headworn display providing untracked text and graphics and a fixed flat panel display representing an improved version of the laptop-based documentation currently employed in practice. The augmented reality condition allowed mechanics to locate tasks more quickly than when using either baseline, and in some instances, resulted in less overall head movement. A qualitative survey showed that mechanics found the augmented reality condition intuitive and satisfying for the tested sequence of tasks."
+	},
+	{
+		"path" : "text_files/zhou_2012.txt",
+		"title" : "In-Situ Support for Automotive Manufacturing Using Spatial Augmented Reality",
+		"authors" : "Jianlong Zhou, Ivan Lee, Bruce Thomas, Roland Menassa, Anthony Farrant, and Andrew Sansome",
+		"url" : "http://wearables.unisa.edu.au/uploads/2013/10/insitusupport.pdf",
+		"abstract" : "In automotive manufacturing, quality inspection of spot welding demands excessive manual operations. Operators refer to a printed drawing of the testing body, with the inspection points marked on this drawing. Operators have to locate the matching spot on the drawing and the body manually to perform the inspection. Further more, different subsets of spots are inspected on different car bodies with a pre-determined sequence. This paper describes a system that projects visual data onto arbitrary surfaces for providing just-in-time information to a user in-situ within a physical work-cell. This system aims to reduce the inefficiencies and potential mistakes in manual inspection process. This paper discusses how spatial augmented reality and head-mount displays may be combined to display global information visible by all operators as well as personalized information to individuals. Further investigations on applying spatial augmented reality for spot welding inspections are explored, including four types of digital information projected onto the surfaces of car body parts under structured work environments: 1) Location of spot welds; 2) Inspection methods; 3) Operation Description Sheet (ODS) information; 4) Visualization of weld locating methods. Three visualization methods are used to attract operators’ attention to locate the position of spot welds efficiently. This paper also proposes a method to project augmentations on objects moving along an assembly line. The proposed system allows operators becoming more effective and efficient in performing proper inspections, by providing them the required information at the required time without the need to refer to paper-based manuals or computer terminals."
+	},
+	{
+		"path" : "text_files/liu_2012.txt",
+		"title" : "Evaluating the Benefits of Real-time Feedback in Mobile Augmented Reality with Hand-held Devices",
+		"authors" : "Can Liu, Stéphane Huot, Jonathan Diehl, Wendy E. Mackay, Michel Beaudouin-Lafon",
+		"url" : "https://hal.archives-ouvertes.fr/docs/00/66/39/74/PDF/ARFeedbackA.pdf",
+		"abstract" : "Augmented Reality (AR) has been proved useful to guide operational tasks in professional domains by reducing the shift of attention between instructions and physical objects. Modern smartphones make it possible to use such techniques in everyday tasks, but raise new challenges for the usability of AR in this context: small screen, occlusion, operation “through a lens”. We address these problems by adding real- time feedback to the AR overlay. We conducted a controlled experiment comparing AR with and without feedback, and with standard textual and graphical instructions. Results show significant benefits for mobile AR with feedback and reveals some problems with the other techniques."
+	},
+	{
+		"path" : "text_files/alem_2011.txt",
+		"title" : "Supporting the Changing Roles of Maintenance Operators in Mining: A Human Factors Perspective",
+		"authors" : "Leila Alem, Weidong Huang, Franco Tecchia",
+		"url" : "http://benthamopen.com/contents/pdf/TOERGJ/TOERGJ-4-81.pdf",
+		"abstract" : "Rapid advances in networking and hardware have made it possible for remotely located individuals to perform physical tasks. Recently a number of systems have been developed with each supporting a different scenario of remote collaboration. Of particular interest to us is to explore the value of these technologies in the context of mining. As automation is being introduced in mines, more and more skilled operators are operating remotely. As a result, onsite operators’ job becomes more complex and requires input from remote skilled operators. The productivity of the future mine relies on the effective delivery, just in time, of remote guidance. This paper presents a remote guiding system called HandsOnVideo, which is developed as part of our Human System Integration project within the CSIRO’s Minerals Down Under (MDU), a National Research Flagship. Our aim is to design and develop a system that supports a remote helper guiding a mobile local worker in maintaining complex equipment in mine sites. The system is developed following a participatory design approach and the results of a usability study with real users indicate that the system is useful and effective."
+	},
+	{
+		"path" : "text_files/huang_2011.txt",
+		"title" : "HandsInAir: A Wearable System for Remote Collaboration",
+		"authors" : "Weidong Huang, Leila Alem, Jalal Albasri",
+		"url" : "https://arxiv.org/pdf/1112.1742",
+		"abstract" : "We present HandsInAir, a real-time collaborative wearable system for remote collaboration. The system is developed to support real world scenarios in which a remote mobile helper guides a local mobile worker performing a physical task. HandsInAir implements a novel approach to support mobility of remote collaborators. This approach allows the helper to perform gestures without having to touch tangible objects, requiring little environment support. The system consists of two parts: the helper part and the worker part. The two parts are connected via a wireless network and the collaboration partners communicate with each other via audio and visual links. In this paper, we review related work, describe technical implementation of the system and envision future work for further improvements."
+	},
+	{
+		"path" : "text_files/anderson_2013.txt",
+		"title" : "YouMove: Enhancing Movement Training with an Augmented Reality Mirror",
+		"authors" : "Fraser Anderson, Tovi Grossman, Justin Matejka, George Fitzmaurice",
+		"url" : "https://autodeskresearch.com/pdf/p311.pdf",
+		"abstract" : "YouMove is a novel system that allows users to record and learn physical movement sequences. The recording system is designed to be simple, allowing anyone to create and share training content. The training system uses recorded data to train the user using a large-scale augmented reality mirror. The system trains the user through a series of stages that gradually reduce the user’s reliance on guidance and feedback. This paper discusses the design and implementation of YouMove and its interactive mirror. We also present a user study in which YouMove was shown to improve learning and short-term retention by a factor of 2 compared to a traditional video demonstration."
+	},
+	{
+		"path" : "text_files/tang_2014.txt",
+		"title" : "Physio@Home: Design Explorations to Support Movement Guidance",
+		"authors" : "Richard Tang, Hesam Alizadeh, Anthony Tang, Scott Bateman, Joaquim Jorge",
+		"url" : "",
+		"abstract" : "Patients typically undergo physiotherapy with the help of a physiotherapist who teaches, guides, and corrects the patients as they perform exercises. It would be nice if people could repeat these exercises at home, potentially improving their recovery rate. However, without guidance and/or corrective feedback from a physiotherapist, the patient will not know whether they are doing their exercises correctly. To address this problem, we implemented a prototype that guides patients through pre-recorded exercise movements using visual guides overlaid atop a mirror-view of the patient on a wall-mounted display. We conducted informal evaluations and pilot studies to assess our prototype and identified some working designs and design characteristics. Collected data will assist us in developing future iterations of the system and designing improved guides for physiotherapy sessions at home."
+	},
+	{
+		"path" : "text_files/damen_2014.txt",
+		"title" : "Multi-User Egocentric Online System for Unsupervised Assistance on Object Usage",
+		"authors" : "Dima Damen, Osian Haines, Teesid Leelasawassuk, Andrew Calway, Walterio Mayol-Cuevas",
+		"url" : "https://www.cs.bris.ac.uk/~damen/You-Do-I-Learn/Damen_ACVR2014_prePrint.pdf",
+		"abstract" : "We present an online fully unsupervised approach for auto- matically extracting video guides of how objects are used from wearable gaze trackers worn by multiple users. Given egocentric video and eye gaze from multiple users performing tasks, the system discovers task-relevant objects and automatically extracts guidance videos on how these objects have been used. In the assistive mode, the paper proposes a method for selecting a suitable video guide to be displayed to a novice user indi- cating how to use an object, purely triggered by the user’s gaze. The approach is tested on a variety of daily tasks ranging from opening a door, to preparing coffee and operating a gym machine."
+	},
+	{
+		"path" : "text_files/damen_2014_2.txt",
+		"title" : "You-Do, I-Learn: Discovering Task Relevant Objects and their Modes of Interaction from Multi-User Egocentric Video",
+		"authors" : "Dima Damen, Teesid Leelasawassuk, Osian Haines, Andrew Calway, Walterio Mayol-Cuevas",
+		"url" : "http://www.bmva.org/bmvc/2014/files/paper059.pdf",
+		"abstract" : "We present a fully unsupervised approach for the discovery of i) task relevant objects and ii) how these objects have been used. Given egocentric video from multiple opera- tors, the approach can discover objects with which the users interact, both static objects such as a coffee machine as well as movable ones such as a cup. Importantly, the com- mon modes of interaction for discovered objects are also found. We investigate using appearance, position, motion and attention, and present results using each and a combi- nation of relevant features. Results show that the method is capable of discovering 95% of task relevant objects on a variety of daily tasks such as initialising a printer, preparing a coffee and setting up a gym machine. In addition, the approach enables the automatic generation of guidance video on how these objects have been used before."
+	},
+	{
+		"path" : "text_files/chi_2013.txt",
+		"title" : "DemoCut: Generating Concise Instructional Videos for Physical Demonstrations",
+		"authors" : "Pei-Yu (Peggy) Chi, Joyce Liu, Jason Linder, Mira Dontcheva, Wilmot Li, Björn Hartmann",
+		"url" : "http://dl.acm.org/ft_gateway.cfm?id=2502052&type=pdf",
+		"abstract" : ""
+	},
+	{
+		"path" : "text_files/gupta_2012.txt",
+		"title" : "DuploTrack: A Real-time System for Authoring and Guiding Duplo Block Assembly",
+		"authors" : "Ankit Gupta, Dieter Fox, Brian Curless, Michael Cohen",
+		"url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.348.4324&rep=rep1&type=pdf",
+		"abstract" : "We demonstrate a realtime system which infers and tracks the assembly process of a snap-together block model using a Kinect⃝R sensor. The inference enables us to build a virtual replica of the model at every step. Tracking enables us to provide context specific visual feedback on a screen by aug- menting the rendered virtual model aligned with the physical model. The system allows users to author a new model and uses the inferred assembly process to guide its recreation by others. We propose a novel way of assembly guidance where the next block to be added is rendered in blinking mode with the tracked virtual model on screen. The system is also able to detect any mistakes made and helps correct them by provid- ing appropriate feedback. We focus on assemblies of Duplo⃝R blocks.\nWe discuss the shortcomings of existing methods of guidance — static figures or recorded videos — and demonstrate how our method avoids those shortcomings. We also report on a user study to compare our system with standard figure-based guidance methods found in user manuals. The results of the user study suggest that our method is able to aid users’ struc- tural perception of the model better, leads to fewer assembly errors, and reduces model construction time."
+	},
+	{
+		"path" : "text_files/fischer_2005.txt",
+		"title" : "Stylized Augmented Reality for Improved Immersion",
+		"authors" : "Jan Fischer, Dirk Bartz, Wolfgang Straßer",
+		"url" : "https://www.researchgate.net/profile/Jan_Fischer3/publication/4165383_Stylized_augmented_reality_for_improved_immersion/links/02e7e522c6ebbd9d25000000.pdf",
+		"abstract" : "The ultimate goal of augmented reality is to provide the user with a view of the surroundings enriched by virtual objects. Practically all augmented reality systems rely on standard real-time rendering methods for generating the images of virtual scene elements. Al- though such conventional computer graphics algorithms are fast, they often fail to produce sufficiently realistic renderings. The use of simple lighting and shading methods, as well as the lack of knowledge about actual lighting conditions in the real surround- ings, cause virtual objects to appear artificial.\nIn this paper, we propose an entirely novel approach for gener- ating augmented reality images in video see-through systems. Our method is based on the idea of applying stylization techniques for reducing the visual realism of both the camera image and the vir- tual graphical objects. A special painterly image filter is applied to the camera video stream. The virtual scene elements are generated using a non-photorealistic rendering method. Since both the cam- era image and the virtual objects are stylized in a corresponding “cartoon-like” or “sketch-like” way, they appear very similar. As a result, the graphical objects seem to be an actual part of the real surroundings.\nWe describe both the new painterly filter for the camera image and the non-photorealistic rendering method for virtual scene el- ements, which has been adapted for this purpose. Both are fast enough for generating augmented reality images in real-time and are highly customizable. The results obtained using our method are very promising and show that it improves immersion in augmented reality."
+	},
+	{
+		"path" : "text_files/haller_2004.txt",
+		"title" : "Non-photorealistic rendering techniques for motion in computer games",
+		"authors" : "Michael Haller, Christian Hanl, Jeremiah Diephuis",
+		"url" : "http://ai2-s2-pdfs.s3.amazonaws.com/94a3/009c77e3d2bf66cc7e8c6ba09dc664f7e320.pdf",
+		"abstract" : "Still images often take advantage of stylized techniques to portray motion. Most of these techniques are commonly used for dynamic images as well (e.g. for cartoons). Typically an artist abstracts the motion of a specific scene or animation to illustrate movement. Depicting motion in real-time environments is no less essential and therefore a similar approach would be desirable. Our approach is focused on three methods to stylize motion: squash-and-stretch, multiple images, and motion lines. These methods for depicting motion in dynamic images are discussed in the course of this paper, and an implementation is presented. Finally, we discuss the results and conclude with an outlook of further development."
+	},
+	{
+		"path" : "text_files/haller_205.txt",
+		"title" : "A Loose and Sketchy Approach in a Mediated Reality Environment",
+		"authors" : "Michael Haller, Florian Landerl, Mark Billinghurst",
+		"url" : "http://ir.canterbury.ac.nz/bitstream/handle/10092/2338/12602112_2005-GRAPHITE-Loose&Sketchy.pdf?sequence=1",
+		"abstract" : "In this paper, we present sketchy-ar-us, a modified, real-time ver- sion of the Loose and Sketchy algorithm used to render graphics in an AR environment. The primary challenge was to modify the orig- inal algorithm to produce a NPR effect at interactive frame rate. Our algorithm renders moderately complex scenes at multiple frames per second. Equipped with a handheld visor, visitors can see the real environment overlaid with virtual objects with both the real and virtual content rendered in a non-photorealistic style."
+	},
+	{
+		"path" : "text_files/schall_2010.txt",
+		"title" : "Handheld Augmented Reality in Civil Engineering",
+		"authors" : "Gerhard Schall",
+		"url" : "http://www.icg.tu-graz.ac.at/Members/schall/rosus/download",
+		"abstract" : "This paper presents an overview of a project focusing on research on the next-generation field information system for utility companies, providing mobile workforces with capabilities for on-site inspection and planning. For achieving this aim, handheld Augmented Reality technology is used for on-site visualization of geometric and semantic attributes of geospatial 3D models on the user’s handheld device. The project aims at providing a fully functional handheld Augmented Reality device for utility field workers. A software solution that can visualize registered three-dimensional underground models in real time has been developed. Registration in 3D requires being able to perform accurate global localization and posing tracking in real time without relying on unrealistic assumptions concerning prior scene knowledge. The generation of such three-dimensional underground models will be discussed as well as an overview of the fields of application will be given."
+	},
+	{
+		"path" : "text_files/tatzgern_2010.txt",
+		"title" : "Compact Explosion Diagrams",
+		"authors" : "Markus Tatzgern, Denis Kalkofen, Dieter Schmalstieg",
+		"url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.936.481&rep=rep1&type=pdf",
+		"abstract" : "This paper presents a system to automatically generate compact ex- plosion diagrams. Inspired by handmade illustrations, our approach reduces the complexity of an explosion diagram by rendering an ex- ploded view only for a subset of the assemblies of an object. How- ever, the exploded views are chosen so that they allow inference of the remaining unexploded assemblies of the entire 3D model. In particular, our approach demonstrates the assembly of a set of identical groups of parts, by presenting an exploded view only for a single representative. In order to identify the representatives, our system automatically searches for recurring subassemblies. It se- lects representatives depending on a quality evaluation of their po- tential exploded view. Our system takes into account visibility in- formation of both the exploded view of a potential representative as well as visibility information of the remaining unexploded assem- blies. This allows rendering a balanced compact explosion diagram, consisting of a clear presentation of the exploded representatives as well as the unexploded remaining assemblies. Since representatives may interfere with one another, our system furthermore optimizes combinations of representatives. Throughout this paper we show a number of examples, which have all been rendered from unmodi- fied 3D CAD models."
+	},
+	{
+		"path" : "text_files/kalkofen_2009.txt",
+		"title" : "Explosion Diagrams in Augmented Reality",
+		"authors" : "Denis Kalkofen, Markus Tatzgern, Dieter Schmalstieg",
+		"url" : "https://pdfs.semanticscholar.org/01f1/8503450fdb9952a016edec4bfbe954d0418e.pdf",
+		"abstract" : "This article introduces explosion diagrams to Augmented Reality (AR) applications. It presents algorithms to seamlessly integrate an object’s explosion diagram into a real world environment, includ- ing the AR rendering of relocated objects textured with live video and the restoration of visual information which are hidden behind relocated objects. It demonstrates several types of visualizations for convincing AR explosion diagrams and it discusses visualizations of exploded parts as well as visual links conveying their relocation direction. Furthermore, we show the integration of our rendering and visualization techniques in an AR framework, which is able to automatically compute a diagram’s layout and an animation of its corresponding explosion."
+	},
+	{
+		"path" : "text_files/schall_2010.txt",
+		"title" : "VIDENTE - 3D Visualization of Underground Infrastructure using Handheld Augmented Reality",
+		"authors" : "Gerhard Schall, Dieter Schmalstieg, Sebastian Junghanns",
+		"url" : "http://www.icg.tu-graz.ac.at/Members/schall/geohydro.pdf/download/",
+		"abstract" : "This chapter outlines a research project called Vidente following the vision of registered 3D visualization of underground networks on handheld devices in real-time. Towards this aim, technology from interdisciplinary fields such as computer graphics, augmented reality, geographic information systems (GIS) and satellite navigation needs to be addressed. We highlight aspects of the Vidente system targeted on water systems operated by utilities from the water supply sector, which are already completely relying on their geo-databases for day-to-day operation of their assets. However, there is a noticeable gap between desktop GIS technology available in the office and access to this information in the field. To fill this gap, we propose to provide field workers with an intuitive three-dimensional visualization of the local underground network infrastructure using outdoor handheld augmented reality (AR) as depicted in Figure 1. The focus is on a next-generation mobile GIS system for utilities as well as telecommunication companies, supporting mobile workforces in the complete life cycle of water infrastructure, thus revolutionizing traditional planning, operation, maintenance, on-site inspection, fault management and decision-making. The project significantly advances mobile GIS in water engineering. Moreover, common field tasks concerning maintenance and operation are accomplished more efficiently while reducing unintended damage and increasing general safety on site. The system is intended to equip professionals, practitioners, water resources engineers, managers and decision makers working in water related arenas, utilities from the water sector, water boards and other government agencies with available information and advanced information technology tools to assist in on-site applications to geohydrological and environmental problems of urban waters."
+	},
+	{
+		"path" : "text_files/mendez_2006.txt",
+		"title" : "Interactive Context-Driven Visualization Tools for Augmented Reality",
+		"authors" : "Erick Mendez, Denis Kalkofen, Dieter Schmalstieg",
+		"url" : "http://www.icg.tu-graz.ac.at/Members/mendez/Pueblications/mendez_ismar2006.pdf",
+		"abstract" : "In this article we present an interaction tool, based on the Magic Lenses technique, that allows a 3D scene to be affected dynamically given contextual information, for example, to support information filtering. We show how elements of a scene graph are grouped by context in addition to hierarchically, and, how this enables us to locally modify their rendering styles. This research has two major contributions, the use of context sensitivity with 3D Magic Lenses in a scene graph and the implementation of multiple volumetric 3D Magic Lenses for Augmented Reality setups. We have developed our tool for the Studierstube framework which allows us doing rapid prototyping of Virtual and Augmented Reality applications. Some application directions are shown throughout the paper. We compare our work with other methods, highlight strengths and weaknesses and finally discuss research directions for our work."
+	},
+	{
+		"path" : "text_files/veas_2013.txt",
+		"title" : "Mobile augmented reality for environmental monitoring",
+		"authors" : "Eduardo Veas, Raphaël Grasset, Ioan Ferencik, Thomas Grünewald, Dieter Schmalstieg",
+		"url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.646.7064&rep=rep1&type=pdf",
+		"abstract" : "In response to dramatic changes in the environment, and supported by advances in wireless network- ing, pervasive sensor networks have become a common tool for environmental monitoring. However, tools for on- site visualization and interactive exploration of environ- mental data are still inadequate for domain experts. Current solutions are generally limited to tabular data, basic 2D plots, or standard 2D GIS tools designed for the desktop and not adapted to mobile use. In this paper, we introduce a novel augmented reality platform for 3D mobile visuali- zation of environmental data. Following a user-centered design approach, we analyze processes, tasks, and requirements of on-site visualization tools for environ- mental experts. We present our multilayer infrastructure and the mobile augmented reality platform that leverages visualization of georeferenced sensor measurement and simulation data in a seamless integrated view of the environment."
+	},
+	{
+		"path" : "text_files/ghadirian_2002.txt",
+		"title" : "Composition of Augmented Reality and GIS To Visualize Environmental Changes",
+		"authors" : "Payam Ghadirian, Ian D. Bishop",
+		"url" : "https://www.researchgate.net/profile/Ian_Bishop/publication/249873509_Composition_of_Augmented_Reality_and_GIS_To_Visualize_Environmental_Changes/links/0046353c650fcb1805000000.pdf",
+		"abstract" : "Nowadays, researchers, managers and even the general public are much more concerned about environmental changes. Changes in the landscape around us, and their effect on our lives, are among the most important indicators of cause for environmental concern. Observation and monitoring of change and attempts at the creation of more realistic simulations of the evolving environment have become key research fields. Nevertheless, current visualisation systems are still unable to create a sense of place and realism sufficiently similar to that in the real world. A very beautiful animation is not necessarily a sufficient surrogate for real world experience. Therefore, in order to use simulation to monitor people’s responses to and behaviour in real world situations we need better tools. The development of an interactive visualisation system that can use all the amenities of current systems (Geo-reference GIS, environmental process modelling and 3D modelling and rendering) in combination with a 3D immersion system that uses real world elements (Video sequences), would overcome several of the problems associated with current systems.\nThis paper introduces a preliminary stages of a project which combines GIS based environmental process modelling with use of augmented reality (AR) technology to present environmental change in an immersive environment. The paper first reviews current visualisation systems, it then introduces the concepts and existing development of our proposed system and describes the proposed weed spread case study and some experiences in multi-channel video capture."
+	},
+	{
+		"path" : "text_files/hedley_2002.txt",
+		"title" : "Explorations in the use of Augmented Reality for Geographic Visualization",
+		"authors" : "Nick. R. Hedley, Mark Billinghurst, Lori Postner, Richard May, Hirokazu Kato",
+		"url" : "http://www.academia.edu/download/4442053/10.1.1.96.4435.pdf",
+		"abstract" : "In this paper we describe two explorations in the use of hybrid user interfaces for collaborative geographic data visualization. Our first interface combines three technologies; Augmented Reality (AR), immersive Virtual Reality and computer vision based hand and object tracking. Wearing a lightweight display with camera attached, users can look at a real map and see three-dimensional virtual terrain models overlaid on the map. From this AR interface they can fly in and experience the model immersively, or use free hand gestures or physical markers to change the data representation. Building on this work, our second interface explores alternative interface techniques, including a zoomable user interface, paddle interactions and pen annotations. We describe the system hardware and software, and the implications for GIS and spatial science applications."
+	},
+	{
+		"path" : "text_files/veas_2009.txt",
+		"title" : "HYDROSYS - first approaches towards on-site monitoring and management with handhelds",
+		"authors" : "Eduardo Veas, Ernst Kruijff, Erick Mendez",
+		"url" : "http://hydrosys.icg.tugraz.at/media_files/hydrosys-e-envi2009.pdf",
+		"abstract" : "HYDROSYS is a project targeted at improving monitoring and understanding of environmental processes and their management. The project introduces innovative concepts of on-site monitoring and event-driven campaigns. It builds an infrastructure that promotes synergy across user groups both on-site and at the workplace. This publication introduces initial steps towards defining on-site monitoring and an infrastructure to support it."
+	},
+	{
+		"path" : "text_files/veas_2010.txt",
+		"title" : "Techniques for View Transition in Multi-Camera Outdoor Environments",
+		"authors" : "Eduardo Veas, Alessandro Mulloni, Ernst Kruijff, Holger Regenbrecht, Dieter Schmalstieg",
+		"url" : "http://www.icg.tu-graz.ac.at/Members/veas/papers/2010-GI_Techniques_for_View_Transition_Multicam.pdf/at_download/file",
+		"abstract" : "Environment monitoring using multiple observation cameras is increasingly popular. Different techniques exist to visualize the incoming video streams, but only few evaluations are available to find the best suitable one for a given task and context. This article compares three techniques for browsing video feeds from cameras that are located around the user in an unstructured manner. The techniques allow mobile users to gain extra information about the surroundings, the objects and the actors in the environment by observing a site from different perspectives. The techniques relate local and remote cameras topologically, via a tunnel, or via bird’s eye viewpoint. Their common goal is to enhance spatial awareness of the viewer, without relying on a model or previous knowledge of the environment. We introduce several factors of spatial awareness inherent to multi-camera systems, and present a comparative evaluation of the proposed techniques with respect to spatial understanding and workload."
+	},
+	{
+		"path" : "text_files/veas_2012.txt",
+		"title" : "Extended Overview Techniques for Outdoor Augmented Reality",
+		"authors" : "Eduardo Veas, Raphaël Grasset, Ernst Kruijff, Dieter Schmalstieg",
+		"url" : "http://ai2-s2-pdfs.s3.amazonaws.com/8b3f/cd06cdf63ad75d8759229902b8cbe2d55927.pdf",
+		"abstract" : "In this paper, we explore techniques that aim to improve site understanding for outdoor Augmented Reality (AR) applications. While the first person perspective in AR is a direct way of filtering and zooming on a portion of the data set, it severely narrows overview of the situation, particularly over large areas. We present two interactive techniques to overcome this problem: multi-view AR and variable perspective view. We describe in details the conceptual, visualization and interaction aspects of these techniques and their evaluation through a comparative user study. The results we have obtained strengthen the validity of our approach and the applicability of our methods to a large range of application domains."
+	},
+	{
+		"path" : "text_files/tatzgern_2015.txt",
+		"title" : "Exploring Real World Points of Interest: Design and Evaluation of Object-centric Exploration Techniques for Augmented Reality",
+		"authors" : "Markus Tatzgern1 Raphael Grasset, Eduardo Veas, Denis Kalkofen, Hartmut Seichter, Dieter Schmalstieg",
+		"url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.705.714&rep=rep1&type=pdf",
+		"abstract" : "Augmented reality (AR) enables users to retrieve additional information about real world objects and locations. Exploring such location-based information in AR requires physical movement to different viewpoints, which may be tiring and even infeasible when viewpoints are out of reach. In this paper, we present object-centric exploration techniques for handheld AR that allow users to access information freely using a virtual copy metaphor. We focus on the design of techniques that allow the exploration of large real world objects. We evaluated our interfaces in a series of studies in controlled conditions and compared them to a 3D map interface, which is a more common method for accessing location-based information. Based on our findings, we put forward design recommendations that should be considered by future generations of location-based AR browsers, 3D tourist guides or situated urban planning."
+	},
+	{
+		"path" : "text_files/mohr_2017.txt",
+		"title" : "Retargeting Video Tutorials Showing Tools With Surface Contact to Augmented Reality",
+		"authors" : "Peter Mohr, David Mandl, Markus Tatzgern, Eduardo Veas, Dieter Schmalstieg, Denis Kalkofen",
+		"url" : "",
+		"abstract" : "A video tutorial effectively conveys complex motions, but may be hard to follow precisely because of its restriction to a predetermined viewpoint. Augmented reality (AR) tutori- als have been demonstrated to be more effective. We bring the advantages of both together by interactively retargeting conventional, two-dimensional videos into three-dimensional AR tutorials. Unlike previous work, we do not simply overlay video, but synthesize 3D-registered motion from the video. Since the information in the resulting AR tutorial is registered to 3D objects, the user can freely change the viewpoint with- out degrading the experience. This approach applies to many styles of video tutorials. In this work, we concentrate on a class of tutorials which alter the surface of an object."
+	},
+	{
+		"path" : "text_files/tatzgern_2013.txt",
+		"title" : "Exploring Distant Objects with Augmented Reality",
+		"authors" : "Markus Tatzgern, Raphael Grasset, Eduardo Veas, Denis Kalkofen, Hartmut Seichter, Dieter Schmalstieg",
+		"url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.641.1592&rep=rep1&type=pdf",
+		"abstract" : "Augmented reality (AR) enables users to retrieve additional information about the real world objects and locations. Exploring such location-based information in AR requires physical movement to different viewpoints, which may be tiring and even infeasible when viewpoints are out of reach. In this paper, we present object-centric exploration techniques for handheld AR that allow users to access information freely using a virtual copy metaphor to explore large real world objects. We evaluated our interfaces in controlled conditions and collected first experiences in a real world pilot study. Based on our findings, we put forward design recommendations that should be considered by future generations of location-based AR browsers, 3D tourist guides, or in situated urban planning."
+	},
+	{
+		"path" : "text_files/klein_2006.txt",
+		"title" : "Visual Tracking for Augmented Reality",
+		"authors" : "Georg Klein",
+		"url" : "http://www.academia.edu/download/46006461/Visual_Tracking_for.pdf",
+		"abstract" : "In Augmented Reality applications, the real environment is annotated or enhanced with computer-generated graphics. These graphics must be ex- actly registered to real objects in the scene and this requires AR systems to track a user’s viewpoint. This thesis shows that visual tracking with in- expensive cameras (such as those now often built into mobile computing devices) can be sufficiently robust and accurate for AR applications. Visual tracking has previously been applied to AR, however this has used artifi- cial markers placed in the scene; this is undesirable and this thesis shows that it is no longer necessary. To address the demanding tracking needs of AR, two specific AR formats are considered. Firstly, for a head-mounted display, a markerless tracker which is robust to rapid head motions is presented. This robustness is achieved by combining visual measurements with those of head-worn in- ertial sensors. A novel sensor fusion approach allows not only pose pre- diction, but also enables the tracking of video with unprecedented levels of motion blur. Secondly, the tablet PC is proposed as a user-friendly AR medium. For this device, tracking combines inside-out edge tracking with outside-in track- ing of tablet-mounted LEDs. Through the external fusion of these comple- mentary sensors, accurate and robust tracking is achieved within a modest computing budget. This allows further visual analysis of the occlusion boundaries between real and virtual objects and a marked improvement in the quality of augmentations. Finally, this thesis shows that not only can tracking be made resilient to motion blur, it can benefit from it. By exploiting the directional nature of motion blur, camera rotations can be extracted from individual blurred frames. The extreme efficiency of the proposed method makes it a viable drop-in replacement for inertial sensors."
+	},
+	{
+		"path" : "text_files/gadelha_2014.txt",
+		"title" : "An Augmented Reality Pipeline to Create Scenes with Coherent Illumination Using Textured Cuboids",
+		"authors" : "Matheus Abrantes Gadelha",
+		"url" : "https://repositorio.ufrn.br/jspui/bitstream/123456789/19823/1/MatheusAbrantesGadelha_DISSERT.pdf",
+		"abstract" : "Shadows and illumination play an important role when generating a realistic scene in computer graphics. Most of the Augmented Reality (AR) systems track markers placed in a real scene and retrieve their position and orientation to serve as a frame of reference for added computer generated content, thereby producing an augmented scene. Realis- tic depiction of augmented content with coherent visual cues is a desired goal in many AR applications. However, rendering an augmented scene with realistic illumination is a complex task. Many existent approaches rely on a non automated pre-processing phase to retrieve illumination parameters from the scene. Other techniques rely on specific markers that contain light probes to perform environment lighting estimation. This study aims at designing a method to create AR applications with coherent illumination and shadows, using a textured cuboid marker, that does not require a training phase to provide lighting information. Such marker may be easily found in common environments: most of product packaging satisfies such characteristics. Thus, we propose a way to estimate a directio- nal light configuration using multiple texture tracking to render AR scenes in a realistic fashion. We also propose a novel feature descriptor that is used to perform multiple tex- ture tracking. Our descriptor is an extension of the binary descriptor, named discrete descriptor, and outperforms current state-of-the-art methods in speed, while maintaining their accuracy."
+	},
+	{
+		"path" : "text_files/rekimoto_1995.txt",
+		"title" : "The World through the Computer: Computer Augmented Interaction with Real World Environments",
+		"authors" : "Jun Rekimoto, Katashi Nagao",
+		"url" : "https://www.sonycsl.co.jp/person/rekimoto/uist95/uist95.html",
+		"abstract" : "Current user interface techniques such as WIMP or the desktop metaphor do not support real world tasks, because the focus of these user interfaces is only on human–computer in- teractions, not on human–real world interactions. In this pa- per, we propose a method of building computer augmented environments using a situation-aware portable device. This device, called NaviCam, has the ability to recognize the user’s situation by detecting color-code IDs in real world environ- ments. It displays situation sensitive information by superim- posing messages on its video see-through screen. Combina- tion of ID-awareness and portable video-see-through display solves several problems with current ubiquitous computers systems and augmented reality systems."
+	},
+	{
+		"path" : "text_files/bell_2001.txt",
+		"title" : "View Management for Virtual and Augmented Reality",
+		"authors" : "Blaine Bell, Steven Feiner, Tobias Höllerer",
+		"url" : "http://monet.cs.columbia.edu/publications.newer/uist01.pdf",
+		"abstract" : "We describe a view-management component for interactive 3D user interfaces. By view management, we mean maintaining visual constraints on the projections of objects on the view plane, such as locating related objects near each other, or preventing objects from occluding each other. Our view-management component accomplishes this by modifying selected object properties, including position, size, and transparency, which are tagged to indicate their constraints. For example, some objects may have geometric properties that are determined entirely by a physical simulation and which cannot be modified, while other objects may be annotations whose position and size are flexible. We introduce algorithms that use upright rectangular extents to represent on the view plane a dynamic and efficient approximation of the occupied space containing the projections of visible portions of 3D objects, as well as the unoccupied space in which objects can be placed to avoid occlusion. Layout decisions from previous frames are taken into account to reduce visual discontinuities. We present augmented reality and virtual reality examples to which we have applied our approach, including a dynamically labeled and annotated environment."
 	}
 ]}

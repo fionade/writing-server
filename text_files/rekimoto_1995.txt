@@ -1,0 +1,176 @@
+The World through the Computer: Computer Augmented Interaction with Real World Environments
+                              
+                                                              
+                                       
+                                                                                                      
+ABSTRACT
+Current user interface techniques such as WIMP or the desk- top metaphor do not support real world tasks, because the focus of these user interfaces is only on human–computer in- teractions, not on human–real world interactions. In this pa- per, we propose a method of building computer augmented environments using a situation-aware portable device. This device, called NaviCam, has the ability to recognize the user’s situation by detecting color-code IDs in real world environ- ments. It displays situation sensitive information by superim- posing messages on its video see-through screen. Combina- tion of ID-awareness and portable video-see-through display solves several problems with current ubiquitous computers systems and augmented reality systems.
+KEYWORDS: user-Interface software and technology, com- puter augmented environments, palmtop computers, ubiqui- tous computing, augmented reality, barcode
+INTRODUCTION
+Computers are becoming increasingly portable and ubiqui- tous, as recent progress in hardware technology has produced computers that are small enough to carry easily or even to wear. However, these computers, often referred to as PDAs (Personal Digital Assistant) or palmtops, are not suitable for traditional user-interface techniques such as the desk-top metaphor or the WIMP (window, icon, mouse, and a pointing device) interface. The fundamental limitations of GUIs can be summarized as follows:
+Explicit operations GUIs can reduce the cognitive overload of computer operations, but do not reduce the volume of oper- ations themselves. This is an upcoming problem for portable computers. As users integrate their computers into their daily lives, they tend to pay less attention to them. Instead, they prefer interacting with each other, and with objects in the real world. The user’s focus of interest is not the human–
+computer interactions, but the human–real world interactions. People will not wish to be bothered by tedious computer oper- ations while they are doing a real world task. Consequently, the reduction of the amount of computer manipulation will become an issue rather than simply how to make existing ma- nipulations easier and more understandable.
+Unaware of the real world situations Portability implies that computers will be used in a variety of situations in the real world. Thus, dynamical change of functionalities will be re- quired for mobile computers. Traditional GUIs are not de- signed for such a dynamic environment. Although some con- text sensitive interaction is available on GUIs, such as con- text sensitive help, GUIs cannot deal with real world contexts. GUIs assume an environment composed of desk-top comput- ers and users at a desk, where the real world situation is less important.
+Gaps between the computer world and the real world Ob- jects within a database, which is a computer generated world, can be easily related, but it is hard to make relations among real world objects, or between a real object and a computer based object. Consider a system that maintains a document database. Users of this system can store and retrieve docu- ments. However, once a document has been printed out, the system can no longer maintain such an output. It is up to the user to relate these outputs to objects still maintained in the computer. This is at the user’s cost. We thus need computers that can understand real world events, in addition to events within the computer.
+Recently, a research field called computer augmented envi- ronments has been emerged to address these problems [18]. In this paper, we propose a method to build a computer aug- mented environment using a portable device that has an abil- ity to recognize a user’s situation in the real world. A user can see the world through this device with computer augmented information regarding that situation. We call this interaction style Augmented Interaction, because this device enhances the ability of the user to interact with the real world environ- ment.
+This paper is organized as follows. In the next section, we briefly introduce the idea of proposed interaction style. The
+
+     Gap
+C
+R
+(a) GUI
+C
+R
+C
+(b) Virtual Reality
+C
+      R
+C
+C
+C
+R
+            (c) Ubiquitous Computers
+C ComputerWorld R RealWorld
+(d) Augmented Interaction
+Human-ComputerInteraction Human - Real World Interaction Real World - Computer Interaction
+       following three sections present the NaviCam system, its ap- plications, and its implementation issues. Comparison to other work and our future plans are also discussed in the RELATED WORK section and the FUTURE DIRECTIONS section, re- spectively.
+SITUATION AWARENESS AND AUGMENTED INTERAC- TION
+Augmented Interaction is a style of human-computer inter- action that aims to reduce computer manipulations by using environmental information as implicit input. With this style, the user will be able to interact with a real world augmented by the computer’s synthetic information. The user’s situa- tion will be automatically recognized by using a range of recognition methods, that will allow the computer to assist the user without having to be directly instructed to do so. The user’s focus will thus not be on the computer, but on the real world. The computer’s role is to assist and enhance interac- tions between humans and the real world. Many recognition methods can be used with this concept. Time, location, and object recognition using computer vision are possible exam- ples. Also, we can make the real world more understandable to computers, by putting some marks or IDs (bar-codes, for example) on the environment.
+Figure 1 shows a comparison of HCI styles involving human– computer interaction and human–real world interaction.
+(a) In a desk-top computer (with a GUI as its interaction style), interaction between the user and the computer is isolated from the interaction between the user and the real world. There is a gap between the two interactions. Some researchers are trying to bridge this gap by merging a real desk-top with a desk-top in the computer [12, 17]. (b) In a virtual reality
+system, the computer surrounds the user completely and in- teraction between the user and the real world vanishes. (c) In the ubiquitous computers environment, the user interacts with the real world but can also interact with computers embodied in the real world. (d) Augmented Interaction supports the user’s interaction with the real world, using computer aug- mented information. The main difference between (c) and (d) is the number of computers. The comparison of these two approaches will be discussed later in the RELATED WORK section.
+NAVICAM
+As an initial attempt to realize the idea of Augmented Inter- action, we are currently developing a prototype system called NaviCam (NAVIgation CAMera). NaviCam is a portable com- puter with a small video camera to detect real-world situ- ations. This system allows the user to view the real world together with context sensitive information generated by the computer.
+NaviCam has two hardware configurations. One is a palmtop computer with a small CCD camera, and the other is a head- up display with a head-mounted camera (Figure 2). Both con- figurations use the same software. The palmtop configuration extends the idea of position sensitive PDAs proposed by Fitz- maurice [9]. The head-up configuration is a kind of video see-through HMD [2], but it does not shield the user’s real sight. Both configurations allow the user to interact directly with the real world and also to view the computer augmented view of the real world.
+The system uses color-codes to recognize real world situa- tions. The color-code is a sequence of color stripes (red or blue) printed on paper that encodes an ID of a real world
+Figure 1: A comparison of HCI styles
+
+LCD Display
+         Head-up configuration
+Palmtop configuration
+CCD Cameras
+Figure 2: Palmtop configuration and head-up configuration
+ Real View
+APPLICATIONS
+We are currently investigating the potential of augmented in- teraction using NaviCam. There follows some experimental applications that we have identified.
+Augmented Museum
+Figure 4: NaviCam generates information about Rem- brandt
+Figure 4 shows a sample snapshot of a NaviCam display. The system detects the ID of a picture, and generates a description of it. Suppose that a user with a NaviCam is in a museum and looking at a picture. NaviCam identifies which picture the user is looking at and displays relevant information on the screen. This approach has advantages over putting an expla- nation card beside a picture. Since NaviCam is a computer, it can generate personalized information depending on the user’s age, knowledge level, or preferred language. Contents of explanation cards in today’s museums are often too basic for experts, or too difficult for children or overseas visitors. NaviCam overcomes this problem by displaying information appropriate for the owner.
+Active Paper Calendar
+Figure 6 shows another usage of NaviCam. By viewing a calender through NaviCam, you can see your own personal
+      Augmented View
+Augmented View
+ Figure 3: The magnifying glass metaphor
+object. For example, the color-code on the door of the of- fice identifies the owner of the office. By detecting a specific color-code, NaviCam can recognize where the user is located in the real world, and what kind of object the user is look- ing at. Figure 5 shows the information flow of this system. First, the system recognizes a color-code through the cam- era. Image processing is performed using software at a rate of 10 frames per second. Next, NaviCam generates a mes- sage based on that real world situation. Currently, this is done simply by retrieving the database record matching the color- coded ID. Finally, the system superimposes a message on the captured video image.
+Using a CCD camera and an LCD display, the palmtop Navi- Cam presents the view at which the user is looking as if it is a transparent board. We coined the term magnifying glass metaphor to describe this configuration (Figure 3). While a real magnifying glass optically enlarges the real world, our system enlarges it in terms of information. Just as with a real magnifying glasses, it is easy to move NaviCam around in the environment, to move it toward an object, and to compare the real image and the information-enhanced image.
+Video See-through Palmtop
+
+  Sony NEWS Workstation
+ Superimpose
+ Message Generation
+ Color code Recognition
+       Color code
+Real World Environments
+Head-up Display (VirtualVision)
+CCD Camera
+Palmtop TV
+CCD Camera
+NTSC
+NTSC
+ Figure 5: The system architecture of NaviCam
+  Figure 6: Viewing a paper calender through NaviCam
+schedule on it. This is another example of getting situation specific and personalized information while walking around in real world environments. NaviCam can also display infor- mation shared among multiple users. For example, you could put your electronic annotation or voice notes on a (real) bul- letin board via NaviCam. This annotation can then be read by other NaviCam equipped colleagues.
+Active Door
+The third example is a NaviCam version of the active door (Figure 7). This office door can tell a visitor where the oc- cupier of the office is currently, and when he/she will come back. The system also allows the office occupier to leave a video message to be displayed on arrival by a visitor (through the visitor’s NaviCam screen). There is no need to embed any computer in the door itself. The door only has a color-code ID on it. It is, in fact, a passive-door that can behave as an active-door.
+NaviCam as a collaboration tool
+In the above three examples, NaviCam users are individually assisted by a computer. NaviCam can also function as a col- laboration tool. In this case, a NaviCam user (an operator) is supported by another user (an instructor) looking at the same
+Figure 7: A pseudo-active office door greets a visitor
+Figure 8: NaviCam can be used as a collaboration tool
+ 
+screen image from probably a remote location. Unlike other video collaboration tools, the relationship between the two users is not symmetric, but asymmetric. Figure 8 shows an example of collaborative task (video console operation). The instructor is demonstrating which button should be pressed by using a mouse cursor and a circle drawn on the screen. The instructor augments the operator’s skill using NaviCam.
+Ubiquitous Talker: situated conversation with NaviCam
+We are also developing an extended version of NaviCam that allows the user to operate the system with voice commands, called Ubiquitous Talker. Ubiquitous Talker is composed of the original NaviCam and a speech dialogue subsystem (Fig- ure 11). The speech subsystem has speech recognition and voice synthesis capabilities. The NaviCam subsystem sends the detected color code ID to the speech subsystem. The speech subsystem generates a response (either voice or text) based on these IDs and spoken commands from the user. The two subsystems communicate with each other through Unix sockets.
+An experimental application developed using Ubiquitous Talker is called the augmented library. In this scenario, Ubiquitous Talker acts as a personalized library catalogue. The user car- ries the NaviCam unit around the library and the system as- sists the user to find a book, or answers questions about the books in the library (Figure 9).
+Figure 9: Ubiquitous Talker being used as a library guide
+Ubiquitous Talker would also be an important application in the AI research area. Recognizing dialogue contexts remains one of the most difficult areas in natural language understand- ing. Real-world awareness allows a solution to this problem. For example, the system can respond to a question such as “Where is the book entitled Multimedia Applications?” by answering “It is on the bookshelf behind you.”, because the system is aware of which bookshelf the user is looking at. It is almost impossible to generate such a response without us- ing real world information. The system also allows a user to use deictic expressions such as “this book”, because the situ- ation can resolve ambiguity. This feature is similar to multi- modal interfaces such as Bolt’s Put-That-There system [4]. The unique point in our approach is to use real world situa- tions, other than commands from the user, as a new modality in the human–computer interaction.
+For a more detailed discussion of Ubiquitous Talker’s natu- ral language processing, please refer to our companion pa- per [13].
+IMPLEMENTATION DETAILS
+At this stage, the wearable part of the NaviCam system is con- nected to a workstation by two NTSC cables and the actual processing is done by the workstation. The workstation com- ponent is an X-Window client program written in C. What ap- pears on the palmtop TV is actually an X-window displaying a video image. Video images are transmitted from the video capturing board by using DMA (direct memory access), pro- cessed in the system, and sent to the X-Window through the shared-memory transport extension to X.
+The following are some of the software implementation is- sues.
+Color code detection
+The system seeks out color codes on incoming video images. The image processing is done by software. No special hard- ware is required apart from video capturing.
+Figure 10: Detecting a color code: a snapshot of what the system is really seeing
+The color-code detection algorithm is summarized as follows. First, the system samples some scan lines from the video im- age (Figure 10). To locate any red and blue bands, each pixel in the scan line is filtered by a color detecting function based on its   (brightness),   (red) and   (blue) values. Any color bands detected become candidates for a color code. We use the following equations to extract red and blue pixels:
+  where  
+=   +   +   , and       . . .       are constant values.
+ 
+    +           +      
+  3        +     3        +  
+These constants are calculated from sampled pixel values of
+color-bar images under various lighting conditions. A pixel
+that satisfies equation 1 is taken as a red pixel. To detect blue
+  
+pixel, another set of constants (    . . .     ) is used.
+  
+Next, the system selects the most appropriate candidate as the detected color code. Final selection is based on checks for consistency of distance between the color bands. The de- tected code is then used to generate information on the screen.
+(1)
+
+   Voice
+NTSC
+NTSC
+Microphone
+Sony NEWS Workstation NWS-5000
+Voice Synthesis
+Spoken Message Generation
+Natural Language Processing
+Speech Recognition
+       Palmtop TV (Sony MGV-41)
+Superimpose
+Visual Message Generation
+Image Recognition
+       Color Code
+Real World Environments
+ CCD Camera (Sony CCD-MC1)
+  Using above algorithm, the system can recognize 4-bit color- code IDs (3cm   5cm in size) at a distance of 30cm – 50cm using the consumer-based small CCD camera (Sony CCD- MC1). IDs are placed in various environments (e.g., offices, libraries, video studios) so the lighting condition also changes depends on the place and the time. Even under such condi- tions, the color-detecting algorithm was quite robust and sta- ble. This is because equation 1 compensates an effect on pixel values when lighting condition changes.
+Superimposing information on a video image
+The system superimposes a generated message on the exist- ing video image. This image processing is also achieved us- ing software. We could also use chromakey hardware, but the performance of the software based superimposition is sat- isfactory for our purposes, even though it cannot achieve a video-frame rate. The message appears near the detected color code on the screen, to emphasize the relation between cause and effect.
+We use a 4-inch LCD screen and pixel resolution is 640   480. The system can display any graphic elements and char- acters as the X-Window does. However, it was very hard, if not impossible, to read small fonts through this LCD screen. Currently, we use 24-dot or 32-dot font to increase readabil- ity. The system also displays a semi-transparent rectangle as a background of a text item. It retains readability even when the background video image (real scene) is complicated.
+Database registration
+For the first three applications explained in the APPLICA- TIONS section, the system first recognizes IDs in the real world environment, then determines what kind of informa- tion should be displayed. Thus, the database supporting the NaviCam is essential to the generation of adequate informa- tion. The current implementation of the system adopts very simplified approach to this. The system contains a group of command script files with IDs. On receipt of a valid ID, the system invokes a script having the same ID. The invoked script generates a string that appears on the screen. This mech- anism works well enough, especially at the prototype stage.
+However, we obviously need to enhance this element, before realizing more complicated and practical applications.
+RELATED WORK
+In this section, we discuss our Augmented Interaction ap- proach in relation to other related approaches.
+Ubiquitous computers
+Augmented Interaction has similarities to Sakamura’s highly functionally distributed system (HFDS) concept [14], his TRON house project, and ubiquitous computers proposed by Weiser [16]. These approaches all aim to create a computer augmented real environment rather than building a virtual environment in a computer. The main difference between ubiquitous computing and Augmented Interaction is in the approach. Augmented Interaction tries to achieve its goal by introducing a portable or wearable computer that uses real world situations as implicit commands. Ubiquitous comput- ing realizes the same goal by spreading a large number of computers around the environment.
+These two approaches are complementary and can support each other. We believe that in future, human existence will be enhanced by a mixture of the two; ubiquitous computers embodied everywhere, and a portable computer acting as an intimate assistant.
+One problem with using ubiquitous computers is reliability. In a ubiquitous computers world, each computer has a dif- ferent functionality and requires different software. It is es- sential that they collaborate with each other. However, if our everyday life is filled with a massive number of computers, we must anticipate that some of them will not work correctly, because of hardware or software troubles, or simply because of their dead batteries. It can be very difficult to detect such problem among so many computers and then fix them. An- other problem is cost. Although the price of computers is getting down rapidly, it is still costly to embed a computer in every document in an office, for example.
+In contrast to ubiquitous computers, NaviCam’s situation aware
+Figure 11: The architecture of Ubiquitous Talker
+
+approach is a low cost and potentially more reliable alterna- tive to embedding a computer everywhere. Suppose that ev- ery page in a book had a unique ID (e.g. bar-code). When the user opens a page, the ID of that page is detected by the com- puter, and the system can supply specific information relating to that page. If the user has some comments or ideas while reading that page, they can simply read them out. The system will record the voice information tagged with the page ID for later retrieval. This scenario is almost equivalent to having a computer in every page of a book but with very little cost. ID-awareness is better than ubiquitous computers from the viewpoint of reliability, because it does not require batteries, does not consume energy, and does not break down.
+Another advantage of an ID-awareness approach is the pos- sibility of incorporating existing ID systems. Today, barcode systems are in use everywhere. Many products have barcodes for POS use, while many libraries use a barcode system to manage their books. If NaviCam can detect such commonly used IDs, we should be able to take advantage of computer augmented environments long before embodied computers are commonplace.
+Augmented Reality
+Augmented reality (AR) is a variant of virtual reality that uses see-through head mounted displays to overlay computer gen- erated images on the user’s real sight [15, 8, 6, 2, 7, 5].
+AR systems currently developed use only locational informa- tion to generate images. This is because the research focus of AR is currently on implementing correct registration of 3D images on a real scene [1, 3]. However, by incorporating other external factors such as real world IDs, the usefulness of AR should be much more improved.
+We have built NaviCam in both head-up and palmtop config- urations. The head-up configuration is quite similar to other AR systems, though currently NaviCam does not utilize lo- cational information. We thus have experience of both head- up and palmtop type of augmented reality systems and have learned some of the advantages and disadvantages of both.
+The major disadvantage of a palmtop configuration is that it always requires one hand to hold the device. Head-up Navi- Cam allows for hands-free operation. Palmtop NaviCam is thus not suitable for some applications requiring two handed operation (e.g. surgery). On the other hand, putting on head- up gear is, of course, rather cumbersome and under some cir- cumstances might be socially unacceptable. This situation will not change until head-up gear becomes as small and light as bifocal spectacles are today.
+For the ID detection purpose, head-up NaviCam is also some- what impractical because it forces the user to place their head very close to the object. Since hand mobility is much quicker and easier than head mobility, palmtop NaviCam appears more suitable for browsing through a real world environment.
+Another potential advantage of the palmtop configuration is that it still allows traditional interaction techniques through its screen. For example, you could to annotate the real world with letters or graphics directly on the NaviCam screen with your finger or a pen. You could also operate NaviCam by
+touching a menu on the screen. This is quite plausible be- cause most existing palmtop computers have a touch-sensitive, pen-aware LCD screen. On the other hand, a head-up config- uration would require other interaction techniques with which users would be unfamiliar.
+Returning to the magnifying glass analogy, we can identify uses for head-up magnifying glasses for some special pur- poses (e.g. watch repair). The head-up configuration there- fore has advantages in some areas, however, even in these fields hand-held magnifying lenses are still dominant and most prefer them.
+Chameleon - a spatially aware palmtop
+Fitzmaurice’s Chameleon [9] is a spatially-aware palmtop com- puter. Using locational information, Chameleon allows a user to navigate through a virtual 3D space by changing the loca- tion and orientation of the palmtop in his hand. Locational information is also used to display context sensitive informa- tion in the real world. For example, by moving Chameleon toward a specific area on a wall map, information regarding that area appears on the screen. Using locational information to detect the user’s circumstances, although a very good idea, has some limitations. First, location is not always enough to identify situations. When real world objects (e.g. books) move, the system can no longer keep up. Secondly, detecting the palmtop’s own position is a difficult problem. The Polhe- mus sensor used with Chameleon has a very limited sensing range (typically 1-2 meters) and is sensitive to interference from other magnetic devices. Relying on this technology lim- its the user’s activity to very restricted areas.
+FUTURE DIRECTIONS
+Situation Sensing Technologies
+We are currently just using a color-code system and a CCD camera to read the code, to investigate the potential of aug- mented interaction. This very basic color-code system is, however, unrealistic for large scale applications, because the number of detectable IDs is quite limited. We plan to attach a line-sensor to NaviCam and use a real barcode system. This would make the system more practical.
+Situation sensing methods are not limited to barcode systems. We should be able to apply a wide range of techniques to enhance the usefulness of the system.
+Several, so-called next generation barcode systems have al- ready been developed. Among them, the most appealing tech- nology for our purposes would seem to be the Supertag tech- nology invented by CSIR in South Africa [11]. Supertag is a wireless electronic label system that uses a battery less pas- sive IC chip as an ID tag. The ID sensor is comprised of a radio frequency transmitter and a receiver. It scans hundreds of nearby tags simultaneously without contact. Such wire- less ID technologies should greatly improve the usefulness of augmented interaction.
+For location-detection, we could employ the global position- ing system (GPS) which is already in wide use as a key- component of car navigation systems. The personal handy phone system (PHS) is another possibility. PHS is a micro- cellular wireless telephone system which will come into oper-
+
+ation in Japan in the summer of 1995. By sensing which cell the user is in, the system can know where the user is located.
+A more long-range vision would be to incorporate various kinds of vision techniques into the system. For example, if a user tapped a finger on an object appearing on the display, the system would try to detect what the user is pointing to by applying pattern matching techniques.
+Obviously, combining several information sources (such as location, real world IDs, time, and vision) should increase the reliability and accuracy of situation detection, although the inherent problems are not trivial. This will also be another future direction for our research.
+Inferring the user’s intention from the situation
+Recognized situations are still only a clue to user’s inten- tions. Even when the system knows where the user is in and at which object the user is looking, it is not a trivial problem to infer what the user wants to know. This issue is closely related to the design of agent-based user interfaces. How do we design an agent that behaves as we would want? This is a very large open-question and we do not have immediate an- swer to this. It may be possible to employ various kinds of intelligent user interface technologies such as those discussed in [10].
+CONCLUSION
+In this paper, we proposed a simple but effective method to re- alize computer augmented environments. The proposed aug- mented interaction style focuses on human–real world inter- action and not just human–computer interaction. It is de- signed for the highly portable and personal computers of the future, and concentrates on reducing the complexity of com- puter operation by accepting real world situations as implicit input. We also reported on our prototype system called Navi- Cam, which is an ID-aware palmtop system, and described some applications to show the possibilities of the proposed interaction style.
