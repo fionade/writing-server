@@ -1,3 +1,5 @@
+var collectionName = "study";
+
 function DatabaseConnector() {
 	this.MongoClient = require('mongodb').MongoClient;
 	this.assert = require('assert');
@@ -28,7 +30,7 @@ DatabaseConnector.prototype.insertDocument = function insertDocument(document) {
 	var that = this;
 
 	// Get the documents collection
-	var collection = this.db.collection('activity');
+	var collection = this.db.collection(collectionName);
 	collection.insert(document, function(err, result) {
 		that.assert.equal(err, null);
 		that.assert.equal(1, result.result.n);
@@ -56,8 +58,8 @@ DatabaseConnector.prototype.insertDocuments = function insertDocuments(documents
 	var that = this;
 
 	// Get the documents collection
-	var collection = this.db.collection('activity');
-	collection.insert(documents, function(err, result) {
+	var collection = this.db.collection(collectionName);
+	collection.insert(document, function(err, result) {
 		that.assert.equal(err, null);
     console.log("Inserted documents into the collection");
 	});
@@ -68,7 +70,7 @@ DatabaseConnector.prototype.isConnected = function isConnected() {
 }
 
 DatabaseConnector.prototype.getDocumentsForId = function getDocumentsForId(documentId, callback) {
-	var collection = this.db.collection('activity');
+	var collection = this.db.collection(collectionName);
 
 	collection.find({"documentId" : documentId}).sort({"documentId" : 1}).toArray(function(err, docs){
     	callback(err, docs);
