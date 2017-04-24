@@ -59,7 +59,7 @@ DatabaseConnector.prototype.insertDocuments = function insertDocuments(documents
 
 	// Get the documents collection
 	var collection = this.db.collection(collectionName);
-	collection.insert(document, function(err, result) {
+	collection.insert(documents, function(err, result) {
 		that.assert.equal(err, null);
     console.log("Inserted documents into the collection");
 	});
