@@ -249,9 +249,14 @@ function KeywordContextExtractor() {
     var keywordContexts = {};
 
     function containsToken(array, term, startIndex) {
+      // terms with less than three characters will not be regarded
+      if (term.length < 3) {
+        return -1;
+      }
       term = term.toLowerCase();
       for (var i = startIndex; i < array.length; i++) {
-        if (array[i].toLowerCase().startsWith(term)) {
+        // include all words that start with the term and have no more than 3 characters behind it
+        if (array[i].toLowerCase().startsWith(term) && (array[i].length - term.length) < 4) {
           return i;
         }
       }
