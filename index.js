@@ -112,6 +112,17 @@ function retrieveContexts(request, response, next) {
   next();
 }
 
+function getSynonyms(request, response, next) {
+  var term = request.params.term;
+
+  synonymHelper.getSynonyms(term, function(result) {
+    response.send(200, result);
+  });
+
+  next();
+
+}
+
 function getTextMeasures(request, response, next) {
 
   var params = JSON.parse(request.body);
@@ -180,6 +191,8 @@ server.post({
 
 server.get('/getContext/:keyword', retrieveContexts);
 
+server.get('/getSynonyms/:term', getSynonyms);
+
 // set up database connection
 var DatabaseConnector = require("./databaseConnector");
 var databaseConnector = new DatabaseConnector();
@@ -189,9 +202,14 @@ var documentKeywordExtractor = new KeywordExtractor();
 var TypingToolHelper = require("./typingToolHelper");
 var typingToolHelper = new TypingToolHelper(databaseConnector, documentKeywordExtractor);
 
+var SynonymHelper = require("./synonymHelper");
+var synonymHelper = new SynonymHelper(databaseConnector);
+
 databaseConnector.connect(function() {
-  databaseConnector.clearCollection("context");
+  // uncomment on first run
+  /*databaseConnector.clearCollection("context");
   typingToolHelper.getFileNames("./text_files");
+  synonymHelper.initDatabase();*/
 });
 
 // TODO REST call for this

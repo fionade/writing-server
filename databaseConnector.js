@@ -65,6 +65,18 @@ DatabaseConnector.prototype.insertDocuments = function insertDocuments(documents
 	});
 }
 
+DatabaseConnector.prototype.insertDocumentsIntoCollection = function insertDocumentsIntoCollection(documents, collectionToUse) {
+
+	var that = this;
+
+	// Get the documents collection
+	var collection = this.db.collection(collectionToUse);
+	collection.insert(documents, function(err, result) {
+		that.assert.equal(err, null);
+    console.log("Inserted documents into the collection");
+	});
+}
+
 DatabaseConnector.prototype.isConnected = function isConnected() {
 	return this.db;
 }
@@ -91,7 +103,25 @@ DatabaseConnector.prototype.clearCollection = function clearCollection(collectio
 
 	var collection = this.db.collection(collection);
 
-	collection.remove({});
+	collection.drop();
+}
+
+DatabaseConnector.prototype.getSynonyms = function getSynonyms(term, callback) {
+
+	var collection = this.db.collection('synonyms');
+
+	collection.find({'term' : term}).toArray(function(err, result) {
+		if (result) {
+			var sets = [];
+			result.forEach(function(d) {
+				sets.push(d.set);
+			});
+			collection.find({'set' : { $in : sets} }).toArray(function(err, synonyms) {
+				callback(err, synonyms);
+			});
+		}
+	});
+
 }
 
 module.exports = DatabaseConnector;
