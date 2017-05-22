@@ -27,6 +27,9 @@ function SynonymHelper(databaseConnector) {
           });
           callback(synonyms);
         }
+        else {
+          callback([]);
+        }
       });
     }
 

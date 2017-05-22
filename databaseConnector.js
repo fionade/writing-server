@@ -120,6 +120,9 @@ DatabaseConnector.prototype.getSynonyms = function getSynonyms(term, callback) {
 				callback(err, synonyms);
 			});
 		}
+		else {
+			callback(err, []);
+		}
 	});
 
 }
