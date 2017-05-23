@@ -143,7 +143,7 @@
 		"path" : "text_files/gupta_2012.txt",
 		"title" : "DuploTrack: A Real-time System for Authoring and Guiding Duplo Block Assembly",
 		"authors" : "Ankit Gupta, Dieter Fox, Brian Curless, Michael Cohen",
-		"url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.348.4324&rep=rep1&type=pdf",
+		"url" : "https://pdfs.semanticscholar.org/563c/01818b54ca85ed5970dc12c5ca379f146f7f.pdf",
 		"abstract" : "We demonstrate a realtime system which infers and tracks the assembly process of a snap-together block model using a Kinect⃝R sensor. The inference enables us to build a virtual replica of the model at every step. Tracking enables us to provide context specific visual feedback on a screen by aug- menting the rendered virtual model aligned with the physical model. The system allows users to author a new model and uses the inferred assembly process to guide its recreation by others. We propose a novel way of assembly guidance where the next block to be added is rendered in blinking mode with the tracked virtual model on screen. The system is also able to detect any mistakes made and helps correct them by provid- ing appropriate feedback. We focus on assemblies of Duplo⃝R blocks.\nWe discuss the shortcomings of existing methods of guidance — static figures or recorded videos — and demonstrate how our method avoids those shortcomings. We also report on a user study to compare our system with standard figure-based guidance methods found in user manuals. The results of the user study suggest that our method is able to aid users’ struc- tural perception of the model better, leads to fewer assembly errors, and reduces model construction time."
 	},
 	{
@@ -171,14 +171,14 @@
 		"path" : "text_files/schall_2010.txt",
 		"title" : "Handheld Augmented Reality in Civil Engineering",
 		"authors" : "Gerhard Schall",
-		"url" : "http://www.icg.tu-graz.ac.at/Members/schall/rosus/download",
+		"url" : "https://pdfs.semanticscholar.org/52ac/ffca6c1c77b240c5d1d72a8e87578278e7bb.pdf",
 		"abstract" : "This paper presents an overview of a project focusing on research on the next-generation field information system for utility companies, providing mobile workforces with capabilities for on-site inspection and planning. For achieving this aim, handheld Augmented Reality technology is used for on-site visualization of geometric and semantic attributes of geospatial 3D models on the user’s handheld device. The project aims at providing a fully functional handheld Augmented Reality device for utility field workers. A software solution that can visualize registered three-dimensional underground models in real time has been developed. Registration in 3D requires being able to perform accurate global localization and posing tracking in real time without relying on unrealistic assumptions concerning prior scene knowledge. The generation of such three-dimensional underground models will be discussed as well as an overview of the fields of application will be given."
 	},
 	{
 		"path" : "text_files/tatzgern_2010.txt",
 		"title" : "Compact Explosion Diagrams",
 		"authors" : "Markus Tatzgern, Denis Kalkofen, Dieter Schmalstieg",
-		"url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.936.481&rep=rep1&type=pdf",
+		"url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.936.481&rep=rep1&type=pdfhttps://www.researchgate.net/profile/Markus_Tatzgern/publication/221523214_Compact_explosion_diagrams/links/00b49521f1f632c1ac000000.pdf",
 		"abstract" : "This paper presents a system to automatically generate compact ex- plosion diagrams. Inspired by handmade illustrations, our approach reduces the complexity of an explosion diagram by rendering an ex- ploded view only for a subset of the assemblies of an object. How- ever, the exploded views are chosen so that they allow inference of the remaining unexploded assemblies of the entire 3D model. In particular, our approach demonstrates the assembly of a set of identical groups of parts, by presenting an exploded view only for a single representative. In order to identify the representatives, our system automatically searches for recurring subassemblies. It se- lects representatives depending on a quality evaluation of their po- tential exploded view. Our system takes into account visibility in- formation of both the exploded view of a potential representative as well as visibility information of the remaining unexploded assem- blies. This allows rendering a balanced compact explosion diagram, consisting of a clear presentation of the exploded representatives as well as the unexploded remaining assemblies. Since representatives may interfere with one another, our system furthermore optimizes combinations of representatives. Throughout this paper we show a number of examples, which have all been rendered from unmodi- fied 3D CAD models."
 	},
 	{
@@ -192,14 +192,14 @@
 		"path" : "text_files/schall_2010.txt",
 		"title" : "VIDENTE - 3D Visualization of Underground Infrastructure using Handheld Augmented Reality",
 		"authors" : "Gerhard Schall, Dieter Schmalstieg, Sebastian Junghanns",
-		"url" : "http://www.icg.tu-graz.ac.at/Members/schall/geohydro.pdf/download/",
+		"url" : "https://www.researchgate.net/profile/Dieter_Schmalstieg/publication/228592264_VIDENTE-3D_Visualization_of_Underground_Infrastructure_using_Handheld_Augmented_Reality/links/53fdd2d20cf22f21c2f84e6f.pdf",
 		"abstract" : "This chapter outlines a research project called Vidente following the vision of registered 3D visualization of underground networks on handheld devices in real-time. Towards this aim, technology from interdisciplinary fields such as computer graphics, augmented reality, geographic information systems (GIS) and satellite navigation needs to be addressed. We highlight aspects of the Vidente system targeted on water systems operated by utilities from the water supply sector, which are already completely relying on their geo-databases for day-to-day operation of their assets. However, there is a noticeable gap between desktop GIS technology available in the office and access to this information in the field. To fill this gap, we propose to provide field workers with an intuitive three-dimensional visualization of the local underground network infrastructure using outdoor handheld augmented reality (AR) as depicted in Figure 1. The focus is on a next-generation mobile GIS system for utilities as well as telecommunication companies, supporting mobile workforces in the complete life cycle of water infrastructure, thus revolutionizing traditional planning, operation, maintenance, on-site inspection, fault management and decision-making. The project significantly advances mobile GIS in water engineering. Moreover, common field tasks concerning maintenance and operation are accomplished more efficiently while reducing unintended damage and increasing general safety on site. The system is intended to equip professionals, practitioners, water resources engineers, managers and decision makers working in water related arenas, utilities from the water sector, water boards and other government agencies with available information and advanced information technology tools to assist in on-site applications to geohydrological and environmental problems of urban waters."
 	},
 	{
 		"path" : "text_files/mendez_2006.txt",
 		"title" : "Interactive Context-Driven Visualization Tools for Augmented Reality",
 		"authors" : "Erick Mendez, Denis Kalkofen, Dieter Schmalstieg",
-		"url" : "http://www.icg.tu-graz.ac.at/Members/mendez/Pueblications/mendez_ismar2006.pdf",
+		"url" : "https://www.researchgate.net/profile/Dieter_Schmalstieg/publication/221221092_Interactive_context-driven_visualization_tools_for_augmented_reality/links/53fdd3880cf2dca80003956f.pdf",
 		"abstract" : "In this article we present an interaction tool, based on the Magic Lenses technique, that allows a 3D scene to be affected dynamically given contextual information, for example, to support information filtering. We show how elements of a scene graph are grouped by context in addition to hierarchically, and, how this enables us to locally modify their rendering styles. This research has two major contributions, the use of context sensitivity with 3D Magic Lenses in a scene graph and the implementation of multiple volumetric 3D Magic Lenses for Augmented Reality setups. We have developed our tool for the Studierstube framework which allows us doing rapid prototyping of Virtual and Augmented Reality applications. Some application directions are shown throughout the paper. We compare our work with other methods, highlight strengths and weaknesses and finally discuss research directions for our work."
 	},
 	{
@@ -220,21 +220,21 @@
 		"path" : "text_files/hedley_2002.txt",
 		"title" : "Explorations in the use of Augmented Reality for Geographic Visualization",
 		"authors" : "Nick. R. Hedley, Mark Billinghurst, Lori Postner, Richard May, Hirokazu Kato",
-		"url" : "http://www.academia.edu/download/4442053/10.1.1.96.4435.pdf",
+		"url" : "https://www.researchgate.net/profile/Mark_Billinghurst/publication/220090143_Explorations_in_the_Use_of_Augmented_Reality_for_Geographic_Visualization/links/0912f5131507ecdce6000000.pdf",
 		"abstract" : "In this paper we describe two explorations in the use of hybrid user interfaces for collaborative geographic data visualization. Our first interface combines three technologies; Augmented Reality (AR), immersive Virtual Reality and computer vision based hand and object tracking. Wearing a lightweight display with camera attached, users can look at a real map and see three-dimensional virtual terrain models overlaid on the map. From this AR interface they can fly in and experience the model immersively, or use free hand gestures or physical markers to change the data representation. Building on this work, our second interface explores alternative interface techniques, including a zoomable user interface, paddle interactions and pen annotations. We describe the system hardware and software, and the implications for GIS and spatial science applications."
 	},
 	{
 		"path" : "text_files/veas_2009.txt",
 		"title" : "HYDROSYS - first approaches towards on-site monitoring and management with handhelds",
 		"authors" : "Eduardo Veas, Ernst Kruijff, Erick Mendez",
-		"url" : "http://hydrosys.icg.tugraz.at/media_files/hydrosys-e-envi2009.pdf",
+		"url" : "https://www.researchgate.net/profile/Eduardo_Veas/publication/228816223_HYDROSYS-first_approaches_towards_on-site_monitoring_and_management_with_handhelds/links/0fcfd51120955bb169000000.pdf",
 		"abstract" : "HYDROSYS is a project targeted at improving monitoring and understanding of environmental processes and their management. The project introduces innovative concepts of on-site monitoring and event-driven campaigns. It builds an infrastructure that promotes synergy across user groups both on-site and at the workplace. This publication introduces initial steps towards defining on-site monitoring and an infrastructure to support it."
 	},
 	{
 		"path" : "text_files/veas_2010.txt",
 		"title" : "Techniques for View Transition in Multi-Camera Outdoor Environments",
 		"authors" : "Eduardo Veas, Alessandro Mulloni, Ernst Kruijff, Holger Regenbrecht, Dieter Schmalstieg",
-		"url" : "http://www.icg.tu-graz.ac.at/Members/veas/papers/2010-GI_Techniques_for_View_Transition_Multicam.pdf/at_download/file",
+		"url" : "https://www.researchgate.net/profile/Eduardo_Veas/publication/221474656_Techniques_for_view_transition_in_multi-camera_outdoor_environments/links/09e41506bffbdd39c4000000.pdf,
 		"abstract" : "Environment monitoring using multiple observation cameras is increasingly popular. Different techniques exist to visualize the incoming video streams, but only few evaluations are available to find the best suitable one for a given task and context. This article compares three techniques for browsing video feeds from cameras that are located around the user in an unstructured manner. The techniques allow mobile users to gain extra information about the surroundings, the objects and the actors in the environment by observing a site from different perspectives. The techniques relate local and remote cameras topologically, via a tunnel, or via bird’s eye viewpoint. Their common goal is to enhance spatial awareness of the viewer, without relying on a model or previous knowledge of the environment. We introduce several factors of spatial awareness inherent to multi-camera systems, and present a comparative evaluation of the proposed techniques with respect to spatial understanding and workload."
 	},
 	{
@@ -248,7 +248,7 @@
 		"path" : "text_files/tatzgern_2015.txt",
 		"title" : "Exploring Real World Points of Interest: Design and Evaluation of Object-centric Exploration Techniques for Augmented Reality",
 		"authors" : "Markus Tatzgern1 Raphael Grasset, Eduardo Veas, Denis Kalkofen, Hartmut Seichter, Dieter Schmalstieg",
-		"url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.705.714&rep=rep1&type=pdf",
+		"url" : "",
 		"abstract" : "Augmented reality (AR) enables users to retrieve additional information about real world objects and locations. Exploring such location-based information in AR requires physical movement to different viewpoints, which may be tiring and even infeasible when viewpoints are out of reach. In this paper, we present object-centric exploration techniques for handheld AR that allow users to access information freely using a virtual copy metaphor. We focus on the design of techniques that allow the exploration of large real world objects. We evaluated our interfaces in a series of studies in controlled conditions and compared them to a 3D map interface, which is a more common method for accessing location-based information. Based on our findings, we put forward design recommendations that should be considered by future generations of location-based AR browsers, 3D tourist guides or situated urban planning."
 	},
 	{
@@ -262,14 +262,14 @@
 		"path" : "text_files/tatzgern_2013.txt",
 		"title" : "Exploring Distant Objects with Augmented Reality",
 		"authors" : "Markus Tatzgern, Raphael Grasset, Eduardo Veas, Denis Kalkofen, Hartmut Seichter, Dieter Schmalstieg",
-		"url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.641.1592&rep=rep1&type=pdf",
+		"url" : "https://www.researchgate.net/profile/Markus_Tatzgern/publication/258118750_Exploring_Distant_Objects_with_Augmented_Reality/links/0deec52b497776c4c4000000.pdf",
 		"abstract" : "Augmented reality (AR) enables users to retrieve additional information about the real world objects and locations. Exploring such location-based information in AR requires physical movement to different viewpoints, which may be tiring and even infeasible when viewpoints are out of reach. In this paper, we present object-centric exploration techniques for handheld AR that allow users to access information freely using a virtual copy metaphor to explore large real world objects. We evaluated our interfaces in controlled conditions and collected first experiences in a real world pilot study. Based on our findings, we put forward design recommendations that should be considered by future generations of location-based AR browsers, 3D tourist guides, or in situated urban planning."
 	},
 	{
 		"path" : "text_files/klein_2006.txt",
 		"title" : "Visual Tracking for Augmented Reality",
 		"authors" : "Georg Klein",
-		"url" : "http://www.academia.edu/download/46006461/Visual_Tracking_for.pdf",
+		"url" : "",
 		"abstract" : "In Augmented Reality applications, the real environment is annotated or enhanced with computer-generated graphics. These graphics must be ex- actly registered to real objects in the scene and this requires AR systems to track a user’s viewpoint. This thesis shows that visual tracking with in- expensive cameras (such as those now often built into mobile computing devices) can be sufficiently robust and accurate for AR applications. Visual tracking has previously been applied to AR, however this has used artifi- cial markers placed in the scene; this is undesirable and this thesis shows that it is no longer necessary. To address the demanding tracking needs of AR, two specific AR formats are considered. Firstly, for a head-mounted display, a markerless tracker which is robust to rapid head motions is presented. This robustness is achieved by combining visual measurements with those of head-worn in- ertial sensors. A novel sensor fusion approach allows not only pose pre- diction, but also enables the tracking of video with unprecedented levels of motion blur. Secondly, the tablet PC is proposed as a user-friendly AR medium. For this device, tracking combines inside-out edge tracking with outside-in track- ing of tablet-mounted LEDs. Through the external fusion of these comple- mentary sensors, accurate and robust tracking is achieved within a modest computing budget. This allows further visual analysis of the occlusion boundaries between real and virtual objects and a marked improvement in the quality of augmentations. Finally, this thesis shows that not only can tracking be made resilient to motion blur, it can benefit from it. By exploiting the directional nature of motion blur, camera rotations can be extracted from individual blurred frames. The extreme efficiency of the proposed method makes it a viable drop-in replacement for inertial sensors."
 	},
 	{
