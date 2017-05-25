@@ -234,7 +234,7 @@
 		"path" : "text_files/veas_2010.txt",
 		"title" : "Techniques for View Transition in Multi-Camera Outdoor Environments",
 		"authors" : "Eduardo Veas, Alessandro Mulloni, Ernst Kruijff, Holger Regenbrecht, Dieter Schmalstieg",
-		"url" : "https://www.researchgate.net/profile/Eduardo_Veas/publication/221474656_Techniques_for_view_transition_in_multi-camera_outdoor_environments/links/09e41506bffbdd39c4000000.pdf,
+		"url" : "https://www.researchgate.net/profile/Eduardo_Veas/publication/221474656_Techniques_for_view_transition_in_multi-camera_outdoor_environments/links/09e41506bffbdd39c4000000.pdf",
 		"abstract" : "Environment monitoring using multiple observation cameras is increasingly popular. Different techniques exist to visualize the incoming video streams, but only few evaluations are available to find the best suitable one for a given task and context. This article compares three techniques for browsing video feeds from cameras that are located around the user in an unstructured manner. The techniques allow mobile users to gain extra information about the surroundings, the objects and the actors in the environment by observing a site from different perspectives. The techniques relate local and remote cameras topologically, via a tunnel, or via bird’s eye viewpoint. Their common goal is to enhance spatial awareness of the viewer, without relying on a model or previous knowledge of the environment. We introduce several factors of spatial awareness inherent to multi-camera systems, and present a comparative evaluation of the proposed techniques with respect to spatial understanding and workload."
 	},
 	{
