@@ -1,0 +1,8 @@
+Artificial neural networks were developed to imitate functionality of the biological neural networks which are part of the human brain. In our brains, there are about a hundred billion (10^11) neurons, each consisting of a cell body, a collection of dendrites which are responsible for bringing electrochemical information into the cell and an axon which transmits electro-chemical information out of the cell. [1] [2]
+
+Neuron
+Figure 1 - A neuron (figure from https://en.wikipedia.org/wiki/Neuron)
+
+In the biological neuron, electrical impulses arrive on the dendrites. These impulses are absorbed into the cell body and there they are processed. Then they are sent over the axon to the next neuron.
+
+When a collective effort of neuronal inputs reaches a certain threshold, it produces an output along its axon. The axon from one neuron can influence the dendrites of another neuron across junctions called synapses. Depending on the influence, some synapses will encourage activation of the neuron, while others will discourage it. It is believed that a single neuron receives impulses from probably a hundred thousand (10^5) synapses, whereas our brain contains ten quadrillion (10^16). Unfortunately, it is still not clear exactly how our brains learn and remember, but it seems to be associated with the interconnections between the neurons. [3]

@@ -1,0 +1,19 @@
+Knowledge based systems are computer programs that are designed to emulate the work of experts in specific domains of knowledge.
+
+Types of knowledge based systems:
+
+Expert Systems are one possible realization of a knowledge based system. They model higher cognitive functions of the human brain. They are often used to mimic the human decision-making process. The algorithms used in expert systems are often static, which means that it provides a specific degree of certainty. However, this also means they cannot learn from experience.
+
+Neural Networks model the brain at the biological level. This enables them to mimic the pattern recognition abilities of the human brain. Through this, and opposed to expert systems, they e.g. can learn to read, recognize patterns from experience or can be used to try to predict the future. Neural networks will be discussed in depth in a later chapter.
+
+Case-based reasoning (CBS) imitates the human thought process of thinking in analogies. One sector in which CBS is used is the judicial system. Here, the knowledge of the law is contained in written documents. CBS, however, saves in a knowledge base how the law was actually applied in real life cases.
+
+Genetic Algorithms are inspired by natural evolution processes. Similarly to natural evolution, genetic algorithms try to find one good solution out of all possible solutions through various methods such as inference, mutation, crossover, or selection. For example, there are many possible ways of how to schedule a meeting, but through applying genetic algorithms it may be possible to find one of the good ones. [1]
+
+Intelligent agents are computer programs. Usually, an overall goal or task is specified, but they are given a certain degree of freedom to make their own decisions in how to reach or complete that goal or task. Intelligent agents usually work in the background without the user noticing them. They are often used to retrieve information from the internet when too much potentially interesting information is available. For example, if you search for “When was Steve Jobs born?” or “How far is the moon from earth?” on google.com, their intelligent agent software (“rich snippets”) will find the information on the internet and return it to the user.
+
+Data mining (or knowledge extraction) is used extensively in many different business areas. Through data mining, it is possible to identify relationships in data that were previously undiscovered. This means that we can obtain useful information or knowledge by thoroughly analyzing (mining) all the data that is already available to us. For example, through data mining it was found that when men bought diapers on Thursdays and Saturdays, they also bought beer. As a result, diapers and beer were moved next to each other and sold at full price on these days—resulting in a revenue increase. [2]
+
+Intelligent Tutoring Systems try to provide instant and personalized instructions or feedback to a user (e.g. a pupil). They are used as a cheaper alternative to human teachers. As is the case with human teachers, they also need to be able to adapt their teaching strategies in real time to conform to the different needs of the users.
+
+Please note that the above mentioned types of knowledge based systems are not exclusive to each other. In real world applications, it is often the case that multiple systems are combined. For example, data mining algorithms can use semantic networks or genetic algorithms to analyze data. Case-based reasoning is usually used in combination with expert systems. Et cetera.

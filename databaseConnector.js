@@ -89,9 +89,12 @@ DatabaseConnector.prototype.getDocumentsForId = function getDocumentsForId(docum
 	});
 }
 
-DatabaseConnector.prototype.getKeywordSurroundings = function getKeywordSurroundings(keyword, callback) {
+DatabaseConnector.prototype.getKeywordSurroundings = function getKeywordSurroundings(keyword, selectedCollection, callback) {
 
 	var collection = this.db.collection('context');
+	if (selectedCollection) {
+		collection = this.db.collection(selectedCollection);
+	}
 
 	collection.find({ 'variations' : { $in : [keyword]}}).toArray(function(err, docs) {
 		callback(err, docs);

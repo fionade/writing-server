@@ -1,0 +1,8 @@
+There are several different types of knowledge:
+
+Declarative Knowledge (Know-What): This type of knowledge is about facts. For example, ‘Chocolate is made out of cocoa beans’ is a fact.
+Procedural Knowledge (Know-How): This type describes how to perform a certain action, e.g. how to make chocolate yourself.
+Meta Knowledge (Knowledge about knowledge): If we know what we know, this can help us make decisions. For example, a husband knows that his wife is allergic to flowers, so he gives her chocolate instead.
+The following type of knowledge can be derived from the three above-mentioned ones.
+
+Semantic Knowledge is a memory for the knowledge of the world, of facts, meanings of words etc. For example, we know that ‘Eiffel’ is a civil engineer behind the famous Eiffel tower, even though the word ‘Eiffel’ does not hint to this fact. We just ‘know’ the semantic meaning of the word. This is something that has to be learned.

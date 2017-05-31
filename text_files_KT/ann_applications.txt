@@ -1,0 +1,36 @@
+Possible applications of artificial neural networks encompass:
+
+system identification and control (vehicle control, process control),
+game-playing and decision making (backgammon, chess, racing)
+pattern recognition (radar systems, face identification, object recognition)
+sequence recognition (gesture, speech, handwritten text recognition)
+medical diagnosis
+financial applications
+data mining visualization
+e-mail spam filtering
+Two other types of ANN applications are image recognition and regression analysis.
+
+Image recognition (IR) is used, if a picture is analysed for certain features e.g. edges, colourization or certain image patterns. An easy example is a distinction between several photos of different faces. The ANN is provided with several images of faces and has to classify them according to their correct owners.
+
+Image recognition example
+Figure 9 - Image recognition example
+
+Since the input data is connected to certain classes this process is called Classification, which is a very basic term in knowledge engineering.
+
+Classification is used if unstructured data is collected and sorted into certain classes. The classes and their amount are known to the system.
+
+Regression analysis (RA) is something every average Austrian student has done in his school assignments. Basically it is the task of developing a mathematical function which approximates given data points at its best. For example, one could ask why ANNs are needed to fulfill that task if it was so easy in school. The answer to that question is simple – basic functions can be approximated without computational assistance.
+
+However, complex functions tend to be very hard to approximate. This is where ANNs, beside other models, can give good and fast outcomes. Every time a set of data needs to be approximated or data points in the future need to be assumed, the ANNs come into play. This problem is called regression analysis, which is another basic term in knowledge engineering. [6]
+
+Regression analysis is a statistical technique in order to estimate the relationship among data points. The desired outcome is a function which approximates the points.
+
+The example below gives you an impression about IR. In this case the approximated function is linear, which is very easy to compute. Keep in mind that there are much more complex functions to approximate.
+
+Linear regression analysis
+Figure 10 - Linear regression analysis
+
+Explanation: Also once again, regression analysis in this example was searching for a linear relationship between the given inputs (blue dots). A linear relationship is a linear function or a straight defined as y=kx+n
+.
+
+Just imagine you want to predict how the price of gold is going to change in the future, given the known prices of the last 20 hours and predicted prices for next 60 hours. Prices are indicated with blue dots. Now when we calculate linear function we can predict how the price is going to change in 100, 200 or more hours. This is very difficult or almost impossible to do without artificial neural networks.

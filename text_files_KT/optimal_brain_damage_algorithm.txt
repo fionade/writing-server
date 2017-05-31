@@ -1,0 +1,12 @@
+Optimal brain damage is a method to remove weights from a multilayer perceptron without significantly lowering classification performance and improving computational performance of the network. (Chao Liu, 2013)
+
+It finds weights which have low “saliency”, which actually means weights which when set to zero will have least effect on the training error. Le Cun and others (Le Cun, John S. Denker and Sara A. Solla, 1990) have created an approximation formula to measure the saliency of each weight parameter.
+
+First it assumes the change in error is the sum of the errors for each individual weight. This is referred to as “diagonal approximation”.
+
+Then the “quadratic” approximation assumes that the error is nearly quadratic and therefore can be approximated by the Taylor series to the second order.
+
+When this is done, we are left with a simple formula. Keep in mind that this formula is only intended to be used on previously trained network which has converged to a local minimum.
+
+Also, once more. When we have the saliencies, we sort the weights in ascending order. Then we remove those with the lowest saliency and retrain the network. After, we repeat the process again.
+

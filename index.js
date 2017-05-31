@@ -90,11 +90,11 @@ function getActivity(request, response, next) {
 }
 
 function retrieveContexts(request, response, next) {
-  // TODO
   var keyword = request.params.keyword;
+  var collection = request.params.collection;
 
   if (databaseConnector && databaseConnector.isConnected()) {
-    databaseConnector.getKeywordSurroundings(keyword, function(err, result) {
+    databaseConnector.getKeywordSurroundings(keyword, collection, function(err, result) {
       if (result.length > 0) {
         result = {
           leftParts : result[0].leftParts.slice(0, Math.min(result[0].leftParts.length, 5)),
@@ -152,9 +152,14 @@ function getTextMeasures(request, response, next) {
 function getMatchesForKeywords(request, response, next) {
 
   var keywords = JSON.parse(request.body);
-  var result = documentKeywordExtractor.getMatchesForKeywords(keywords.keywords);
-
-  response.send(200, result);
+  if (keywords.collection) {
+    var result = collectionDocumentKeywordExtractor.getMatchesForKeywords(keywords.keywords);
+    response.send(200, result);
+  }
+  else {
+    var result = documentKeywordExtractor.getMatchesForKeywords(keywords.keywords);
+    response.send(200, result);
+  }
 
   next();
 
@@ -164,6 +169,7 @@ var server = restify.createServer();
 
 server.use(restify.gzipResponse());
 server.use(restify.bodyParser());
+server.use(restify.queryParser());
 
 server.post({
 	path: '/keywords'
@@ -189,6 +195,8 @@ server.post({
   path: '/getMatches'
 }, getMatchesForKeywords);
 
+server.get('/getContext/:keyword/:collection', retrieveContexts);
+
 server.get('/getContext/:keyword', retrieveContexts);
 
 server.get('/getSynonyms/:term', getSynonyms);
@@ -198,18 +206,21 @@ var DatabaseConnector = require("./databaseConnector");
 var databaseConnector = new DatabaseConnector();
 
 var documentKeywordExtractor = new KeywordExtractor();
+var collectionDocumentKeywordExtractor = new KeywordExtractor();
 
 var TypingToolHelper = require("./typingToolHelper");
 var typingToolHelper = new TypingToolHelper(databaseConnector, documentKeywordExtractor);
+var collectionTypingToolHelper = new TypingToolHelper(databaseConnector, collectionDocumentKeywordExtractor, "context_KT");
 
 var SynonymHelper = require("./synonymHelper");
 var synonymHelper = new SynonymHelper(databaseConnector);
 
 databaseConnector.connect(function() {
   // uncomment on first run
-  /*databaseConnector.clearCollection("context");
+  databaseConnector.clearCollection("context");
   typingToolHelper.getFileNames("./text_files");
-  synonymHelper.initDatabase();*/
+  collectionTypingToolHelper.getFileNames("./text_files_KT");
+  //synonymHelper.initDatabase();
 });
 
 // TODO REST call for this

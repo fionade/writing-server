@@ -1,0 +1,15 @@
+A multi-layer perceptron is such a perceptron which besides input and output layer has at least one more additional layer, called hidden layer. The first layer where the input data is sent is the input layer (first layer on the left) and the last layer where the output data is calculated is the output layer (last layer on the right). Any numbers of layers in between are so-called hidden layers.
+
+Multi-layer perceptron
+Figure 5 - Multi-layer perceptron
+
+In Figure 5, artificial neurons are represented with regular octagons, x represents input, w represents weight and o represents output.
+
+The first (input layer) and the last layer (output layer) are connected via a hidden layer (not connected to the outside world). This layer gives us more possibilities, for example building the XOR-Function.
+
+Multi-layer perceptron simulating XOR gate
+Figure 6 - Multi-layer perceptron simulating XOR gate
+
+The numbers within the neurons represent its individual threshold based on a step-activation-function. The output neuron is only summing up its inputs.
+
+Due to the computation power which is now at its highest (every supervised problem can be solved with multilayer ANNs) the learning algorithm becomes more complex.

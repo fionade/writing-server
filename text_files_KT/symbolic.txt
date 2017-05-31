@@ -1,0 +1,7 @@
+Symbolic AI represents all methods in AI research that are based on human-readable symbols. These symbols represent the problem logics and searches. Symbolic AI was dominant between 1950s and 1980s, until a new approach was introduced, namely the sub-symbolic approach. Symbolic AI was intended to produce general, human-like intelligence in a machine, whereas most modern research is directed at specific sub-problems. The sub-symbolic approach is based among others on neural networks, statistics and numerical optimisation.
+
+Nowadays, the majority of AI applications employ sub-symbolic techniques, while symbolic techniques are rarely used or used in some smaller domains such as knowledge representation and expert system.
+
+The most successful form of symbolic AI are the expert systems, which use production rules, connecting symbols in a relationship similar to an If-Then statement. The expert system processes the rules to decide if it needs any additional information, if yes then which, what questions to ask, while using human-readable symbols.
+
+In the book “Artificial Intelligence: The very Idea”, John Haugeland (1985) refers to symbolic AI as to GOFAI which means “Good Old-Fashioned Artificial Intelligence”.

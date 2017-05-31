@@ -1,0 +1,21 @@
+The Turing test approach was proposed by Alan Turing in 1950. It was designed to provide a definition of intelligence, whose operation is satisfying.
+
+The Turing test is actually a test of a machine’s ability to exhibit intelligent behaviour equivalent to, or indistinguishable from, that of a human. In the illustrative example, a human judge engages in natural language conversations with both a human and a machine. The machine is designed to generate performance indistinguishable from that of a human being. All participants are separated.
+
+A given computer passes the test if a human interrogator, after posing some written questions, cannot determine whether a computer or a human being is answering his questions in written form. The test does not check the correctness of the answers, only the resemblance to the way humans answer the questions, as humans can also provide wrong answers. In order for the results not to be dependent on the machine’s ability to render words into audio, test is limited to the text-only channels.
+
+Turing test
+Figure 1 - Turing test (figure from https://en.wikipedia.org/wiki/Turing_test)
+
+To be successful in the Turing test, a computer must be able to:
+
+Process natural language – to communicate in English
+Represent knowledge – to store what it perceives
+Reason – to use stored information
+Learn – to adapt to new circumstances and to derive new knowledge
+Turing’s test avoided direct physical interaction, as physical simulation is not necessary for intelligence. However there is a total Turing test which includes a video signal so that the interrogator can test perceptual abilities and an interaction with physical objects.
+
+To be successful in the total Turing test, a computer needs:
+
+Computer vision – to perceive
+Robotics – to manipulate physical objects

@@ -1,0 +1,19 @@
+Expert systems are one possible realization of a knowledge based system. They model higher cognitive functions of the human brain. They are often used to mimic the human decision-making process. The algorithms used in expert systems are often static, which means that it provides a specific degree of certainty. However, this also means they cannot learn from experience.
+When looking at expert systems in a more detailed fashion, we can identify four main elements of an expert system.
+
+Acquisition module (input by external expert and database)
+Empty KB (input specific knowledge)
+Inference engine (derive decisions from knowledge and be able to justify them)
+Explanatory interface (which enlightens the user)
+Main elements of an expert system
+Figure 9 - Main elements of an expert system
+
+The acquisition module processes the input of one or multiple experts as well as a database. To make the knowledge acquisition process easier, the expert(s) usually focus on a very specific, narrow topic.
+
+The received information is then fed into a knowledge base. For example, the acquisition module can be a human knowledge engineer who inserts the information received by the domain expert into the knowledge base. They usually do this by organizing the information into a set of rules, e.g. of an ‘if-then’ structure. These kinds of rules are also called production rules.
+
+This is also important for the inference engine algorithms to produce the best possible results. The algorithms infer meaning from the data provided in the knowledge base and derive decisions.
+
+These decisions are then displayed through an explanatory interface to the user.
+
+A professionally created and well-maintained expert system can become a substitute for a domain expert. This only applies to very specific areas of knowledge

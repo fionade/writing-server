@@ -1,0 +1,44 @@
+An intelligent agent (IA) is an autonomous entity, which observes through sensors and acts with actuators upon an environment, in order to direct its activities towards the achievement of specific goals. During this procedure it is not uncommon that an intelligent agent acquires new knowledge or uses already acquired knowledge to achieve its goals.
+
+As such, it is rather obvious that an intelligent agent can be both very simple and also very complex.
+
+As it was also case with artificial intelligence, intelligent agents cannot be uniquely described with only one definition. Therefore, an intelligent agent should exhibit at least the following characteristics:
+
+Accommodate new rules incrementally
+Analyse itself in terms of behaviour, error and success
+Learn and improve through interaction with environment
+Learn quickly from large data sets
+Have equivalent to short and long term memory, age, forgetting…
+Intelligent agents can be grouped into five classes based on the degree of perceived intelligence and capabilities:
+
+Simple reflex agent Simple reflex agents are not able to cope with perception history, but rather only with the current percept utilising the condition-action rule (if condition – then action).
+Simple reflex agent
+Figure 2 - Simple reflex agent
+
+Figure 2 shows that the agent is functional when the environment is fully observable, otherwise they are not able to predict what an action should be if the environment observation does not trigger an action. Often the only way to implement such design is by using infinite loops.
+Model-based reflex agents
+
+A model-based agent is able to cope with a partially observable environment, due to the current state stored in the agent and thus maintaining a structure representing the part of the world which cannot be perceived.
+
+Model-based reflex agent
+Figure 3 - Model-based reflex agent
+
+Goal-based agents
+
+A goal-based agent expands on the capabilities of model-based agents by using the “goal” information. Such an information describes desired situations, allowing an agent to choose among multiple possibilities and in this manner select the one which reaches a goal state.
+
+Goal-based agent
+Figure 4 - Goal-based agent
+
+Utility-based agents
+
+Goal-based agents are only able to distinguish goal states and non-goal states. With function, which maps a state to a measure of the utility of the state, it can be determined just how much a particular state is desired. This allows for a comparison of a different world states which shows how “happy” an agent would be when reaching a particular state. A rational utility-based agent chooses the action that maximises the expected utility of the action outcome.
+
+Utility-based agents
+Figure 5 - Utility-based agents
+
+Learning agents
+
+In order for an agent to operate in unknown environments and to become more competent, it has to have the ability to acquire knowledge, to learn. The learning element uses feedback from the “critic” on how the agent is doing and determines how the performance element should be modified to do better in the future. One additional element is the “problem generator” responsible for suggesting actions that lead to new and informative experiences.
+
+General learning agent

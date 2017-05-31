@@ -1,0 +1,52 @@
+Artificial neural networks are forms of computer architecture, inspired by biological neural networks and designed to estimate functions depending on a large set of generally unknown inputs. Generally spoken, an artificial neuron is nothing but a mathematical model activated (“fired”) when a linear combination of its inputs exceeds a given threshold. A group of such neurons creates an artificial neural network. (Keith Frankish, 2014)
+
+It is very important to state that artificial neural networks do not emulate thought processes.
+
+Artificial Neuron
+Figure 2 - Artificial Neuron
+
+From the Figure 2 it is very intuitive to understand how an artificial neuron works. An artificial neuron is fed with weighted inputs. The input values behave like Boolean variables. The input contains either a value (=weight) or is zero. The input function processes the inputs in a predefined way (usually as a sum of inputs) and the result is sent to the activation function. The activation function decides which result is provided as output. If the input value is higher than a given threshold, the result of the activation function is one. If the input value is lower than the given threshold, the result of the activation function is zero.
+
+In this lecture, two types of activation functions are used:
+
+Step function where the threshold is a certain value. It is often used for classifications.
+Linear function where the threshold follows a linear graph. This is used for regression analysis.
+Example: Given that the input function is alpha and the activation function is beta, inputs (in) with weights (w) are as follows (read, 0.6), (see, 1.0), (hear, 0.3) and an activation point is 1.0, then we have a following example.
+
+α=∑ink⋅wk
+β=(α≥act)
+The example simulates a situation when a person reads, sees or hears something tied to an object he is acquainted to. Only in case when output is one, has a person recognised the object.
+
+When the person does not read, see or hear anything, alpha is 0. Therefore beta is 0 and the output is 0. Ergo, the person has not recognised the object.
+When the person only reads something, alpha is 0.6. Therefore beta is 0 and the output is 0. Ergo, the person has not recognised the object.
+When the person only sees something, alpha is 1.0. Therefore beta is 1 and the output is 1. Ergo, the person has recognised the object.
+When the person only hears something, alpha is 0.3. Therefore beta is 0 and the output is 0. Ergo, the person has not recognised the object.
+When the person reads and sees something, alpha is 1.6. Therefore beta is 1 and the output is 1. Ergo, the person has recognised the object.
+When the person reads and hears something, alpha is 0.9. Therefore beta is 0 and the output is 0. Ergo, the person has not recognised the object.
+When the person sees and hears something, alpha is 1.3. Therefore beta is 1 and the output is 1. Ergo, the person has recognised the object.
+When then person reads, sees and hears something, alpha is 1.9. Therefore beta is 1 and the output is 1. Ergo, the person has recognised the object.
+Changing the weights would change the output. Therefore it is said that the knowledge of an artificial neural network is actually stored in the weights themselves.
+
+Person	Function	Output
+Reads	Sees	Hears	Alpha	Beta
+0	0	0	0.0	0	0
+0	0	1	0.6	0	0
+0	1	0	1.0	1	1
+0	1	1	0.3	0	0
+1	0	0	1.6	1	1
+1	0	1	0.9	0	0
+1	1	0	1.3	1	1
+1	1	1	1.9	1	1
+Table 1 - Example results
+
+A single neuron can also be used as a Boolean expression. Alpha is in this case a product of inputs (simulating AND gate), while Beta is function over activation point 1.0.
+
+Inputs	Function	Output
+Reads	Sees	Alpha	Beta
+0	0	0.0	0	0
+0	1	0.0	0	0
+1	0	0.0	0	0
+1	1	1.0	1	1
+Table 2 - Example of AND neuron
+
+From this example it is easy to notice that computation power of a single neuron is rather low. However, it was never actually intended that a single neuron possesses a massive computational power. The secret in the power of neural networks is in the sheer quantity.

@@ -1,0 +1,177 @@
+{ "files" : [
+	{
+		"path" : "text_files_KT/ai_definition.txt",
+		"title" : "Definition of Artificial Intelligence",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/knowledgeTechnologies/lectureNotes/index.html#ai-definition",
+		"abstract" : "Does not existe a single and unique definition of artificial intelligence. Therefore, it is logical to present the most widely used ones. In the following table, the given definitions are organized in two dimensions. The definitions on top are related to thinking processes and reasoning, in contrast to those on the bottom which address behaviour. Furthermore, the definitions on the left measure success in terms of fidelity to human performance, whereas the definitions on the right measure rationality, a success compared to ideal performance. It is important to note that a system is only rational, if it does the “right thing”, given its knowledge."
+	},
+	{
+		"path" : "text_files_KT/thinking_humanly.txt",
+		"title" : "Thinking humanly: The cognitive modelling approach",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/knowledgeTechnologies/lectureNotes/index.html#thinking-humanly-the-cognitive-modelling-approach",
+		"abstract" : "To be able to develop a program that thinks like a human, we first need to find out how humans think. This can be done by carrying out the following actions: Introspection – trying to catch our own thoughts as they appear Psychological experiments – observing a person in action Brain imaging – observing the brain in action Once there is a sufficient precise theory of how a brain works, it could be expressed through a computer program. If program’s behaviour expresses human behaviour, then the goal is achieved and the program operates like a human."
+	},
+	{
+		"path" : "text_files_KT/acting_humanly.txt",
+		"title" : "Acting humanly: The Turing test approach",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/knowledgeTechnologies/lectureNotes/index.html#acting-humanly-the-turing-test-approach",
+		"abstract" : "The Turing test approach was proposed by Alan Turing in 1950. It was designed to provide a definition of intelligence, whose operation is satisfying.  The Turing test is actually a test of a machine’s ability to exhibit intelligent behaviour equivalent to, or indistinguishable from, that of a human. In the illustrative example, a human judge engages in natural language conversations with both a human and a machine. The machine is designed to generate performance indistinguishable from that of a human being. All participants are separated.  A given computer passes the test if a human interrogator, after posing some written questions, cannot determine whether a computer or a human being is answering his questions in written form. The test does not check the correctness of the answers, only the resemblance to the way humans answer the questions, as humans can also provide wrong answers. In order for the results not to be dependent on the machine’s ability to render words into audio, test is limited to the text-only channels."
+	},
+	{
+		"path" : "text_files_KT/thinking_rationally.txt",
+		"title" : "Thinking rationally: The 'laws if thought' approach",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/knowledgeTechnologies/lectureNotes/index.html#thinking-rationally-the-laws-if-thought-approach",
+		"abstract" : "One of the first approaches of how to attempt codifying “right thinking” was done by Aristotle, a Greek philosopher. His work provided base for structures that always provided correct results when given correct premises (“Socrates is a man; all men are mortal; therefore, Socrates is mortal”). These laws governing the operation of the mind initiated the field called logic. In 1965, there were developed some programs, which were able to solve any problem, if it was completely described in logical notation. They formed a base for building artificial intelligence with the goal to create more and better intelligent systems. However, there are two main obstacles to this approach. First, it is extremely difficult to represent informal knowledge in logical notation. This is also the case if the knowledge is 100% certain. Second, solving a problem in theory is not the same as solving a problem in practice. Many logical operations and problems tend to exhaust the current computer resources (especially in earlier years)."
+	},
+	{
+		"path" : "text_files_KT/acting_rationally.txt",
+		"title" : "Acting rationally: The rational agent approach",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/knowledgeTechnologies/lectureNotes/index.html#acting-rationally-the-rational-agent-approach",
+		"abstract" : "An agent is just something that acts. They are however expected not only to do something, but rather to do more: operate autonomously, perceive environment, persist over a time period, adapt, change, create and pursue goals. Therefore, a rational agent is an agent that acts with the goal to achieve the best (expected) outcome. The rational agent approach has two advantages over the other approaches. First, it is more general than the “laws of thought” approach, because correct inference is just one of several possible mechanisms for achieving rationality. Second, it is oriented towards scientific development than to other approaches. The standard of rationality is mathematically well defined and completely general. Human behaviour, on the other hand, is well adapted for one specific environment and is defined by the sum of all the things that humans do."
+	},
+	{
+		"path" : "text_files_KT/intelligent_agents.txt",
+		"title" : "Intelligent Agents",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/knowledgeTechnologies/lectureNotes/index.html#intelligent-agents",
+		"abstract" : "An intelligent agent (IA) is an autonomous entity, which observes through sensors and acts with actuators upon an environment, in order to direct its activities towards the achievement of specific goals. During this procedure it is not uncommon that an intelligent agent acquires new knowledge or uses already acquired knowledge to achieve its goals.\nAs such, it is rather obvious that an intelligent agent can be both very simple and also very complex.\nAs it was also case with artificial intelligence, intelligent agents cannot be uniquely described with only one definition. Therefore, an intelligent agent should exhibit at least the following characteristics:\nAccommodate new rules incrementally\nAnalyse itself in terms of behaviour, error and success\nLearn and improve through interaction with environment\nLearn quickly from large data sets\nHave equivalent to short and long term memory, age, forgetting…"
+	},
+	{
+		"path" : "text_files_KT/data_info_knowledge.txt",
+		"title" : "Data, Information and Knowledge",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/knowledgeTechnologies/lectureNotes/index.html#data-information-and-knowledge",
+		"abstract" : "There are different stages of ‘knowledge’ per se. Data, information and knowledge are not static things in themselves but stages in the process of using data and transforming it into knowledge – or the other way around.  One should be aware that there exists no universally accepted definitions of ‘data’ and ‘information’. For convenience, though, we will assume the following meanings for these specific concepts:  Data are commonly assumed to be raw facts, recorded symbols. There is only little or no amount of semantics. Information is data in context. It is data presented in a form that is meaningful to the recipient. Knowledge is “The explicit functional associations between items of information and/or data” (Debenham, 1988). Or, in other words, what someone has after understanding information. They can interpret information according to the human understanding. Data, Information and Knowledge Figure 7 - Data, Information and Knowledge dynamic  So, if we deal with data, we tend to deal with simple facts. The more we work with information and then knowledge, the more these facts are combined into concepts growing in complexity.  Example Data, Information and Knowledge Figure 8 - Example Data, Information and Knowledge  Knowledge hence enables us to make informed decisions. This is why it is useful as knowledge engineer to build knowledge based systems."
+	},
+	{
+		"path" : "text_files_KT/types_knowledge.txt",
+		"title" : "Types of Knowledge",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/knowledgeTechnologies/lectureNotes/index.html#types-of-knowledge",
+		"abstract" : "There are several different types of knowledge:  Declarative Knowledge (Know-What): This type of knowledge is about facts. For example, ‘Chocolate is made out of cocoa beans’ is a fact. Procedural Knowledge (Know-How): This type describes how to perform a certain action, e.g. how to make chocolate yourself. Meta Knowledge (Knowledge about knowledge): If we know what we know, this can help us make decisions. For example, a husband knows that his wife is allergic to flowers, so he gives her chocolate instead. The following type of knowledge can be derived from the three above-mentioned ones.  Semantic Knowledge is a memory for the knowledge of the world, of facts, meanings of words etc. For example, we know that ‘Eiffel’ is a civil engineer behind the famous Eiffel tower, even though the word ‘Eiffel’ does not hint to this fact. We just ‘know’ the semantic meaning of the word. This is something that has to be learned."
+	},
+	{
+		"path" : "text_files_KT/knowledge_based_systems.txt",
+		"title" : "Knowledge Based Systems: Concept and Types",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/knowledgeTechnologies/lectureNotes/index.html#knowledge-based-systems-concept-and-types",
+		"abstract" : "Knowledge based systems are computer programs that are designed to emulate the work of experts in specific domains of knowledge.  Types of knowledge based systems:  Expert Systems are one possible realization of a knowledge based system. They model higher cognitive functions of the human brain. They are often used to mimic the human decision-making process. The algorithms used in expert systems are often static, which means that it provides a specific degree of certainty. However, this also means they cannot learn from experience.  Neural Networks model the brain at the biological level. This enables them to mimic the pattern recognition abilities of the human brain. Through this, and opposed to expert systems, they e.g. can learn to read, recognize patterns from experience or can be used to try to predict the future. Neural networks will be discussed in depth in a later chapter.  Case-based reasoning (CBS) imitates the human thought process of thinking in analogies. One sector in which CBS is used is the judicial system. Here, the knowledge of the law is contained in written documents. CBS, however, saves in a knowledge base how the law was actually applied in real life cases.  Genetic Algorithms are inspired by natural evolution processes. Similarly to natural evolution, genetic algorithms try to find one good solution out of all possible solutions through various methods such as inference, mutation, crossover, or selection. For example, there are many possible ways of how to schedule a meeting, but through applying genetic algorithms it may be possible to find one of the good ones. [1]  Intelligent agents are computer programs. Usually, an overall goal or task is specified, but they are given a certain degree of freedom to make their own decisions in how to reach or complete that goal or task. Intelligent agents usually work in the background without the user noticing them. They are often used to retrieve information from the internet when too much potentially interesting information is available. For example, if you search for “When was Steve Jobs born?” or “How far is the moon from earth?” on google.com, their intelligent agent software (“rich snippets”) will find the information on the internet and return it to the user.  Data mining (or knowledge extraction) is used extensively in many different business areas. Through data mining, it is possible to identify relationships in data that were previously undiscovered. This means that we can obtain useful information or knowledge by thoroughly analyzing (mining) all the data that is already available to us. For example, through data mining it was found that when men bought diapers on Thursdays and Saturdays, they also bought beer. As a result, diapers and beer were moved next to each other and sold at full price on these days—resulting in a revenue increase. [2]  Intelligent Tutoring Systems try to provide instant and personalized instructions or feedback to a user (e.g. a pupil). They are used as a cheaper alternative to human teachers. As is the case with human teachers, they also need to be able to adapt their teaching strategies in real time to conform to the different needs of the users.  Please note that the above mentioned types of knowledge based systems are not exclusive to each other. In real world applications, it is often the case that multiple systems are combined. For example, data mining algorithms can use semantic networks or genetic algorithms to analyze data. Case-based reasoning is usually used in combination with expert systems. Et cetera."
+	},
+	{
+		"path" : "text_files_KT/expert_system.txt",
+		"title" : "Main Elements of an Expert System",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/knowledgeTechnologies/lectureNotes/index.html#main-elements-of-an-expert-system",
+		"abstract" : "Expert systems are one possible realization of a knowledge based system. They model higher cognitive functions of the human brain. They are often used to mimic the human decision-making process. The algorithms used in expert systems are often static, which means that it provides a specific degree of certainty. However, this also means they cannot learn from experience. When looking at expert systems in a more detailed fashion, we can identify four main elements of an expert system. Acquisition module (input by external expert and database). Empty KB (input specific knowledge). Inference engine (derive decisions from knowledge and be able to justify them). Explanatory interface (which enlightens the user). Main elements of an expert system"
+	},
+	{
+		"path" : "text_files_KT/symbolic.txt",
+		"title" : "Knowledge Technologies: Symbolic and Sub-Symbolic",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/knowledgeTechnologies/lectureNotes/index.html#knowledge-technologies-symbolic-and-sub-symbolic",
+		"abstract" : "Symbolic AI represents all methods in AI research that are based on human-readable symbols. These symbols represent the problem logics and searches. Symbolic AI was dominant between 1950s and 1980s, until a new approach was introduced, namely the sub-symbolic approach. Symbolic AI was intended to produce general, human-like intelligence in a machine, whereas most modern research is directed at specific sub-problems. The sub-symbolic approach is based among others on neural networks, statistics and numerical optimisation.  Nowadays, the majority of AI applications employ sub-symbolic techniques, while symbolic techniques are rarely used or used in some smaller domains such as knowledge representation and expert system.  The most successful form of symbolic AI are the expert systems, which use production rules, connecting symbols in a relationship similar to an If-Then statement. The expert system processes the rules to decide if it needs any additional information, if yes then which, what questions to ask, while using human-readable symbols.  In the book “Artificial Intelligence: The very Idea”, John Haugeland (1985) refers to symbolic AI as to GOFAI which means “Good Old-Fashioned Artificial Intelligence”."
+	},
+	{
+		"path" : "text_files_KT/knowledge_engineering.txt",
+		"title" : "Knowledge Engineering",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/knowledgeTechnologies/lectureNotes/index.html#knowledge-engineering",
+		"abstract" : "“Knowledge Engineering is the process of developing Knowledge Base Systems in any field, whether it be in the public or private sector, in the commerce or in industry.” (Debenham, 1988). Knowledge Acquisition This step involves obtaining knowledge from various sources including human experts, books, videos and existing computer sources of data such as databases and the Internet. Knowledge Validation Here, the knowledge is checked using test cases for adequate quality. Knowledge Representation In this step, a map of the knowledge is produced and then encoded into the knowledge base. Inference Inference means that new knowledge is created in the form of links between information and knowledge. A knowledge based system can use the provided and inferred knowledge to make decisions or provide advice to the user. Explanation and Justification Explanation and justification involves additional computer program design, primarily to help the computer answer questions posed by the user and also to show how a conclusion was reached using knowledge in the knowledge base."
+	},
+	{
+		"path" : "text_files_KT/interview.txt",
+		"title" : "Interviews",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/knowledgeTechnologies/lectureNotes/index.html#interviews",
+		"abstract" : "At first, it may sound rather easy to conduct an interview. But trying to elicit the “right” knowledge in an appropriate time span is not a trivial task. Several steps are involved when conducting an interview. Preparation Before conducting an interview with a domain expert (knowledge engineer), the knowledge engineer (knowledge engineer) needs to make several preparations. Obviously, it is not necessary for the knowledge engineer to become an expert in the field himself/herself, but they still need to research the domain beforehand. Only if the knowledge engineer possesses basic knowledge about the subject matter, and also the terminology, they will be able to formulate relevant questions for the interview. If the knowledge engineer enters the interview unprepared, they will waste the knowledge engineer’s time as well as interrupt the “flow” of the conversation since the knowledge engineer will then have to explain trivial information."
+	},
+	{
+		"path" : "text_files_KT/human_brain_principle.txt",
+		"title" : "Human Brain Principle",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/artificialNeuralNetworks/lectureNotes/index.html#human-brain-principle",
+		"abstract" : "Artificial neural networks were developed to imitate functionality of the biological neural networks which are part of the human brain. In our brains, there are about a hundred billion (10^11) neurons, each consisting of a cell body, a collection of dendrites which are responsible for bringing electrochemical information into the cell and an axon which transmits electro-chemical information out of the cell."
+	},
+	{
+		"path" : "text_files_KT/ann_definition.txt",
+		"title" : "ANN Definition and General Concepts",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/artificialNeuralNetworks/lectureNotes/index.html#ann-definition-and-general-concepts",
+		"abstract" : "Artificial neural networks are forms of computer architecture, inspired by biological neural networks and designed to estimate functions depending on a large set of generally unknown inputs. Generally spoken, an artificial neuron is nothing but a mathematical model activated (“fired”) when a linear combination of its inputs exceeds a given threshold. A group of such neurons creates an artificial neural network. (Keith Frankish, 2014)"
+	},
+	{
+		"path" : "text_files_KT/single_layer_perceptron.txt",
+		"title" : "Single-Layer Perceptron",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/artificialNeuralNetworks/lectureNotes/index.html#single-layer-perceptron-single-layer-feed-forward-ann",
+		"abstract" : "Complex Boolean circuits can be created by connecting multiple neurons in two layers. These networks are then called single layer perceptron. Likewise complex Boolean formulas can be simplified and split into single operations. The first layer is called input layer, the second layer output layer. The concept of weighing is again used on the inputs of the output layer. Figure 3 presents the simplest architecture. In reality, such an architecture can be much bigger and with many more layers."
+	},
+	{
+		"path" : "text_files_KT/multi_layer_perceptron.txt",
+		"title" : "Multi-Layer Perceptron (Multi-layer feed-forward ANN)",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/artificialNeuralNetworks/lectureNotes/index.html#multi-layer-perceptron-multi-layer-feed-forward-ann",
+		"abstract" : "A multi-layer perceptron is such a perceptron which besides input and output layer has at least one more additional layer, called hidden layer. The first layer where the input data is sent is the input layer (first layer on the left) and the last layer where the output data is calculated is the output layer (last layer on the right). Any numbers of layers in between are so-called hidden layers. The first (input layer) and the last layer (output layer) are connected via a hidden layer (not connected to the outside world). This layer gives us more possibilities, for example building the XOR-Function."
+	},
+	{
+		"path" : "text_files_KT/back_propagation_learning.txt",
+		"title" : "Back-Propagation Learning",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/artificialNeuralNetworks/lectureNotes/index.html#back-propagation-learning",
+		"abstract" : "Back-propagation, an abbreviation for “backward propagation of errors”, is a common method of training artificial neural networks used in connection with an optimization method such as gradient descent. The method calculates the gradient of a loss function with respects to all the weights in the network. The gradient is fed to the optimization method which in turn uses it to update the weights, in an attempt to minimize the loss function. Back-propagation requires a known, desired output for each and every input in order to calculate the loss function gradient. Therefore it is usually believed to be a supervised learning method. However it is sometimes also used in unsupervised networks such as auto encoders. It is a generalization of the delta rule to multi-layered feedforward networks, made possibly by using the chain rule to iteratively compute gradients for each and every layer. It is required by the back-propagation that the activation function used by the artificial neuron be differentiable."
+	},
+	{
+		"path" : "text_files_KT/overfitting.txt",
+		"title" : "Overfitting",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/artificialNeuralNetworks/lectureNotes/index.html#overfitting",
+		"abstract" : "A mathematical model overfits a training dataset with respect to an error criterion and a test dataset if another model with larger error criterion on the same training dataset generalises better to test dataset. (Kai Velten, 2009)"
+	},
+	{
+		"path" : "text_files_KT/optimal_brain_damage_algorithm.txt",
+		"title" : "Optimal Brain Damage Algorithm",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/artificialNeuralNetworks/lectureNotes/index.html#optimal-brain-damage-algorithm",
+		"abstract" : "Optimal brain damage is a method to remove weights from a multilayer perceptron without significantly lowering classification performance and improving computational performance of the network. (Chao Liu, 2013). It finds weights which have low “saliency”, which actually means weights which when set to zero will have least effect on the training error. Le Cun and others (Le Cun, John S. Denker and Sara A. Solla, 1990) have created an approximation formula to measure the saliency of each weight parameter."
+	},
+	{
+		"path" : "text_files_KT/ann_applications.txt",
+		"title" : "ANN Applications",
+		"authors" : "",
+		"url" : "https://ext216.know-center.tugraz.at/iktsystem/Course_content/artificialNeuralNetworks/lectureNotes/index.html#ann-applications",
+		"abstract" : "Possible applications of artificial neural networks encompass: system identification and control (vehicle control, process control), game-playing and decision making (backgammon, chess, racing), pattern recognition (radar systems, face identification, object recognition), sequence recognition (gesture, speech, handwritten text recognition), medical diagnosis, financial applications, data mining visualization, e-mail spam filtering, Two other types of ANN applications are image, recognition and regression analysis."
+	},
+	{
+		"path" : "text_files_KT/optimal_brain_damage.txt",
+		"title" : "Optimal Brain Damage",
+		"authors" : "Yann Le Cun, John S. Denker, Sara A. Solla",
+		"url" : "https://papers.nips.cc/paper/250-optimal-brain-damage.pdf",
+		"abstract" : "We have used information-theoretic ideas to derive a class of practical and nearly optimal schemes for adapting the size of a neural network. By removing unimportant weights from a network, sev- eral improvements can be expected: better generalization, fewer training examples required, and improved speed of learning and/or classification. The basic idea is to use second-derivative informa- tion to make a tradeoff between network complexity and training set error. Experiments confirm the usefulness of the methods on a real-world application."
+	},
+	{
+		"path" : "text_files_KT/atari_reinforcement_learning.txt",
+		"title" : "Playing Atari with Deep Reinforcement Learning",
+		"authors" : "Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, Martin Riedmiller",
+		"url" : "https://arxiv.org/pdf/1312.5602.pdf",
+		"abstract" : "We present the first deep learning model to successfully learn control policies di- rectly from high-dimensional sensory input using reinforcement learning. The model is a convolutional neural network, trained with a variant of Q-learning, whose input is raw pixels and whose output is a value function estimating future rewards. We apply our method to seven Atari 2600 games from the Arcade Learn- ing Environment, with no adjustment of the architecture or learning algorithm. We find that it outperforms all previous approaches on six of the games and surpasses a human expert on three of them."
+	},
+	{
+		"path" : "text_files_KT/deep_learning_atari.txt",
+		"title" : "Deep Learning for Real-Time Atari Game Play Using Offline Monte-Carlo Tree Search Planning",
+		"authors" : "Xiaoxiao Guo, Satinder Singh, Honglak Lee, Richard Lewis, Xiaoshi Wang",
+		"url" : "http://papers.nips.cc/paper/5421-deep-learning-for-real-time-atari-game-play-using-offline-monte-carlo-tree-search-planning.pdf",
+		"abstract" : "The combination of modern Reinforcement Learning and Deep Learning ap- proaches holds the promise of making significant progress on challenging appli- cations requiring both rich perception and policy-selection. The Arcade Learning Environment (ALE) provides a set of Atari games that represent a useful bench- mark set of such applications. A recent breakthrough in combining model-free reinforcement learning with deep learning, called DQN, achieves the best real- time agents thus far. Planning-based approaches achieve far higher scores than the best model-free approaches, but they exploit information that is not available to human players, and they are orders of magnitude slower than needed for real-time play. Our main goal in this work is to build a better real-time Atari game playing agent than DQN. The central idea is to use the slow planning-based agents to pro- vide training data for a deep-learning architecture capable of real-time play. We proposed new agents based on this idea and show that they outperform DQN."
+	},
+	{
+		"path" : "text_files_KT/human_level_control.txt",
+		"title" : "Human-level control through deep reinforcement learning",
+		"authors" : "Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Andrei A. Rusu,...",
+		"url" : "http://www.davidqiu.com:8888/research/nature14236.pdf",
+		"abstract" : "The theory of reinforcement learning provides a normative account1, deeply rooted in psychological2 and neuroscientific3 perspectives on animal behaviour, of how agents may optimize their control of an environment. To use reinforcement learning successfully in situations approaching real-world complexity, however, agents are confronted with a difficult task: they must derive efficient representations of the environment from high-dimensional sensory inputs, and use these to generalize past experience to new situations. Remarkably, humans and other animals seem to solve this problem through a harmonious combination of reinforcement learning and hierarchical sensory pro- cessing systems4,5, the former evidenced by a wealth of neural data revealing notable parallels between the phasic signals emitted by dopa- minergic neurons and temporal difference reinforcement learning algorithms3. While reinforcement learning agents have achieved some successes in a variety of domains6–8, their applicability has previously been limited to domains in which useful features can be handcrafted, or to domains with fully observed, low-dimensional state spaces. Here we use recent advances in training deep neural networks9–11 to develop a novel artificial agent, termed a deep Q-network, that can learn successful policies directly from high-dimensional sensory inputs using end-to-end reinforcement learning. We tested this agent on the challenging domain of classic Atari 2600 games12. We demon- strate that the deep Q-network agent, receiving only the pixels and the game score as inputs, was able to surpass the performance of all previous algorithms and achieve a level comparable to that of a pro- fessional human games tester across a set of 49 games, using the same algorithm, network architecture and hyperparameters. This work bridges the divide between high-dimensional sensory inputs and actions, resulting in the first artificial agent that is capable of learn- ing to excel at a diverse array of challenging tasks."
+	}
+]}

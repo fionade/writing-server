@@ -1,0 +1,34 @@
+Back-propagation, an abbreviation for “backward propagation of errors”, is a common method of training artificial neural networks used in connection with an optimization method such as gradient descent. The method calculates the gradient of a loss function with respects to all the weights in the network. The gradient is fed to the optimization method which in turn uses it to update the weights, in an attempt to minimize the loss function. [4]
+
+Back-propagation requires a known, desired output for each and every input in order to calculate the loss function gradient. Therefore it is usually believed to be a supervised learning method. However it is sometimes also used in unsupervised networks such as auto encoders. It is a generalization of the delta rule to multi-layered feedforward networks, made possibly by using the chain rule to iteratively compute gradients for each and every layer. It is required by the back-propagation that the activation function used by the artificial neuron be differentiable.
+
+It is much harder to determine the responsible weight if the output is not good enough. The mentioned perceptron algorithm is the basis for the algorithm which is called back-propagation.
+
+Back-propagation needs the activation function to be differentiable. Keep in mind that step functions cannot be differentiated.
+
+New weights are calculated via a newly introduced variable delta: wnew=wold+δ
+
+The algorithm iterates following steps:
+
+Forward pass, calculate output vector
+Error computation, calculate difference between desired and resolved result
+Compute delta (additional summand to old weight) between hidden and output neurons
+Compute delta between input and hidden neuron
+Update weights in network
+Those steps are repeated until the weights have converged (change between calculations is smaller than some threshold). [5]
+
+Gradient Descent is a very basic stochastic method of adjusting a function to its minimum. In our case our goal is to minimize the difference between the target output function and the concrete outputs.
+
+The error function E based on a mean square error is defined as
+
+E=12∑i=1n(ti−oi)2
+Where n is amount of training sets presented to the network, t is output with current weights and o is correct output. (R. Rojas, 1996)
+
+Gradient descent tries to find the local minimum of E which is very likely to be the best solution. It is important to note that when the local minimum of E is computed, it does not mean that we found the solution. There might be more local minimums smaller than the one calculated and if so, the smallest of them would be the global minimum. In order to resolve that, the algorithm computes the differentiation of E according to the weights.
+
+The gradient is a vector which points to the maximum of E. Therefore one needs to change the weights in its negative direction. The step width is called learn rate η and has a great impact on learning time and correct results.
+
+Gradient descent example
+Figure 7 - Gradient descent example
+
+In the Figure 7 one can see a gradient descent on a 3D-function which forms a bowl with its minimum in the middle. The negative gradient points directly to this minimum. After several steps the minimum is reached. One can also see that η decreases.

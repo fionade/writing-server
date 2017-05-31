@@ -1,0 +1,36 @@
+“Knowledge Engineering is the process of developing Knowledge Base Systems in any field, whether it be in the public or private sector, in the commerce or in industry.” (Debenham, 1988)
+
+4.2. Knowledge Engineering roles
+Knowledge Engineers are experts at constructing useful, simplistic, meaningful Knowledge Based Systems (KBS) using the information provided by the domain experts.
+Tasks of Knowledge engineers:
+Extracts knowledge from domain expert(s)
+Plans and manages knowledge acquisition process and chooses acquisition method
+Represents extracted knowledge in some knowledge representation format
+Involved in the development of the KBS
+Ensures quality with the help of domain expert(s)
+Skills of Knowledge engineers:
+Knowledge representation
+Fact finding
+Human skills
+Visual skills
+Analysis
+Creativity
+Managerial
+A Domain Expert (or subject-matter expert) is an expert in a particular area of topic.
+A Project Champion works with the project team as a user representative. He must be able to convince users that the KBS is needed and be capable of presenting the business benefits to management.
+The Project Manager needs to try and match the expectations of all parties involved in the project. For example, the users want a working system, the knowledge engineers want to do their work with as little external influence as possible, the senior management want the project to be done fast and within the budget constraints, etc.
+4.3. Steps of Knowledge Engineering
+Typically, 5 steps are involved when creating a KBS.
+
+Steps in creating a KBS
+Figure 10 - Steps in creating a KBS
+
+Knowledge Acquisition This step involves obtaining knowledge from various sources including human experts, books, videos and existing computer sources of data such as databases and the Internet.
+Knowledge Validation Here, the knowledge is checked using test cases for adequate quality.
+Knowledge Representation In this step, a map of the knowledge is produced and then encoded into the knowledge base.
+Inference Inference means that new knowledge is created in the form of links between information and knowledge. A knowledge based system can use the provided and inferred knowledge to make decisions or provide advice to the user.
+Explanation and Justification Explanation and justification involves additional computer program design, primarily to help the computer answer questions posed by the user and also to show how a conclusion was reached using knowledge in the knowledge base.
+4.4. Knowledge Acquisition
+Knowledge Acquisition (or Knowledge Elicitation) is the process of acquiring knowledge from a human domain expert or a group of experts. The obtained information is then used to build a knowledge-based system.
+
+Interviews are the preferred method for the knowledge acquisition process. Other sources of knowledge are, for example, printed and digital documents (manuals, studies, textbooks, case descriptions, and reports), questionnaires, and tools.

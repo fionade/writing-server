@@ -1,0 +1,16 @@
+There are different stages of ‘knowledge’ per se. Data, information and knowledge are not static things in themselves but stages in the process of using data and transforming it into knowledge – or the other way around.
+
+One should be aware that there exists no universally accepted definitions of ‘data’ and ‘information’. For convenience, though, we will assume the following meanings for these specific concepts:
+
+Data are commonly assumed to be raw facts, recorded symbols. There is only little or no amount of semantics.
+Information is data in context. It is data presented in a form that is meaningful to the recipient.
+Knowledge is “The explicit functional associations between items of information and/or data” (Debenham, 1988). Or, in other words, what someone has after understanding information. They can interpret information according to the human understanding.
+Data, Information and Knowledge
+Figure 7 - Data, Information and Knowledge dynamic
+
+So, if we deal with data, we tend to deal with simple facts. The more we work with information and then knowledge, the more these facts are combined into concepts growing in complexity.
+
+Example Data, Information and Knowledge
+Figure 8 - Example Data, Information and Knowledge
+
+Knowledge hence enables us to make informed decisions. This is why it is useful as knowledge engineer to build knowledge based systems.

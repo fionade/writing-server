@@ -1,0 +1,32 @@
+Complex Boolean circuits can be created by connecting multiple neurons in two layers. These networks are then called single layer perceptron. Likewise complex Boolean formulas can be simplified and split into single operations.
+
+Single-layer perceptron
+Figure 3 - Single-layer perceptron
+
+In Figure 3, artificial neurons are represented with regular octagons, x represents input, w represents weight and o represents output (o1 serves again as input for output layer).
+
+The first layer is called input layer, the second layer output layer. The concept of weighing is again used on the inputs of the output layer. Figure 3 presents the simplest architecture. In reality, such an architecture can be much bigger and with many more layers.
+
+The equation of the whole output for the example above is slightly more complex. One can resolve it by following formula:
+
+o(x1,x2,x3)=(o1(x1)+o2(x2)+o3(x3))≥treshold
+By connecting the nodes we gain calculation power. The principle is the same as with binary numbers for example. With only one digit we can differentiate between 2 states. With two digits it is possible to differentiate between 4 states. With 3 digits – 8 states. With 4 digits – 16 states. With 5 digits – 32 states and so on… For instance with enough nodes it is possible to classify different areas of pictures, like Facebook does with face recognition.
+
+Up until now we have only solved Boolean problems for showing the computational power. Those networks were static and no change was needed to solve the target functions.
+
+However the real strength of ANNs is that they can be changed through learning. As mentioned earlier the only property that needs changing are the weight.
+
+We can change the weights by comparing the real output of the network with some correct solutions. This is used on so called training data which gives us several vector pairs of inputs and corresponding outputs. If the new weights converge (this means that the differences from the previous weights to current weights become insignificant) the training of the network is finished and it can solve problems based on real data.
+
+This process of comparing the actual output to a correct solution is called supervised learning. ANNs can also be used with different learning paradigms not mentioned in this course.
+
+How do we calculate the different weights? This is done by an algorithm which is called Perceptron Learning Algorithm. If one looks in Figure 3 on the output o1 it is clear that only w1 can be responsible for a wrong behaviour. Because single layer perceptron network is so simple, it is very easy to find a weight that should be adjusted. With bigger perceptron networks this is exponentially more difficult.
+
+The great downfall of perceptrons is that they can only model linearly separable functions (this is known as representation theorem), as shown in Figure 4.
+
+OR, AND and XOR as graph
+Figure 4 - OR, AND and XOR as graph
+
+A function is linearly separable if it is possible to divide function outputs with lines. As we can see, this is possible for OR and AND functions, but not for XOR functions. XOR functions have output groups placed diagonally and therefore could not be separated.
+
+To overcome this weakness another layer needs to be introduced. This layer is called hidden layer and by combining the input layer with the hidden layer and the output layer, a multi-layer perceptron is the result.

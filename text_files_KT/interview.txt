@@ -1,0 +1,50 @@
+At first, it may sound rather easy to conduct an interview. But trying to elicit the “right” knowledge in an appropriate time span is not a trivial task. Several steps are involved when conducting an interview.
+
+Preparation Before conducting an interview with a domain expert (knowledge engineer), the knowledge engineer (knowledge engineer) needs to make several preparations.
+
+Obviously, it is not necessary for the knowledge engineer to become an expert in the field himself/herself, but they still need to research the domain beforehand. Only if the knowledge engineer possesses basic knowledge about the subject matter, and also the terminology, they will be able to formulate relevant questions for the interview. If the knowledge engineer enters the interview unprepared, they will waste the knowledge engineer’s time as well as interrupt the “flow” of the conversation since the knowledge engineer will then have to explain trivial information.
+
+For example, the knowledge engineer could reach a basic level of understanding about a topic by examining past case studies, standards documentation or procedure manuals (describe a number of processing steps or actions) or talking to people who are less knowledgeable in the field, but who can still provide valuable information.
+
+Process model Concerning the actual interview, knowledge engineers generally adhere to the following sequence of processes:
+
+Choose appropriate domain expert(s) A domain expert is expected to possess certain skills that are useful for conducting the interview. Some of the skills that make the knowledge acquisition process easier and more effective include domain experts being articulate, motivated, logical and systematic.
+Choose appropriate interview method In order to be able to choose the best interview method(s) in respect to the domain, knowledge engineers need to know in depth a wide spectrum of interview methods, assess the characteristics of the domain and the purpose for which the KBS will be developed and match those to the appropriate interview method.
+Use appropriate stage management techniques The KE needs to ensure that the room in which the interview will be conducted provides minimal disturbance and a maximum of comfort.
+Plan the interview The knowledge engineer may have to think about organizational aspects such as appropriate time slots, preparing the questions, organise recording devices and so on.
+Consider and use appropriate skills When not using appropriate skills, the possibility to extract valuable knowledge is drastically lower.
+Document knowledge acquisition process If the acquisition process is not well documented, many key facts could be left out.
+
+Interview types
+There is a range of different interview methods which can be utilized to conduct an interview. Four very common ones are:
+
+Unstructured interview This type of interview is usually conducted in the early stages of knowledge acquisition. It mainly consists of free flowing dialog from the knowledge engineer. The knowledge engineer only raises general questions or to recover focus on the domain if the domain expert strays off topic. This is why unstructured interviews are likely to take a life of their own. The domain expert is invited to talk about the domain in high-level terms. Unstructured interviews require little planning regarding the content. The bulk of work, which comprises the analysing and structuring of the free flowing dialog, is done after the interview has been conducted. While this type of interview rarely provides a complete or well-organized picture of the domain, it allows for the introduction of important topics that might otherwise have been neglected in an interview that was too structured. In other words, since the knowledge engineer is acting rather passively, the domain expert has a chance to mention relevant topics that the knowledge engineer might not even have been aware of. The unstructured interview enables the knowledge engineer to gain a good understanding of the knowledge domain.
+
+Advantages The domain expert can bring up new areas of the subject matter that were previously not considered. In other words, it supports scoping activities (enlarging the number of domain-relevant knowledge areas).
+
+Disadvantages Domain experts may not stay focused. Unstructured interviews are very time consuming.
+
+Structured interview As opposed to the unstructured interview, the structured interview focuses on one or multiple specific area of knowledge. This is also called scope. Several unstructured interviews should have been conducted and analysed beforehand for structured interviews to be most effective. Structured interviews aim to provide a relaxed, unhurried atmosphere so that domain expert can answer questions clearly and in a detailed fashion.
+
+Parts of structured interview
+Figure 11 - Parts of structured interview
+
+First, knowledge engineer and domain expert agree on a set of questions/topics that will be asked while the interview takes place. Second, the domain expert answers the questions. Last, and this is a very important step, the knowledge engineer validates his knowledge.
+
+They need to ensure and verify that they properly understood what the expert said, e.g. by summarizing the contents of the interview and asking the expert for confirmation. Through this method, knowledge engineers are able to obtain in-depth knowledge about a specific domain, specifically if a number of “why” and “how” questions are being asked.
+
+Advantages Allows for a more in-depth and systematic exploration of the knowledge domain
+
+Disadvantages Too early usage of structured interviews can lead to omission of important knowledge areas within the domain. Not applicable for scoping.
+
+Event recall interview / Thinking aloud protocol When conducting an event recall interview, the domain expert is asked to go through one specific case study. They will go through the specific actions that were performed. The sequence in which they were performed is of particular interest as well since it highlights which actions take a higher priority to the domain expert. Event recall interviews are generally very useful for revealing the thought processes of the domain expert (procedural knowledge). They can be used to check the completeness of the acquired knowledge. This also means that knowledge must have been collected through other methods before.
+
+Advantages For checking completeness of knowledge acquisition sessions. When validity of collected knowledge is in question.
+
+Disadvantages Requires significant interpretative skills from knowledge engineer and a very good memory from the domain expert.
+
+Repertory grid interview A repertory grid can be used to record the view of the domain expert on a specific problem—a very strong focus on one specific part of the domain. The elements are inserted at the top of each column. Elements can be people or objects that the domain expert is familiar with. In each row there are the relevant constructs of the elements which were determined during the knowledge acquisition process. Obviously, knowledge needs to have been collected through other methods beforehand.
+
+Advantages It provides in-depth analysis. It is very well structured and can be used to represent the opinions of multiple domain experts.
+
+Disadvantages Finding constructs is not always an easy task to achieve. Repertory grids cannot be applied to everything. Constructs and elements need to stand in a systematic relation to each other in order for the repertory grid to work.

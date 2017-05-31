@@ -1,0 +1,6 @@
+A mathematical model overfits a training dataset with respect to an error criterion and a test dataset if another model with larger error criterion on the same training dataset generalises better to test dataset. (Kai Velten, 2009)
+
+Overfitting example
+Figure 8 - Overfitting: Training error is shown in blue, validation error is shown in red. If the validation error increases and the training error decreases, then the overfitting may have occurred. The best predictive fitting model would be the one where the validation error has its global minimum. (Figure from https://en.wikipedia.org/wiki/Overfitting)
+
+Usually a learning algorithm is trained using some set of training examples. The learner is assumed to reach the state where it could predict the correct answer for other examples. Unfortunately, sometimes when learning was performed too long or where training exercises are rare, the learner may adjust to very specific training data. If this is the case, the learner will perform much better on the training examples (training error) while the performance on the unseen examples (validation error) will become worse.

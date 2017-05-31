@@ -1,0 +1,6 @@
+To be able to develop a program that thinks like a human, we first need to find out how humans think. This can be done by carrying out the following actions:
+
+Introspection – trying to catch our own thoughts as they appear
+Psychological experiments – observing a person in action
+Brain imaging – observing the brain in action
+Once there is a sufficient precise theory of how a brain works, it could be expressed through a computer program. If program’s behaviour expresses human behaviour, then the goal is achieved and the program operates like a human.

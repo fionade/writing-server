@@ -1,9 +1,15 @@
 const fs = require('fs');
 var KeywordContextExtractor = require('./keywordExtractor2');
 
-function TypingToolHelper(databaseConnector, keywordExtractor) {
+function TypingToolHelper(databaseConnector, keywordExtractor, collection) {
   this.keywordContextExtractor = keywordExtractor;
   this.databaseConnector = databaseConnector;
+  if (collection) {
+    this.collection = collection;
+  }
+  else {
+    this.collection = 'context';
+  }
 };
 
 TypingToolHelper.prototype.addFile = function addFile(metadata, callback) {
@@ -41,7 +47,7 @@ TypingToolHelper.prototype.getFileNames = function getFileNames(directory) {
   //   });
   // });
 
-  fs.readFile('./text_files/metadata.json', 'utf8', function(err, data) {
+  fs.readFile(directory + '/metadata.json', 'utf8', function(err, data) {
     if (err) {
       return console.log(err);
     }
@@ -61,17 +67,6 @@ TypingToolHelper.prototype.getFileNames = function getFileNames(directory) {
         }
       });
     });
-
-  //   { files:
-  //  [ { path: 'Deep_learning.txt',
-  //      title: 'Deep Learning',
-  //      authors: 'Wikipedia',
-  //      url: 'https://en.wikipedia.org/wiki/Deep_Learning' },
-  //    { path: 'machine_learning.txt',
-  //      title: 'Machine Learning',
-  //      authors: 'Wikipedia',
-  //      url: 'https://en.wikipedia.org/wiki/Machine_Learning' } ] }
-
   });
 
 
@@ -92,7 +87,7 @@ TypingToolHelper.prototype.storeKeywordsInDatabase = function storeKeywordsInDat
           'variations' : keywordDict[key].variations
         };
 
-        that.databaseConnector.insertDocumentIntoCollection(document, 'context');
+        that.databaseConnector.insertDocumentIntoCollection(document, that.collection);
     });
 
 }
