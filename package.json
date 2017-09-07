@@ -4,8 +4,12 @@
   "description": "Extract keywords from given text",
   "main": "index.js",
   "dependencies": {
-    "mongodb": "^2.2.11",
-    "natural": "^0.4.0"
+    "mongodb": "^2.2.31",
+    "natural": "^0.4.0",
+    "pos": "^0.4.2",
+    "restify": "^4.1.1",
+    "restify-plugins": "^1.6.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {},
   "scripts": {
@@ -14,7 +18,7 @@
   "author": "fiona",
   "license": "ISC",
   "repository": {
-  	"type": "git",
-  	"url": "https://github.com/fionade/writing-server.git"
-	}
+    "type": "git",
+    "url": "https://github.com/fionade/writing-server.git"
+  }
 }
