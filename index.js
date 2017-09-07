@@ -220,7 +220,7 @@ databaseConnector.connect(function() {
   databaseConnector.clearCollection("context");
   typingToolHelper.getFileNames("./text_files");
   collectionTypingToolHelper.getFileNames("./text_files_KT");
-  //synonymHelper.initDatabase();
+  synonymHelper.initDatabase();
 });
 
 // TODO REST call for this
