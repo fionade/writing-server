@@ -5,15 +5,15 @@ function DatabaseConnector() {
 	this.assert = require('assert');
 }
 
-DatabaseConnector.prototype.connect = function connect(callback) {
+DatabaseConnector.prototype.connect = function(callback) {
 	// Connection URL
-	var url = 'mongodb://localhost:27017/breakfast';
+	var url = 'mongodb://localhost:27017/breakfast?socketTimeoutMS=200000';
 	var that = this;
 
 	// Use connect method to connect to the server
 	this.MongoClient.connect(url, function(err, db) {
 	  that.assert.equal(null, err);
-	  console.log("Connected successfully to server");
+	  console.log("Connected successfully to database");
 	  that.db = db;
 		callback();
 	});
@@ -21,11 +21,12 @@ DatabaseConnector.prototype.connect = function connect(callback) {
 
 DatabaseConnector.prototype.close = function close() {
 	if (this.db) {
+        console.log("Closed database connection")
 		this.db.close();
 	}
 }
 
-DatabaseConnector.prototype.insertDocument = function insertDocument(document) {
+DatabaseConnector.prototype.insertDocument = function(document) {
 
 	var that = this;
 
@@ -39,7 +40,7 @@ DatabaseConnector.prototype.insertDocument = function insertDocument(document) {
 	});
 }
 
-DatabaseConnector.prototype.insertDocumentIntoCollection = function insertDocumentIntoCollection(document, collection) {
+DatabaseConnector.prototype.insertDocumentIntoCollection = function(document, collection, callback) {
 
 	var that = this;
 
@@ -48,12 +49,15 @@ DatabaseConnector.prototype.insertDocumentIntoCollection = function insertDocume
 	collection.insert(document, function(err, result) {
 		that.assert.equal(err, null);
 		that.assert.equal(1, result.result.n);
-    that.assert.equal(1, result.ops.length);
+        that.assert.equal(1, result.ops.length);
+        if (typeof(callback) == 'function') {
+            callback();
+        }
     //console.log("Inserted document into the collection");
 	});
 }
 
-DatabaseConnector.prototype.insertDocuments = function insertDocuments(documents) {
+DatabaseConnector.prototype.insertDocuments = function(documents) {
 
 	var that = this;
 
@@ -65,7 +69,7 @@ DatabaseConnector.prototype.insertDocuments = function insertDocuments(documents
 	});
 }
 
-DatabaseConnector.prototype.insertDocumentsIntoCollection = function insertDocumentsIntoCollection(documents, collectionToUse) {
+DatabaseConnector.prototype.insertDocumentsIntoCollection = function(documents, collectionToUse, callback) {
 
 	var that = this;
 
@@ -73,15 +77,20 @@ DatabaseConnector.prototype.insertDocumentsIntoCollection = function insertDocum
 	var collection = this.db.collection(collectionToUse);
 	collection.insert(documents, function(err, result) {
 		that.assert.equal(err, null);
-    console.log("Inserted documents into the collection");
+        console.log("Inserted documents into the collection");
+        if (callback) {
+            callback();
+        }
 	});
+
+
 }
 
 DatabaseConnector.prototype.isConnected = function isConnected() {
 	return this.db;
 }
 
-DatabaseConnector.prototype.getDocumentsForId = function getDocumentsForId(documentId, callback) {
+DatabaseConnector.prototype.getDocumentsForId = function(documentId, callback) {
 	var collection = this.db.collection(collectionName);
 
 	collection.find({"documentId" : documentId}).sort({"documentId" : 1}).toArray(function(err, docs){
@@ -89,7 +98,7 @@ DatabaseConnector.prototype.getDocumentsForId = function getDocumentsForId(docum
 	});
 }
 
-DatabaseConnector.prototype.getKeywordSurroundings = function getKeywordSurroundings(keyword, selectedCollection, callback) {
+DatabaseConnector.prototype.getKeywordSurroundings = function(keyword, selectedCollection, callback) {
 
 	var collection = this.db.collection('context');
 	if (selectedCollection) {
@@ -102,14 +111,14 @@ DatabaseConnector.prototype.getKeywordSurroundings = function getKeywordSurround
 
 }
 
-DatabaseConnector.prototype.clearCollection = function clearCollection(collection) {
+DatabaseConnector.prototype.clearCollection = function(collection) {
 
 	var collection = this.db.collection(collection);
 
 	collection.drop();
 }
 
-DatabaseConnector.prototype.getSynonyms = function getSynonyms(term, callback) {
+DatabaseConnector.prototype.getSynonyms = function(term, callback) {
 
 	var collection = this.db.collection('synonyms');
 

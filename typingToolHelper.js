@@ -25,7 +25,7 @@ TypingToolHelper.prototype.addFile = function addFile(metadata, callback) {
   });
 }
 
-TypingToolHelper.prototype.getFileNames = function getFileNames(directory) {
+TypingToolHelper.prototype.getFileNames = function getFileNames(directory, callback) {
   var that = this;
   // fs.readdir(directory, (err, files) => {
   //   if (err) {
@@ -63,7 +63,7 @@ TypingToolHelper.prototype.getFileNames = function getFileNames(directory) {
           that.getKeywords();
           var contexts = that.keywordContextExtractor.getKeywordContexts();
 
-          that.storeKeywordsInDatabase(contexts);
+          that.storeKeywordsInDatabase(contexts, callback);
         }
       });
     });
@@ -72,9 +72,10 @@ TypingToolHelper.prototype.getFileNames = function getFileNames(directory) {
 
 }
 
-TypingToolHelper.prototype.storeKeywordsInDatabase = function storeKeywordsInDatabase(keywordDict) {
+TypingToolHelper.prototype.storeKeywordsInDatabase = function storeKeywordsInDatabase(keywordDict, callback) {
 
     var that = this;
+    var documents = [];
 
     // for each key in the dict
     // create a "document" with the term, the left parts, and the right parts
@@ -86,9 +87,11 @@ TypingToolHelper.prototype.storeKeywordsInDatabase = function storeKeywordsInDat
           'rightParts' : keywordDict[key].rightParts,
           'variations' : keywordDict[key].variations
         };
+        documents.push(document);
 
-        that.databaseConnector.insertDocumentIntoCollection(document, that.collection);
     });
+
+    that.databaseConnector.insertDocumentsIntoCollection(documents, that.collection, callback);
 
 }
 

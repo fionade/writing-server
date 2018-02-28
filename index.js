@@ -216,24 +216,16 @@ var SynonymHelper = require("./synonymHelper");
 var synonymHelper = new SynonymHelper(databaseConnector);
 
 databaseConnector.connect(function() {
-  // uncomment on first run
-  databaseConnector.clearCollection("context");
-  typingToolHelper.getFileNames("./text_files");
-  collectionTypingToolHelper.getFileNames("./text_files_KT");
-  synonymHelper.initDatabase();
+  // the following setup code was now moved to setup.js. Run with node setup
+  // databaseConnector.clearCollection("context");
+  // typingToolHelper.getFileNames("./text_files");
+  // collectionTypingToolHelper.getFileNames("./text_files_KT");
+  // synonymHelper.initDatabase();
+  // start listening
+  server.listen(8080, function() {
+    console.log('%s listening at %s', server.name, server.url);
+  });
 });
-
-// TODO REST call for this
-// let's hope it's already connected
-
-// TODO
-// databaseConnector.close();
-
-// start listening
-server.listen(8080, function() {
-  console.log('%s listening at %s', server.name, server.url);
-});
-
 
 
 String.prototype.removeUnnecessaryChars = function() {

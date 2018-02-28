@@ -36,7 +36,7 @@ function SynonymHelper(databaseConnector) {
   }
 
 
-  this.initDatabase = function() {
+  this.initDatabase = function(callback) {
     // read file
     // collection synonyms
     // add each line
@@ -52,7 +52,7 @@ function SynonymHelper(databaseConnector) {
       var fileData = JSON.parse(data);
       that.databaseConnector.connect(function() {
         that.databaseConnector.clearCollection("synonyms");
-        that.databaseConnector.insertDocumentsIntoCollection(fileData, "synonyms");
+        that.databaseConnector.insertDocumentsIntoCollection(fileData, "synonyms", callback);
       });
     });
   }
